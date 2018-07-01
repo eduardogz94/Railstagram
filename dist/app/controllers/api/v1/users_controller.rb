@@ -19,9 +19,8 @@ module Api::V1
     
     def create
       @user = User.new(user_params)
-        if @user.valid?
-           @user.save
-           render json: @user
+        if @user.save
+          render json: @user
         else 
           render json: @user.errors
         end     
@@ -29,11 +28,16 @@ module Api::V1
       
     def update
       @user = User.update_attributes(params[:username, :password, :password_confirmation])
+      if @user.save
+          render json: @user
+        else 
+          render json: 'ss'
+        end
     end
 
     def destroy  
       @user = User.destroy(params[:id])
-        if @user.valid?
+        if @user.save
           render json: @user
         else 
           render json: User.all
