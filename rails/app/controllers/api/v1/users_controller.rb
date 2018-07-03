@@ -4,7 +4,7 @@ module Api::V1
     
     def index
       @users = User.all
-      render json: @users
+      render json: { user:@users , status:'200' }
     end
 
     def show

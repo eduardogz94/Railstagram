@@ -21,7 +21,7 @@ export default class Home extends React.Component {
       fetching({}, 'GET', 'http://10.172.175.155:4000/api/v1/users', 
       response => {
         this.setState({
-          users: response
+          users: response.user
         })
       })
 
@@ -43,9 +43,9 @@ export default class Home extends React.Component {
             return(
               <User user={user} key={user.id}/>)})}
           </Text>
-        <LoginForm/>
+        {/* <LoginForm/>
         <SignupForm/>
-        <FindUser/>
+        <FindUser/> */}
       </View>
     );
   }
