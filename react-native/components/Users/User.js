@@ -6,8 +6,8 @@ import { fetching } from '../Extra/Fetch'
 export default class User extends Component {
     
   delete = (id) => {
-      fetching({}, 'DELETE' , `http://192.168.1.104:4000/api/v1/users/${id}`,
-      response => {
+
+      fetching({}, 'DELETE' , `http://10.168.1.100:4000/api/v1/users/${id}`,  response => {
         console.log(response)
       })
   }
@@ -23,7 +23,6 @@ export default class User extends Component {
             onPress={() => this.delete(id)}
             title="Delete User"
             color="#841584"
-            accessibilityLabel="Learn more about this purple button"
           />
           <Text>--------------------------</Text>
         </View>

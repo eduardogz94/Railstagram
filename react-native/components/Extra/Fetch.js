@@ -49,7 +49,6 @@ export const fetching = (data, method, url, cb) => {
                     method: 'DELETE',
                     withCredentials: true,
                     credentials: 'include',
-                    body: JSON.stringify(data),
                     headers: {
                         'Content-type': 'application/json'
                     }

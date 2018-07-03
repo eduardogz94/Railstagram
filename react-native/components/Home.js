@@ -16,14 +16,15 @@ export default class Home extends React.Component {
   componentDidMount() {
       console.log('Mounted home')
 
-      fetching({}, 'GET', 'http://192.168.1.104:4000/api/v1/users', 
+      fetching({}, 'GET', 'http://10.172.175.155:4000/api/v1/users', 
       response => {
         this.setState({
           users: response
         })
       })
 
-      fetching({}, 'GET' ,'http://192.168.1.104:4000/api/v1/is_logged?', response => {
+      fetching({}, 'GET', 'http://10.172.175.155:4000/api/v1/is_logged?',
+      response => {
           this.setState({
             is_logged: response
           })

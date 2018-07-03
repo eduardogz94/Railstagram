@@ -4,26 +4,28 @@ import Error from '../Extra/ErrorBoundary'
 import { fetching } from '../Extra/Fetch'
 
 export default class LoginForm extends Component {
-    constructor(props) {
-        super(props)
-        this.username = React.createRef();
-        this.password = React.createRef();
-        this.password_confirmation = React.createRef();
+    state = {
+        username: '',
+        password:'',
+        password_confirmation: ''
     }
-    
+
     logIn = (event) => {
         event.preventDefault()
-    
+        
+        
         const options = { 
-            username:this.username.current.value,
-            password:this.password.current.value,
-            password_confirmation:this.password_confirmation.current.value
+            username:this.state.username,
+            password:this.state.password,
+            password_confirmation:this.state.password_confirmation
         }
+        
         console.log(options)
-        // fetching(options, 'POST', 'http://localhost:4000/api/v1/login', response => {
-        //     console.log(response)
-        //     console.log('welcome to Rail API!')
-        // })
+        
+        fetching(options, 'POST', 'http://10.172.175.155:4000/api/v1/login', response => {
+            console.log(response)
+            console.log('welcome to Rail API!')
+        })
     }
 
     render() {
@@ -32,15 +34,15 @@ export default class LoginForm extends Component {
                 <View>
                     <Text> Login </Text>
                     <TextInput 
-						ref={this.username}
+						onChangeText={(username) => this.setState({username})}
 						placeholder = 'Username'
 					/>
 					<TextInput 
-						ref={this.password}
+						onChangeText={(password) => this.setState({password})}
 						placeholder = 'Password'
 					/>
 					<TextInput 
-						ref={this.password_confirmation}
+						onChangeText={(password_confirmation) => this.setState({password_confirmation})}
 						placeholder = 'Password Confirmation'
 					/>
 					<Button 

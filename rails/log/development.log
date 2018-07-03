@@ -4801,3 +4801,256 @@ Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 3.6ms)
 
 
+Started GET "/api/v1/users" for 192.168.1.102 at 2018-07-03 13:56:08 -0400
+Started GET "/api/v1/is_logged" for 192.168.1.102 at 2018-07-03 13:56:08 -0400
+  [1m[35m (18.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (18.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SessionsController#test as */*
+  Parameters: {"session"=>{}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (32.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 56ms (Views: 21.2ms | ActiveRecord: 35.8ms)
+
+
+Started GET "/api/v1/is_logged" for 192.168.1.102 at 2018-07-03 13:57:06 -0400
+Started GET "/api/v1/users" for 192.168.1.102 at 2018-07-03 13:57:06 -0400
+Processing by Api::V1::SessionsController#test as */*
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"session"=>{}}
+  Parameters: {"user"=>{}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/v1/is_logged" for 192.168.1.102 at 2018-07-03 13:57:18 -0400
+Processing by Api::V1::SessionsController#test as */*
+  Parameters: {"session"=>{}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.102 at 2018-07-03 13:57:18 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:20:59 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:22:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 18ms (Views: 10.1ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:22:42 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:23:07 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:23:14 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:23:47 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:31:22 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:32:29 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:33:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:33:19 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:33:35 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:33:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:34:38 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:36:46 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:37:14 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:38:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:38:32 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/login" for 10.172.175.64 at 2018-07-03 15:38:40 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "eg"], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:39:08 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/is_logged" for 10.172.175.64 at 2018-07-03 15:39:08 -0400
+Processing by Api::V1::SessionsController#test as */*
+  Parameters: {"session"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:40:14 -0400
+Started GET "/api/v1/is_logged" for 10.172.175.64 at 2018-07-03 15:40:14 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::SessionsController#test as */*
+  Parameters: {"user"=>{}}
+  Parameters: {"session"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:40:16 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/is_logged" for 10.172.175.64 at 2018-07-03 15:40:16 -0400
+Processing by Api::V1::SessionsController#test as */*
+  Parameters: {"session"=>{}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/login" for 10.172.175.64 at 2018-07-03 15:40:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-03 15:40:53 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/is_logged" for 10.172.175.64 at 2018-07-03 15:40:53 -0400
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by Api::V1::SessionsController#test as */*
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.4ms)
+
+
+  Parameters: {"session"=>{}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/login" for 10.172.175.64 at 2018-07-03 15:42:01 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "eg"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
