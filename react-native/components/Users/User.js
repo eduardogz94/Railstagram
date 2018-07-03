@@ -1,25 +1,32 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, Button } from 'react-native'
+import { fetching } from '../Extra/Fetch'
+
 
 export default class User extends Component {
-    delete = (id) => {
-        console.log(id)
-        axios.delete(`http://localhost:4000/api/v1/users/${id}`)
-            .then(response => console.log(response.data))
-            .catch(err => console.log(err))
-    }
-  
-    render() {
-    const { id, username, password_digest, created_at} = this.props.user;
     
-    return (
-      <View>
-        <Text> {username} </Text>
-        <Text>{id}</Text>
-        <Text>{password_digest}</Text>
-        <Text>{created_at}</Text>
-        <button onClick={() => this.delete(id)}>Delete</button>
-      </View>
-    )
+  delete = (id) => {
+      fetching({}, 'DELETE' , `http://192.168.1.104:4000/api/v1/users/${id}`,
+      response => {
+        console.log(response)
+      })
+  }
+
+  render() {
+    const { id, username, created_at} = this.props.user;
+      return (
+        <View>
+          <Text>Username {username} </Text>
+          <Text>This is users id {id}</Text>
+          <Text>Timestamp {created_at}</Text>
+          <Button
+            onPress={() => this.delete(id)}
+            title="Delete User"
+            color="#841584"
+            accessibilityLabel="Learn more about this purple button"
+          />
+          <Text>--------------------------</Text>
+        </View>
+      )
   }
 }
