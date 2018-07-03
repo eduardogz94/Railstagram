@@ -1,40 +1,37 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Text, View, TextInput, Button } from 'react-native'
 import Error from '../Extra/ErrorBoundary'
 import { fetching } from '../Extra/Fetch'
 
-export default class LoginForm extends Component {
+class SignupForm extends React.Component {
     constructor(){
-        super()    
+        super()
         this.username = '',
         this.password = '',
         this.password_confirmation = ''
+
     }
     
+	signUp = (event) => {
+	    event.preventDefault()
 
-    logIn = (event) => {
-        event.preventDefault()
-        
-        
-        const options = { 
-            username:this.username,
-            password:this.password,
-            password_confirmation:this.password_confirmation
+        const options = {
+            username: this.username,
+            password: this.password,
+            password_confirmation: this.password_confirmation
         }
-        
-        console.log(options)
-        
-        fetching(options, 'POST', 'http://10.172.175.155:4000/api/v1/login', response => {
-            console.log(response)
+
+        fetching(options, 'POST', 'http://10.172.175.155:4000/api/v1/signup', response => {
+            console.log(result)
             console.log('welcome to Rail API!')
         })
-    }
+	}
 
-    render() {
-        return (
-            <Error>
-                <View>
-                    <Text> Login </Text>
+  	render() {
+		return (
+			<Error>
+				<View>
+					<Text>Signup</Text>
                     <TextInput 
 						onChangeText={username => this.username = username}
 						placeholder = 'Username'
@@ -48,11 +45,14 @@ export default class LoginForm extends Component {
 						placeholder = 'Password Confirmation'
 					/>
 					<Button 
-						onPress={this.logIn}
-                        title = 'Log in'
+						onPress={this.signUp}
+                        title = 'Sign up'
                         ></Button>
-                </View>
-            </Error>
-        )
-    }
+				</View>
+			</Error>
+		)
+  	}
+
 }
+
+export default  SignupForm;		

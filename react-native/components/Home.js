@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { fetching } from './Extra/Fetch'
 import User from './Users/User'
 import LoginForm from './Users/LoginForm'
+import SignupForm from './Users/SignupForm'
+import FindUser from './Users/FindUser'
 
 export default class Home extends React.Component {
   constructor() {
@@ -36,12 +38,14 @@ export default class Home extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Rails API users</Text>
-        {/* <Text>
-        {this.state.users.map((user) => {
-          return(
-            <User user={user} key={user.id}/>)})}
-        </Text> */}
+          <Text>
+          {this.state.users.map((user) => {
+            return(
+              <User user={user} key={user.id}/>)})}
+          </Text>
         <LoginForm/>
+        <SignupForm/>
+        <FindUser/>
       </View>
     );
   }
@@ -49,9 +53,9 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 3,
     backgroundColor: '#fff',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
   },
 });
