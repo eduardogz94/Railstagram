@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, Button } from 'react-native'
+
+import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
 
 
@@ -7,8 +9,10 @@ export default class User extends Component {
     
   delete = (id) => {
 
-      fetching({}, 'DELETE' , `http://10.168.1.100:4000/api/v1/users/${id}`,  response => {
+      fetching({}, 'DELETE' , `http://${myIp}/api/v1/users/${id}`,  response => {
         console.log(response)
+        console.log(response.data)
+        console.log(response.status)
       })
   }
 

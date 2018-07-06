@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Text, View, TextInput, Button } from 'react-native'
+
 import Error from '../Extra/ErrorBoundary'
+import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
 
 export default class LoginForm extends Component {
@@ -22,12 +24,12 @@ export default class LoginForm extends Component {
             password_confirmation:this.password_confirmation
         }
         
-        console.log(options)
-        
-        fetching(options, 'POST', 'http://10.172.175.155:4000/api/v1/login', response => {
-            console.log(response)
-            console.log('welcome to Rail API!')
-        })
+        this.props.auth.setItem('session', this.username )
+        console.log(this.props.auth.state)
+        // fetching(options, 'POST', `http://${myIp}/api/v1/login`, response => {
+        //     console.log(response)
+        //     console.log('welcome to Rail API!')
+        // })
     }
 
     render() {

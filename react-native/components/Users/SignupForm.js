@@ -1,6 +1,8 @@
 import React from 'react'
 import { Text, View, TextInput, Button } from 'react-native'
+
 import Error from '../Extra/ErrorBoundary'
+import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
 
 class SignupForm extends React.Component {
@@ -21,8 +23,8 @@ class SignupForm extends React.Component {
             password_confirmation: this.password_confirmation
         }
 
-        fetching(options, 'POST', 'http://10.172.175.155:4000/api/v1/signup', response => {
-            console.log(result)
+        fetching(options, 'POST', `http://${myIp}/api/v1/signup`, response => {
+            console.log(response)
             console.log('welcome to Rail API!')
         })
 	}

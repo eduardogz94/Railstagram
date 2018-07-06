@@ -18,8 +18,7 @@ module Api::V1
     def create
       @user = User.find_by(username: params[:session][:username].downcase)
       if @user && @user.authenticate(params[:session][:password])
-        @session = @user.username
-        render json: @session
+        render json: @user
       else
         render json: 'Invalid email/password combination'
       end

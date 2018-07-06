@@ -1,28 +1,58 @@
-import history from '../Extra/history';
+import React , { Component } from 'react'
+import { AsyncStorage } from 'react-native'
 
-export default class Auth {
-
-  setSession(logged) {
-    localStorage.setItem('username', username);
-    localStorage.setItem('id',  id);
-    // navigate to the home route
-    history.replace('/home');
+export default class Auth extends Component {
+  state = {
+    session: ''
   }
 
-  getUsername() {
-    const username = localStorage.getItem('username');
+  async getItem(key) {
+    try {
+
+      await AsyncStorage.getItem(key).then(data => {
+        
+        this.state = {
+          session:data
+        }
+        
+        console.log(data)
+        console.log(this.state)
+        return data  
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
+  async setItem(key, item) {
+    try {
+      const jsonItem = await AsyncStorage.setItem(key,item);
+  
+      this.state = { 
+        session:jsonItem 
+      }
+      
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async resetSession() {
+    try{
+      await AsyncStorage.removeItem('session')
+
+      const session = await AsyncStorage.getItem('session')
+      this.setState({session:session})
+    } catch (error) {
+      console.log(error)
+    }
+  }  
+
+  checkSession() {
+    const username = this.getItem('session');
     if (!username) {
-      throw new Error('No access token found');
+      throw new Error('No session found');
     }
     return username;
   }
-
-  logout() {
-    // Clear access token and ID token from local storage
-    localStorage.removeItem('username');
-    localStorage.removeItem('id');
-    // navigate to the home route
-    history.replace('/home');
-  }
-  
 }
