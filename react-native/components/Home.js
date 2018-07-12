@@ -47,11 +47,11 @@ export default class Home extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Rails API users</Text>
-          {/* <Text>
-          {this.state.users.map((user) => {
+          <Text>
+          {/* {this.state.users.map((user) => {
             return(
-              <User user={user} key={user.id}/>)})}
-          </Text> */}
+              <User user={user} key={user.id}/>)})} */}
+          </Text>
         <LoginForm auth={auth} />
         {/* <SignupForm/> */}
         {/* <FindUser/> */}

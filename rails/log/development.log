@@ -6538,3 +6538,25 @@ Processing by Api::V1::UsersController#index as */*
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:07:00 -0400
+  [1m[35m (9.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (31.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 55ms (Views: 21.5ms | ActiveRecord: 35.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:07:47 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/api/v1/login" for 10.172.175.55 at 2018-07-12 14:08:55 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
