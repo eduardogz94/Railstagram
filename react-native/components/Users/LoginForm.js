@@ -4,6 +4,7 @@ import { Text, View, TextInput, Button } from 'react-native'
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
+import Title  from '../Extra/HomeTitle'
 
 export default class LoginForm extends Component {
     constructor(){
@@ -38,7 +39,7 @@ export default class LoginForm extends Component {
         return (
             <Error>
                 <View>
-                    <Text> Login </Text>
+                    <Title tagline='Login Form'/>
                     <TextInput 
 						onChangeText={username => this.username = username}
 						placeholder = 'Username'

@@ -1,9 +1,11 @@
 import React from 'react'
-import { Text, View, TextInput, Button } from 'react-native'
+import { StyleSheet, View, TextInput, Button } from 'react-native'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
+
+import Title from '../Extra/HomeTitle'
 
 class SignupForm extends React.Component {
     constructor(){
@@ -33,8 +35,8 @@ class SignupForm extends React.Component {
   	render() {
 		return (
 			<Error>
-				<View>
-					<Text>Signup</Text>
+				<View style={styles.container}>
+					<Title tagline='Sigup Form'/>
                     <TextInput 
 						onChangeText={username => this.username = username}
 						placeholder = 'Username'
@@ -57,5 +59,14 @@ class SignupForm extends React.Component {
   	}
 
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 3,
+		backgroundColor: '#fff',
+		alignItems: 'flex-start',
+		justifyContent: 'center',
+	},
+});
 
 export default  SignupForm;		

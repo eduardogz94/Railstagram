@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { myIp } from './Extra/MyIp'
 import { fetching } from './Extra/Fetch'
+import Title from './Extra/HomeTitle'
+
 
 import User from './Users/User'
 import LoginForm from './Users/LoginForm'
@@ -23,40 +25,38 @@ export default class Home extends React.Component {
   
   componentDidMount() {
     
-    fetching({}, 'GET', `http://${myIp}/api/v1/users`,
-    response => {
-      console.log(response)
-      this.setState({
-        users: response.user
-      })
-      
-      // console.log(response.status)
-      // console.log(response.user)
+    fetching({}, 'GET', `http://${myIp}/api/v1/users`, response => {
+      if (response.status == 200) {
+        this.setState({
+          users: response.user
+        })
+
+      } else {
+        console.log('there was an error')
+      }
     })
-    
-    
-    // const session = auth.getItem('session')
-    // console.log(session)
   }
   
   render() {
     const UserConsumer = UserContext.Consumer
     return (
-      <View style={styles.container}>
-        <Text>Rails API users</Text>
-          {/* <Text>
+      <View >
+        <Title tagline="Rails API users" />
+          <Text>
           {this.state.users.map((user) => {
             return(
               <User user={user} key={user.id}/>)})}
-          </Text> */}
-<Auth>
-  <UserConsumer>
-    {session => <Text>[{session}]</Text>}
-  </UserConsumer>
-</Auth>
+          </Text>
+
+        {/* <Auth>
+          <UserConsumer>
+            {session => <Text>[{session}]</Text>}    
+          </UserConsumer>
+        </Auth>
+
         <LoginForm auth={auth} />
-        <SignupForm/>
-        {/* <FindUser/> */}
+        <SignupForm auth={auth}/> */}
+        {/* <FindUser auth={auth}/>  */}
       </View>
     );
   }

@@ -4,6 +4,8 @@ import { Text, View, Button } from 'react-native'
 import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
 
+import Title from '../Extra/HomeTitle'
+
 
 export default class User extends Component {
     
@@ -20,6 +22,7 @@ export default class User extends Component {
     const { id, username, created_at} = this.props.user;
       return (
         <View>
+          <Title tagline = "User!"/>
           <Text>Username {username} </Text>
           <Text>This is users id {id}</Text>
           <Text>Timestamp {created_at}</Text>
