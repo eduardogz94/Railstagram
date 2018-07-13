@@ -1,15 +1,25 @@
 module Api::V1
   
   class UsersController < ApplicationController
-    
+  
+    before_action :set_user, only: [:log]
+
     def index
       @users = User.all
-      render json: { user:@users , status: '200' }
+      render json: { user: @users , status: '200' }
     end
 
     def show
       @user = User.find(params[:id])
       if @user.valid?
+        render json: { user:@user , status: '200' }
+      else 
+        render json: { data: 'No user found' , status: '404' }
+      end
+    end
+
+    def log
+        if @user
         render json: { user:@user , status: '200' }
       else 
         render json: { data: 'No user found' , status: '404' }
@@ -22,11 +32,11 @@ module Api::V1
           render json: { data: 'User created' , status: '200' }
         else 
           render json: { data:@user.errors, status: '400' }
-        end     
+        end       
     end
       
     def update
-      @user = User.update_attributes(params[:username, :password, :password_confirmation])
+      @user = User.update_attributes(user_params)
       if @user.save
           render json: { data: 'User updated' , status: '200' }
         else 
@@ -42,13 +52,15 @@ module Api::V1
           render json: { data: 'No user found' , status: '404' }
         end
     end
-
-
     
     private 
 
     def user_params
-      params.require(:user).permit(:username, :password, :password_confirmation)
+      params.require(:user).permit(:username, :password_digest)
+    end
+
+    def set_user
+      @user = User.find_by(username: params[:username], password_digest: params[:password_confirmation])
     end
 
   end

@@ -6560,3 +6560,2796 @@ Processing by Api::V1::SessionsController#create as */*
 Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:16:00 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:16:45 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:19:11 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:19:32 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:20:10 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:20:52 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:21:16 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:23:40 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:24:17 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:25:45 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:25:50 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:26:20 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:27:07 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:29:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:29:43 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:30:45 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:31:24 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:32:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:33:16 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:34:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:34:23 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:34:41 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:34:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:35:11 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:35:53 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:35:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:36:11 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:36:37 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:37:05 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:54:38 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:55:01 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:55:54 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:56:28 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:56:55 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:57:07 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:57:55 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:58:27 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:58:41 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:59:30 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 14:59:46 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:01:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:04:06 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:04:20 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:09:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:10:00 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:10:27 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:12:22 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:12:39 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:14:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:15:10 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:22:38 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:23:42 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:27:11 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:27:54 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:28:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:29:39 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:32:26 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:33:25 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:34:29 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:35:23 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 10.172.175.64 at 2018-07-12 15:36:05 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 18:55:02 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 18:57:31 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 18:57:57 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 18:58:27 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 18:58:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 18:59:22 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:00:00 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:00:14 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:00:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:01:45 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:02:01 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:02:40 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:02:46 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:02:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:03:23 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:04:36 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:04:42 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:05:04 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:05:37 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:05:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:06:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:06:39 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:06:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:07:34 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:07:56 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:08:23 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:08:38 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:09:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:09:20 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:09:44 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:09:51 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:10:22 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:10:32 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:11:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:11:22 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:12:04 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:12:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:12:31 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:12:48 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:13:06 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:13:27 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:13:52 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:14:05 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:14:19 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:14:44 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:15:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:15:43 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:16:00 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:16:54 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:17:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:17:45 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.106 at 2018-07-12 19:18:00 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 192.168.1.108 at 2018-07-12 22:31:09 -0400
+  [1m[35m (20.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/eduardo/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/eduardo/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 40ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 192.168.1.108 at 2018-07-12 22:31:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/favicon.ico" for 192.168.1.108 at 2018-07-12 22:31:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-12 22:31:17 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (31.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 62ms (Views: 18.6ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:31:48 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:31:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-12 22:34:57 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:42:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:42:51 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:43:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:43:56 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:44:08 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:44:47 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:44:54 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:46:27 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:48:17 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:49:20 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:49:43 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:51:20 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:51:29 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:52:02 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:53:48 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:55:17 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:56:30 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:56:40 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:57:02 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:57:16 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:57:33 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 22:57:34 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "logged"=>true, "session"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "logged"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 22:57:40 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "logged"=>true, "session"=>{"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "logged"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "t"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 22:57:46 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "logged"=>true, "session"=>{"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "logged"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "t"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:58:29 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 22:58:35 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "t"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 22:58:49 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "t"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 22:58:52 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "t"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 22:59:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 22:59:25 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "t"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 22:59:40 -0400
+Processing by Api::V1::SessionsController#create as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "session"=>{"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "eg"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:02:39 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:02:46 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "E"], ["LIMIT", 1]]
+  [1m[35mSQL (11.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "e"], ["created_at", "2018-07-13 03:02:46.259988"], ["updated_at", "2018-07-13 03:02:46.259988"], ["password_digest", "$2a$10$zdx0DpNrmAm9yUaYtjzaZuuTMGtKPG2yg1fmD8ngXneE1iCSwo3uq"]]
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 161ms (Views: 0.8ms | ActiveRecord: 81.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:03:39 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 2.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=E):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:04:22 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:04:25 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=Eg):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:05:55 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:06:01 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:06:04 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=E):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:06:09 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=E):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:07:04 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:07:06 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'={"username"=>""}):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-12 23:07:20 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 192.168.1.108 at 2018-07-12 23:09:57 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/eduardo/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/eduardo/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:10:19 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:10:21 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :password
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'={"username"=>""}):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:10:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:11:01 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"T", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `username' for #<Api::V1::UsersController:0x005638c2e2abc0>
+Did you mean?  user_params):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:11:27 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:11:29 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"T", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=T):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:12:29 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"T", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 3.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=T):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:14:22 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:14:23 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL AND ("users"."id" != $1) LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 95ms (Views: 0.6ms | ActiveRecord: 0.8ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/users_controller.rb:25:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:14:52 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:14:53 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL AND ("users"."id" != $1) LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:15:06 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (E) LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "e" does not exist
+LINE 1: SELECT  "users".* FROM "users" WHERE (E) LIMIT $1
+                                              ^
+: SELECT  "users".* FROM "users" WHERE (E) LIMIT $1):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:15:36 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:15:37 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `include?' for :username:Symbol):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:16:08 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:16:09 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `username' for #<Api::V1::UsersController:0x007f8ec405c7d8>
+Did you mean?  user_params):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:16:27 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:16:30 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"T", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (T) LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "t" does not exist
+LINE 1: SELECT  "users".* FROM "users" WHERE (T) LIMIT $1
+                                              ^
+: SELECT  "users".* FROM "users" WHERE (T) LIMIT $1):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:17:33 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:17:33 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = 'username' LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  
+app/controllers/api/v1/users_controller.rb:21:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:18:13 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:18:14 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = 'username' LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:18:22 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = 'username' LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:19:34 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:20:05 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:20:06 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `username' for #<Api::V1::UsersController:0x007f8eb03642c8>
+Did you mean?  user_params):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:20:24 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:20:25 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = 'username' LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:20:29 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"T", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = 'username' LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:20:53 -0400
+  
+SyntaxError (/home/eduardo/workspace/reactstagram/rails/app/controllers/api/v1/users_controller.rb:20: syntax error, unexpected ')'
+user = User.find_by(username:)
+                              ^):
+  
+app/controllers/api/v1/users_controller.rb:20: syntax error, unexpected ')'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:21:01 -0400
+  
+SyntaxError (/home/eduardo/workspace/reactstagram/rails/app/controllers/api/v1/users_controller.rb:20: syntax error, unexpected ')'
+user = User.find_by(username:)
+                              ^):
+  
+app/controllers/api/v1/users_controller.rb:20: syntax error, unexpected ')'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:21:10 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 1.5ms)
+
+
+  
+NameError (undefined local variable or method `username' for #<Api::V1::UsersController:0x005638c2752078>
+Did you mean?  user_params):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:21:16 -0400
+  
+SyntaxError (/home/eduardo/workspace/reactstagram/rails/app/controllers/api/v1/users_controller.rb:20: syntax error, unexpected ')'
+user = User.find_by(username:)
+                              ^):
+  
+app/controllers/api/v1/users_controller.rb:20: syntax error, unexpected ')'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:21:24 -0400
+  
+SyntaxError (/home/eduardo/workspace/reactstagram/rails/app/controllers/api/v1/users_controller.rb:21: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+      render json:@user
+                  ^):
+  
+app/controllers/api/v1/users_controller.rb:21: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:22:10 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:22:15 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Test", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Test"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-12 23:22:46 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:22:52 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Eg"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:22:55 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Eg"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:23:57 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (can't cast ActionController::Parameters):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:24:32 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 1.3ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:24:32 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-12 23:24:43 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Eg"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:08:16 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 1.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/api/v1/users_controller.rb:21:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:08:42 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 1.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/api/v1/users_controller.rb:21:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:09:10 -0400
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:09:20 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Eg' AND password_confirmation = '1')[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "password_confirmation" does not exist
+LINE 1: ..."users".* FROM "users" WHERE (username = 'Eg' AND password_c...
+                                                             ^
+: SELECT "users".* FROM "users" WHERE (username = 'Eg' AND password_confirmation = '1')):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:09:20 -0400
+Processing by Api::V1::UsersController#log as */*
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Eg' AND password_confirmation = '1')[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.9ms)
+
+
+  
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Eg' AND password_confirmation = '1')[0m
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "password_confirmation" does not exist
+LINE 1: ..."users".* FROM "users" WHERE (username = 'Eg' AND password_c...
+                                                             ^
+: SELECT "users".* FROM "users" WHERE (username = 'Eg' AND password_confirmation = '1')):
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.9ms)
+
+
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "password_confirmation" does not exist
+LINE 1: ..."users".* FROM "users" WHERE (username = 'Eg' AND password_c...
+                                                             ^
+: SELECT "users".* FROM "users" WHERE (username = 'Eg' AND password_confirmation = '1')):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:09:25 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Eg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Eg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Eg' AND password_confirmation = '1')[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "password_confirmation" does not exist
+LINE 1: ..."users".* FROM "users" WHERE (username = 'Eg' AND password_c...
+                                                             ^
+: SELECT "users".* FROM "users" WHERE (username = 'Eg' AND password_confirmation = '1')):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:09:57 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'E' AND password_confirmation = '1')[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 5.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "password_confirmation" does not exist
+LINE 1: ... "users".* FROM "users" WHERE (username = 'E' AND password_c...
+                                                             ^
+: SELECT "users".* FROM "users" WHERE (username = 'E' AND password_confirmation = '1')):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:10:24 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'E' AND password_confirmation = '1')[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "password_confirmation" does not exist
+LINE 1: ... "users".* FROM "users" WHERE (username = 'E' AND password_c...
+                                                             ^
+: SELECT "users".* FROM "users" WHERE (username = 'E' AND password_confirmation = '1')):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:10:44 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'E' AND password_confirmation = '1')[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "password_confirmation" does not exist
+LINE 1: ... "users".* FROM "users" WHERE (username = 'E' AND password_c...
+                                                             ^
+: SELECT "users".* FROM "users" WHERE (username = 'E' AND password_confirmation = '1')):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:11:02 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'E' AND password_digest = '1')[0m
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:11:10 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Et", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Et", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Et' AND password_digest = '1')[0m
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:11:12 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Et", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Et", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Et' AND password_digest = '1')[0m
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-13 00:11:39 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:13:32 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = '' AND password_digest = '')[0m
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:13:47 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'E' AND password_digest = '1')[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:14:10 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1')[0m
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:15:05 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"en", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"en", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'en' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'en' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'en' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:15:28 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"en", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"en", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'en' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'en' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `nil' for #<ActiveRecord::Relation []>
+Did you mean?  nil?):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'en' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:15:32 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"en", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"en", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'en' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'en' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `nil' for #<ActiveRecord::Relation []>
+Did you mean?  nil?):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'en' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:15:43 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"en", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"en", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'en' AND password_digest = '1')[0m
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:15:59 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1')[0m
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:16:06 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'a' AND password_digest = '1')[0m
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:18:12 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'a' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'a' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `exist?' for #<ActiveRecord::Relation []>
+Did you mean?  exists?):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'a' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:18:17 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE (username = 'a' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:18:32 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e", "password"=>"[FILTERED]"}}
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-13 00:19:12 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/api/v1/signup" for 192.168.1.107 at 2018-07-13 00:19:25 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"T", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "T"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2018-07-13 04:19:25.654570"], ["updated_at", "2018-07-13 04:19:25.654570"], ["password_digest", "$2a$10$RfzzJ.RYAT9ToAa5chI/pOv5R2hveyrsZFM41bVqgAz2JWz1xW9X2"]]
+  [1m[35m (48.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 182ms (Views: 0.2ms | ActiveRecord: 50.5ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:19:37 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"T", "password"=>"[FILTERED]"}}
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE (username = 'T' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:28:19 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"T", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'T' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'T' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'T' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:32:02 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"T", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'T' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'T' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'T' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:32:15 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:23 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:24 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:24 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:25 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:25 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:26 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:26 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:26 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:26 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:46 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 27ms (Views: 6.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:46 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:47 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:47 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:33:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-13 00:35:56 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-13 00:36:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/api/v1/users/7" for 192.168.1.107 at 2018-07-13 00:36:24 -0400
+Processing by Api::V1::UsersController#destroy as */*
+  Parameters: {"id"=>"7", "user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 36ms (Views: 0.9ms | ActiveRecord: 18.2ms)
+
+
+Started DELETE "/api/v1/users/8" for 192.168.1.107 at 2018-07-13 00:36:38 -0400
+Processing by Api::V1::UsersController#destroy as */*
+  Parameters: {"id"=>"8", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[35m (45.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 52ms (Views: 0.2ms | ActiveRecord: 46.8ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-13 00:37:34 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-13 00:39:13 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/v1/signup" for 192.168.1.107 at 2018-07-13 00:39:22 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"T", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"T", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "T"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2018-07-13 04:39:22.798609"], ["updated_at", "2018-07-13 04:39:22.798609"], ["password_digest", "$2a$10$p6g5vZs2rSCjJurwaBipEuEqcryEEMmP9Yj993x7TgCHwVyhi64aC"]]
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 89ms (Views: 0.2ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-13 00:39:49 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:39:51 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = '' AND password_digest = '') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = '' AND password_digest = '') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = '' AND password_digest = '') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:40:01 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Tt", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Tt", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'Tt' AND password_digest = '') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'Tt' AND password_digest = '') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'Tt' AND password_digest = '') LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-13 00:40:29 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:40:34 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Y", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Y", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'Y' AND password_digest = '') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'Y' AND password_digest = '') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'Y' AND password_digest = '') LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/users" for 192.168.1.107 at 2018-07-13 00:41:50 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:42:18 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"edugz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'edugz' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'edugz' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<User::ActiveRecord_Relation:0x007f6ed82d9eb8>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'edugz' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:43:32 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"edugz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'edugz' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'edugz' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<User::ActiveRecord_Relation:0x0055e74dd4cee0>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'edugz' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:43:36 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"edugz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'edugz' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'edugz' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<User::ActiveRecord_Relation:0x007f6ed838b910>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'edugz' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/signup" for 192.168.1.107 at 2018-07-13 00:44:01 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "E"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "e"], ["created_at", "2018-07-13 04:44:01.959265"], ["updated_at", "2018-07-13 04:44:01.959265"], ["password_digest", "$2a$10$Hq5f/kT.eFY.L8atgOMb2ebjBLBsfv01xPTZN8RXZLkBF4YcuzOXe"]]
+  [1m[35m (89.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 168ms (Views: 0.2ms | ActiveRecord: 91.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:44:13 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'E' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'E' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'E' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:44:56 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:45:02 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 00:58:12 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 18ms (Views: 7.1ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:59:16 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Class:0x0055e74de220e0>):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:59:27 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:59:37 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1')[0m
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 00:59:47 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `valid?' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 01:00:31 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Class:0x0055e74d3b7880>):
+  
+app/controllers/api/v1/users_controller.rb:20:in `log'
+Started POST "/api/v1/login" for 192.168.1.107 at 2018-07-13 01:02:28 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE (username = 'e' AND password_digest = '1') LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.108 at 2018-07-13 01:02:41 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edugz"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edugz"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edugz"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edugz"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edugz"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edugz"], ["LIMIT", 11]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edugz"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 11]]
+Started GET "/api/v1/users" for 172.20.10.2 at 2018-07-13 11:01:08 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/eduardo/workspace/reactstagram/rails/app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected [, expecting keyword_do or '{' or '('
+efore_action :set_user, only [:log]
+                              ^):
+  
+app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected [, expecting keyword_do or '{' or '('
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:02:57 -0400
+  
+SyntaxError (/home/eduardo/workspace/reactstagram/rails/app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected [, expecting keyword_do or '{' or '('
+efore_action :set_user, only [:log]
+                              ^):
+  
+app/controllers/api/v1/users_controller.rb:5: syntax error, unexpected [, expecting keyword_do or '{' or '('
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:05:59 -0400
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:06:09 -0400
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:06:09 -0400
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:06:09 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>""}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."passowrd_digest" = $2 LIMIT $3[0m  [["username", ""], ["passowrd_digest", ""], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 3.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.passowrd_digest does not exist
+LINE 1: ....* FROM "users" WHERE "users"."username" = $1 AND "users"."p...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "users.password_digest".
+: SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."passowrd_digest" = $2 LIMIT $3):
+  
+app/controllers/api/v1/users_controller.rb:63:in `set_user'
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Processing by Api::V1::UsersController#log as */*
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>""}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."passowrd_digest" = $2 LIMIT $3[0m  [["username", ""], ["passowrd_digest", ""], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.passowrd_digest does not exist
+LINE 1: ....* FROM "users" WHERE "users"."username" = $1 AND "users"."p...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "users.password_digest".
+: SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."passowrd_digest" = $2 LIMIT $3):
+  
+app/controllers/api/v1/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."passowrd_digest" = $2 LIMIT $3[0m  [["username", ""], ["passowrd_digest", ""], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 7.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.passowrd_digest does not exist
+LINE 1: ....* FROM "users" WHERE "users"."username" = $1 AND "users"."p...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "users.password_digest".
+: SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."passowrd_digest" = $2 LIMIT $3):
+  
+app/controllers/api/v1/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (94.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."passowrd_digest" = $2 LIMIT $3[0m  [["username", ""], ["passowrd_digest", ""], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 162.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.passowrd_digest does not exist
+LINE 1: ....* FROM "users" WHERE "users"."username" = $1 AND "users"."p...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "users.password_digest".
+: SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."passowrd_digest" = $2 LIMIT $3):
+  
+app/controllers/api/v1/users_controller.rb:63:in `set_user'
+Started GET "/api/v1/users" for 172.20.10.2 at 2018-07-13 11:06:13 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:07:06 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", ""], ["password_digest", ""], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `exists?' for nil:NilClass):
+  
+app/controllers/api/v1/users_controller.rb:22:in `log'
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:08:37 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", ""], ["password_digest", ""], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:08:51 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"E", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"E"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "E"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:08:58 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "e"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:09:20 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Y", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Y"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Y"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:09:26 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"P", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"P"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "P"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:09:54 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"P", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"P"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "P"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:10:00 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "e"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:10:07 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"P", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"P"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "P"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:10:25 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"P", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"P"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "P"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:10:33 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"P", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"P"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "P"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:11:04 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "e"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:11:04 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "e"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:11:04 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "e"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:11:04 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "e"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "e"], ["password_digest", "1"], ["LIMIT", 11]]
+Started POST "/api/v1/login" for 172.20.10.2 at 2018-07-13 11:11:26 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"edugz"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.2 at 2018-07-13 11:12:34 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:13:11 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Fabs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Fabs"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fabs"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:13:19 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Fabs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Fabs"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fabs"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:13:51 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Fabs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Fabs"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fabs"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:15:12 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Fabs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Fabs"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fabs"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:15:17 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Fabs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Fabs"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fabs"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:15:18 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Fabs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Fabs"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fabs"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:15:22 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Fabs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Fabs"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fabs"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.2 at 2018-07-13 11:16:05 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.2 at 2018-07-13 11:16:11 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.2 at 2018-07-13 11:16:19 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.2 at 2018-07-13 11:16:33 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/signup" for 172.20.10.2 at 2018-07-13 11:16:42 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Fab", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"Fab", "password_digest"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fab"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "fab"], ["created_at", "2018-07-13 15:16:42.219263"], ["updated_at", "2018-07-13 15:16:42.219263"], ["password_digest", "1"]]
+  [1m[35m (42.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 50ms (Views: 0.2ms | ActiveRecord: 43.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.43.134 at 2018-07-13 11:28:02 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/api/v1/signup" for 192.168.43.134 at 2018-07-13 11:28:15 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Fab", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"Fab", "password_digest"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fab"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/api/v1/login" for 192.168.43.134 at 2018-07-13 11:29:35 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"Edugz", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Edugz"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "Edugz"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/login" for 192.168.43.134 at 2018-07-13 11:29:45 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"edugz"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 192.168.43.134 at 2018-07-13 11:30:24 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/signup" for 192.168.43.134 at 2018-07-13 11:30:34 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"Hola", "password_digest"=>"[FILTERED]", "user"=>{"username"=>"Hola", "password_digest"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Hola"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "hola"], ["created_at", "2018-07-13 15:30:34.250697"], ["updated_at", "2018-07-13 15:30:34.250697"], ["password_digest", "1"]]
+  [1m[35m (52.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 58ms (Views: 0.2ms | ActiveRecord: 53.6ms)
+
+
+Started GET "/api/v1/users" for 192.168.43.134 at 2018-07-13 11:33:40 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.43.134 at 2018-07-13 11:36:46 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 192.168.43.134 at 2018-07-13 11:38:49 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+
+

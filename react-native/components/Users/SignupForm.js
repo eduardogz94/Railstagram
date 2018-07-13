@@ -19,13 +19,14 @@ class SignupForm extends React.Component {
 
         const options = {
             username: this.username,
-            password: this.password,
-            password_confirmation: this.password_confirmation
+            password_digest: this.password,
         }
 
         fetching(options, 'POST', `http://${myIp}/api/v1/signup`, response => {
-            console.log(response)
-            console.log('welcome to Rail API!')
+			response.status == 200 ?
+            (console.log(response),  
+			console.log('welcome to Rail API!'))
+			: console.log('invalid')
         })
 	}
 

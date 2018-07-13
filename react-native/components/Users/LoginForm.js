@@ -16,20 +16,22 @@ export default class LoginForm extends Component {
 
     logIn = (event) => {
         event.preventDefault()
-        
-        
+    
         const options = { 
             username:this.username,
-            password:this.password,
+            // password:this.password,
             password_confirmation:this.password_confirmation
         }
         
-        this.props.auth.setItem('session', this.username )
-        console.log(this.props.auth.state)
-        // fetching(options, 'POST', `http://${myIp}/api/v1/login`, response => {
-        //     console.log(response)
-        //     console.log('welcome to Rail API!')
-        // })
+        console.log(this.username)
+        // this.props.auth.multi(['username',username], ['logged', true])
+        fetching(options, 'POST', `http://${myIp}/api/v1/login`, response => {
+            console.log(response)
+            response.status == 200 ? (
+                this.props.auth.setItem('session', this.username ),
+                console.log('welcome to Rail API!')
+            ) : console.log('invalid credentials') ;
+        })
     }
 
     render() {

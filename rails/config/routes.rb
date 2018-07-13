@@ -6,9 +6,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users
         post    '/signup',  to: 'users#create'
-        get    '/is_logged',   to: 'sessions#test'
-        post   '/login',   to: 'sessions#create'
-        delete '/logout',  to: 'sessions#destroy'
+        get    '/is_logged',   to: 'users#test'
+        post   '/login',   to: 'users#log'
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
