@@ -13,17 +13,43 @@ export const Index = createStackNavigator({
     Home:{
         screen:Home,
         navigationOptions:{
-            title:'Home'
+            title:'Railstagram'
         }
-    } 
+    }
 });
 
+export const Login = createStackNavigator({
+    Login:{
+        screen:LoginForm,
+        navigationOptions:{
+            title:'Railstagram'
+        }
+    }
+});
+
+export const Signup = createStackNavigator({
+    Signup:{
+        screen:SignupForm,
+        navigationOptions:{
+            title:'Railstagram'
+        }
+    }
+});
+
+export const Users = createStackNavigator({
+    Users:{
+        screen:FindUser,
+        navigationOptions:{
+            title:'Railstagram'
+        }
+    }
+});
 export const UserStack = createBottomTabNavigator(
   {
     Home:Index,
-    Users: FindUser,
-    Login: LoginForm,
-    Signup: SignupForm,
+    Users: Users,
+    Login: Login,
+    Signup: Signup
   },
   {
     navigationOptions: ({ navigation }) => ({

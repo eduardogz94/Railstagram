@@ -1,13 +1,19 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
+import Auth, { UserContext } from './components/Auth/Auth';
 import { UserStack } from './components/Routes'
 
 export default class App extends React.Component {
   render() {
+    const UserConsumer = UserContext.Consumer
     return (
       <View style={styles.container}>
-        <UserStack/>
+        <Auth>
+          <UserConsumer>
+            {session => <UserStack session={session}></UserStack>}    
+          </UserConsumer>
+        </Auth>
       </View>
     );
   }
@@ -18,3 +24,4 @@ const styles = StyleSheet.create({
     flex: 1
   },
 });
+

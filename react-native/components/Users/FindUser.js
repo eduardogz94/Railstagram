@@ -1,49 +1,57 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, Button } from 'react-native'
+import {  View, ScrollView } from 'react-native'
+import { List, SearchBar } from 'react-native-elements'
+
 import Error from '../Extra/ErrorBoundary'
+import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
-import Title from '../Extra/HomeTitle'
+
+import User from '../Users/User'
 
 export default class FindUser extends React.Component {
 	constructor(){
 		super()
-		this.id = ''
-	}
+		this.state = {
+			users: []
+		}
+	}	
 
-	show = (event) => {
-        event.preventDefault()
-      	console.log(this.id)
-      
-    //   fetching({}, 'GET', `http://10.172.175.155:4000/api/v1/users/${this.id}`, response => {
-    //     console.log(response)
-    //   })
-	  
+	show = (username) => {
+		fetching({}, 'GET', `http://${myIp}/api/v1/users/find/${username}`, response => {
+			if (response.status == 200 ) {
+				console.log(response)
+				
+				this.setState({
+					users:[ response.user ]
+				})
+			} else {
+				console.log('not true')
+			}
+		})
 	}
 
 	render() {
 		return (
 			<Error>
-				<View style={styles.container}>
-					<Title tagline = "Rails API Search users"/>
-					<TextInput 
-						onChangeText={id => this.id = id}
-						placeholder = 'Id of user'
-					/>
-					<Button 
-						onPress={this.show}
-						title = 'Search'/>
+				<View>
+					<SearchBar
+						lightTheme
+						round
+						onChangeText={username => this.show(username)}
+						onClearText={username => this.show(username)}
+						placeholder='Type Here...' />
+
+					<ScrollView>
+							<List>
+								{this.state.users.map((user) => {
+									return(
+									<User user={user} key={user.id}/>)
+								})}
+							</List>
+					</ScrollView>
+
 				</View>
 			</Error>
 		);
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 3,
-		backgroundColor: '#fff',
-		alignItems: 'flex-start',
-		justifyContent: 'center',
-	},
-});
-

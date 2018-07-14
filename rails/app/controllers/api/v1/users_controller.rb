@@ -3,6 +3,7 @@ module Api::V1
   class UsersController < ApplicationController
   
     before_action :set_user, only: [:log]
+    before_action :get_user, only: [:get]
 
     def index
       @users = User.all
@@ -18,6 +19,14 @@ module Api::V1
       end
     end
 
+    def get
+      if @user
+        render json: { user:@user , status: '200' }
+      else 
+        render json: { data: 'No user found' , status: '404' }
+      end
+    end
+
     def log
         if @user
         render json: { user:@user , status: '200' }
@@ -26,7 +35,7 @@ module Api::V1
       end
     end
 
-    def create
+    def new
       @user = User.new(user_params)
         if @user.save
           render json: { data: 'User created' , status: '200' }
@@ -56,11 +65,15 @@ module Api::V1
     private 
 
     def user_params
-      params.require(:user).permit(:username, :password_digest)
+      params.require(:user).permit(:username, :password)
     end
 
     def set_user
-      @user = User.find_by(username: params[:username], password_digest: params[:password_confirmation])
+      @user = User.find_by(username: params[:username], password_digest: params[:password])
+    end
+
+    def get_user
+      @user = User.find_by(username: params[:username])
     end
 
   end
