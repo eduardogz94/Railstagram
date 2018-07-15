@@ -1,1 +1,1 @@
-export const myIp = `192.168.1.107:4000`
+export const myIp = `192.168.1.105:4000`

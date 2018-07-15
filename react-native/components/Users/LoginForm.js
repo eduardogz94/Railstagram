@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, TextInput } from 'react-native'
 import { Button } from 'react-native-elements'
+import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
@@ -16,7 +17,12 @@ const auth = new Auth()
 
 export default class LoginForm extends Component {
     constructor(){
-        super()    
+        super()  
+
+        this.state = {
+            passwords_error: '',
+            username_error: ''
+        }
         this.username = '',
         this.password = '',
         this.password_confirmation = ''
@@ -37,12 +43,13 @@ export default class LoginForm extends Component {
                
                 response.status == 200 
                     ? (auth.setItem('session',this.username), 
-                        this.props.navigation.navigate('Home')) 
-                    : console.log('invalid credentials') ;
+                        this.props.navigation.navigate('Home')
+                    ) 
+                    : this.setState({username_error: 'Username doesnt exist'}) ;
             })
             
         } else {
-            console.log('password doesnt match')
+            this.setState({passwords_error: 'Passwords didnt match'})
         }
     }
 
@@ -53,24 +60,33 @@ export default class LoginForm extends Component {
 
                 <Title tagline='Login Form'/>
 
-                    <TextInput style={inputs.login}
+                    <FormLabel>Name</FormLabel>
+					<FormInput 
+						style={inputs.login}
                         onChangeText={username => this.username = username}
                         placeholder = 'Username'
                         autoCapitalize={'none'}
-                        autoCorrect={false}
-                    />
-                    <TextInput style={inputs.login}
+					/>
+					<FormValidationMessage>{this.state.username_error}</FormValidationMessage>
+					
+					<FormLabel>Password</FormLabel>
+                    <FormInput style={inputs.login}
                         onChangeText={password => this.password = password}
                         placeholder = 'Password'
                         secureTextEntry={true}
                         autoCapitalize={'none'}
                     />
-                    <TextInput style={inputs.login}
+					<FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
+
+					<FormLabel>Password Confirmation</FormLabel>
+                    <FormInput style={inputs.login}
                         onChangeText={password_confirmation => this.password_confirmation = password_confirmation}
                         placeholder = 'Password Confirmation'
                         secureTextEntry={true}
                         autoCapitalize={'none'}
                     />
+					<FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
+
                     <Button style={{marginTop: 50}}
                         onPress={this.logIn}
                         title = 'Log in'

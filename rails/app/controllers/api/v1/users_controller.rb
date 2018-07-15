@@ -65,7 +65,7 @@ module Api::V1
     private 
 
     def user_params
-      params.require(:user).permit(:username, :password)
+      params.require(:user).permit(:username, :password_digest)
     end
 
     def set_user

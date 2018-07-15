@@ -37,6 +37,7 @@ export default class FindUser extends React.Component {
 					<SearchBar
 						lightTheme
 						round
+						autoCapitalize={'none'}
 						onChangeText={username => this.show(username)}
 						onClearText={username => this.show(username)}
 						placeholder='Type Here...' />
