@@ -35,9 +35,10 @@ module Api::V1
       end
     end
 
-    def new
+    def create
       @user = User.new(user_params)
-        if @user.save
+      @user.picture = "data:image/#{params[:type]};base64, #{params[:picture]}"
+      if @user.save! 
           render json: { data: 'User created' , status: '200' }
         else 
           render json: { data:@user.errors, status: '400' }
@@ -65,7 +66,7 @@ module Api::V1
     private 
 
     def user_params
-      params.require(:user).permit(:username, :password_digest)
+      params.require(:user).permit(:username, :password_digest, :picture)
     end
 
     def set_user
@@ -73,7 +74,7 @@ module Api::V1
     end
 
     def get_user
-      @user = User.find_by(username: params[:username])
+      @user = User.where(username: params[:username])
     end
 
   end

@@ -1,7 +1,9 @@
 import React, { Component }from 'react'
-import { View, TextInput } from 'react-native'
+import { View, TextInput, ScrollView, Image } from 'react-native'
 import { Button } from 'react-native-elements'
 import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
+import { ImagePicker, Permissions } from 'expo'
+import imageType from 'image-type'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
@@ -21,7 +23,9 @@ export default class SignupForm extends Component {
 
 		this.state = {
 			passwords_error: '',
-			username_error: ''
+			username_error: '',
+			image: null,
+			type: null
 		}
         this.username = '',
         this.password = '',
@@ -31,30 +35,54 @@ export default class SignupForm extends Component {
     
 	signUp = (event) => {
 		event.preventDefault()
-		
+		console.log(this.username)
 		if (this.password === this.password_confirmation) {
+
 			const options = {
 				username: this.username,
 				password_digest: this.password,
+				picture: this.state.image,
+				type: this.state.type
 			}
-			
+
 			fetching(options, 'POST', `http://${myIp}/api/v1/signup`, response => {
-				
 				response.status == 200 
 					? (console.log(response), 
-					   console.log('welcome to Rail API!')
+						console.log('welcome to Rail API!')
 					)
 					: this.setState({username_error: 'Username already exist'})
 			})
-
 		} else {
 			this.setState({passwords_error: 'Passwords didnt match'})
 		}
 	}
 
+	_pickImage = async () => {
+        // const status =  Permissions.askAsync(Permissions.CAMERA_ROLL).then(async data => {
+            // console.log(data)
+            let result = await ImagePicker.launchImageLibraryAsync({
+              allowsEditing: true,
+			  aspect: [4, 3],
+			  base64: true
+            });
+        
+			
+            if (!result.cancelled) {
+				const type = result.uri.substr(result.uri.indexOf('.')+1)
+				console.log(type)
+				this.setState({ image:result.base64, show:result.uri, type });
+            }
+        // }).catch(err => {
+        //     console.log(err)
+        // })
+  	};
+
   	render() {
+		let { image, show } = this.state;
+
 		return (
 		<Error>
+			<ScrollView>
 			<View style={inputs.inputWrapper}>
 
 				<Title tagline='Sigup Form'/>
@@ -85,7 +113,13 @@ export default class SignupForm extends Component {
                         autoCapitalize={'none'}
                     />
 					<FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
-
+					<Button
+						title="Pick an image from camera roll"
+						onPress={this._pickImage}
+						/>
+					{image &&
+					<Image source={{ uri: show }} style={{ width: 200, height: 200 }} />}
+   
 					<Button 
 						style={{marginTop: 50}}
 						rightIcon={{name: 'code'}}
@@ -94,6 +128,7 @@ export default class SignupForm extends Component {
 					/>
 
 			</View>
+			</ScrollView>
 		</Error>
 		)
   	}

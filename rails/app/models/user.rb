@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     before_save { self.username = username.downcase }
+    mount_base64_uploader :picture, PictureUploader
 
     validates :username,  presence: true, uniqueness: { case_sensitive: false }
     
