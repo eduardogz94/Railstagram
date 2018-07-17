@@ -20,12 +20,12 @@ export default class User extends Component {
   }
 
   render() {
-    const { id, username, created_at} = this.props.user;
+    const { id, username, created_at, picture} = this.props.user;
       return (
         <ListItem
           roundAvatar
           key={id}
-          avatar = {`https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg`}
+          avatar = {(picture.url != null) ? `http://10.172.175.104:4000${picture.url}` : null}
           title={username}
           subtitle={'Hello World'}
           onPress={() => this.delete(id)}/>
