@@ -14,19 +14,14 @@ export default class Profile extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            user: {
-                picture: {
-                    url: ''
-                }
-            }
         }
     }
     
     
     componentWillMount = () => {
-        auth.getItem('session').then(data => {
-            fetching({}, 'GET', `${myIp}/api/v1/users/find/${data}`, response => {
-                console.log(response)
+        auth.getItem('id').then(data => {
+            fetching({}, 'GET', `${myIp}/api/v1/users/id/${data}`, response => {
+                console.log(response.user)
                 response.status == 200 
                     ? this.setState({user:response.user}) 
                     : alert('Error retrieving the profile')

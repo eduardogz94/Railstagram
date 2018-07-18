@@ -8,18 +8,25 @@ export default class Auth extends Component {
   constructor() {
     super()
     this.state = {
-      session: ''
+      session: '',
+      id: ''
     }
   }  
 
   componentDidMount = () => {
     this.getItem('session').then(data => {
       this.setState({session:data})
+    }).done();
+
+    this.getItem('id').then(data => {
+      this.setState({
+        id: data
+      })
       console.log(this.state)
     }).done();
   }
   
-  async getItem(key) {
+  getItem = async (key) => {
     try {
       const data = await AsyncStorage.getItem(key)
       return data;    
@@ -28,7 +35,7 @@ export default class Auth extends Component {
     }
   }
   
-  async setItem(key,item) {
+  setItem = async (key,item) => {
     try {
       const data = await AsyncStorage.setItem(key,item)
       this.state = `{${key}:${data}}`
@@ -38,30 +45,22 @@ export default class Auth extends Component {
     }
   }
 
-  async multi(...items) {
+  logged = async (session,id) => {
     try {
-      console.log(items)
-      const data = await AsyncStorage.multiSet(...items)
-      
-      console.log(data)
-      // this.setState({
-      //   session: data
-      // })
-      // return data;
+      console.log(session)
+      console.log(id)
+      await AsyncStorage.multiSet(['session', session], ['id', id])
+      this.state = {session:session, id:id}
     } catch (error) {
       console.log(error)
     }
   }
 
-  async resetSession() {
+  resetSession = async () => {
     try{
-      await AsyncStorage.removeItem('session')
-
-      this.getItem('session').then(data => {
-        console.log(data)
-        this.setState({session:data})
-        console.log(this.state)
-      }).done();
+      const data = await AsyncStorage.clear()
+      this.setState({session:'', id:''})
+      console.log(this.state)
 
     } catch (error) {
       console.log(error)
@@ -70,7 +69,6 @@ export default class Auth extends Component {
 
   checkSession() {
     this.getItem('session').then(data => {
-      console.log(data)
       if (data !== null) {
         alert(data)
           return data;
