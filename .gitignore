@@ -22,3 +22,5 @@
 /node_modules
 
 .byebug_history
+
+/rails/public/uploads

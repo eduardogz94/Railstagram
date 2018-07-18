@@ -7,7 +7,7 @@ Rails.application.routes.draw do
         get   '/users/find/:username',   to: 'users#get'
         get   '/users/id/:id',   to: 'users#show'
         
-        post    '/signup',  to: 'users#new'
+        post    '/signup',  to: 'users#create'
         post   '/login',   to: 'users#log'
         
         patch '/edit/:id', to: 'users#update'

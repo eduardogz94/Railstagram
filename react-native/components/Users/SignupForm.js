@@ -1,6 +1,8 @@
 import React, { Component }from 'react'
-import { ScrollView } from 'react-native'
-import { Button, FormValidationMessage } from 'react-native-elements'
+import { View, ScrollView, Image } from 'react-native'
+import { Button } from 'react-native-elements'
+import { FormValidationMessage } from 'react-native-elements'
+import { ImagePicker } from 'expo'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
@@ -22,7 +24,9 @@ export default class SignupForm extends Component {
 			username_error: '',
 			username: '',
 			password: '',
-			password_confirmation: ''
+			password_confirmation: '',
+			image: null,
+			type: null
 		}
 	}
 	
@@ -31,21 +35,21 @@ export default class SignupForm extends Component {
 		event.preventDefault()
 		this.checkValues()
 		if (this.state.password === this.state.password_confirmation) {
-			
+
 			const options = {
-				username: this.state.username,
-				password_digest: this.state.password,
+				username: this.username,
+				password_digest: this.password,
+				picture: this.state.image,
+				type: this.state.type
 			}
-			
-			fetching(options, 'POST', `${myIp}/api/v1/signup`, response => {
-				
+
+			fetching(options, 'POST', `http://${myIp}/api/v1/signup`, response => {
 				response.status == 200 
 					? (console.log(response), 
-					   console.log('welcome to Rail API!')
+						console.log('welcome to Rail API!')
 					)
 					: this.setState({username_error: 'Username already exist'})
 			})
-
 		} else {
 			this.setState({passwords_error: 'Passwords didnt match'})
 		}
@@ -59,8 +63,25 @@ export default class SignupForm extends Component {
 		password == '' ? this.setState({passwords_error:'Cant be blank and both must be equals'}) 
 		: this.setState({passwords_error:''})
 	} 
+	
+	pickImage = async () => {
+		let result = await ImagePicker.launchImageLibraryAsync({
+			allowsEditing: true,
+			aspect: [4, 3],
+			base64: true
+		});
+	
+		
+		if (!result.cancelled) {
+			const type = result.uri.substr(result.uri.indexOf('.')+1)
+			console.log(type)
+			this.setState({ image:result.base64, show:result.uri, type });
+		}
+  	};
 
   	render() {
+		let { image, show } = this.state;
+
 		return (
 		<Error>
 			<ScrollView style={inputs.inputWrapper}>
@@ -91,7 +112,13 @@ export default class SignupForm extends Component {
                         autoCapitalize={'none'}
                     />
 					<FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
-
+					<Button
+						title="Pick an image from camera roll"
+						onPress={this.pickImage}
+						/>
+					{image &&
+					<Image source={{ uri: show }} style={{ width: 200, height: 200 }} />}
+   
 					<Button 
 						style={{marginTop: 50}}
 						rightIcon={{name: 'code'}}
