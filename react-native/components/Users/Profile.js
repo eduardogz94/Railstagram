@@ -14,6 +14,14 @@ export default class Profile extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            user: {
+                id: '',
+                username: '',
+                picture: {
+                    url:''
+                },
+                created_at:'',
+            }
         }
     }
     
@@ -26,6 +34,7 @@ export default class Profile extends Component {
                     ? this.setState({user:response.user}) 
                     : alert('Error retrieving the profile')
             })
+            console.log(this.state.user)
         })    
     }
   
@@ -36,8 +45,8 @@ export default class Profile extends Component {
             <View>
                 <Card  
                     title={username}
+                    image = {(picture.url != null) ? {uri:`${myIp}/${picture.url}`} : null}
                     >
-                    {/* <Image source={(picture.url != null) ? `${myIp}/${picture.url}` : null}/> */}
                     <Text style={{marginBottom: 10}}>
                         {created_at}
                     </Text>
