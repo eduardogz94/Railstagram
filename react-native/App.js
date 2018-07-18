@@ -9,7 +9,11 @@ export default class App extends React.Component {
     const UserConsumer = UserContext.Consumer
     return (
       <View style={styles.container}>
-           <UserStack></UserStack>  
+        <Auth>
+          <UserConsumer>
+            {session => <UserStack session={session}></UserStack>}    
+          </UserConsumer>
+        </Auth>
       </View>
     );
   }
@@ -20,4 +24,3 @@ const styles = StyleSheet.create({
     flex: 1
   },
 });
-

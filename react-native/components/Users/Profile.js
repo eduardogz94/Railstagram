@@ -14,16 +14,14 @@ export default class Profile extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            user: []
-            }
+        }
     }
     
     
-    componentDidMount = () => {
-        alert('mounting profile')
-        auth.getItem('session').then(data => {
-            fetching({}, 'GET', `${myIp}/api/v1/users/find/${data}`, response => {
-                console.log(response)
+    componentWillMount = () => {
+        auth.getItem('id').then(data => {
+            fetching({}, 'GET', `${myIp}/api/v1/users/id/${data}`, response => {
+                console.log(response.user)
                 response.status == 200 
                     ? this.setState({user:this.state.user.concat( response.use )}) 
                     : alert('Error retrieving the profile')

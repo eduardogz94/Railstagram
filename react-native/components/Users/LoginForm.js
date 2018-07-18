@@ -23,8 +23,7 @@ export default class LoginForm extends Component {
             passwords_error: '',
             username_error: '',
             username: '',
-            password: '',
-            password_confirmation: ''
+            password: ''
         }
     }
 
@@ -32,7 +31,7 @@ export default class LoginForm extends Component {
         event.preventDefault()
         this.checkValues()
 
-        if (this.state.password === this.state.password_confirmation) {
+        if ( (this.state.password || this.state.username) !== '') {
             
             const options = { 
                 username: this.state.username,
@@ -42,14 +41,14 @@ export default class LoginForm extends Component {
             fetching(options, 'POST', `${myIp}/api/v1/login`, response => {
                 response.status == 200 
                     ? (
-                        auth.setItem('session',this.state.username), 
+                        // auth.logged(this.state.username, JSON.stringify(response.user.id)),
+                        auth.setItem('session',this.state.username),
+                        auth.setItem('id', JSON.stringify(response.user.id)),
                         this.props.navigation.navigate('Home')
                     ) 
                     : this.setState({username_error: 'Username doesnt exist'}) ;
             })
             
-        } else {
-            this.setState({passwords_error: 'Passwords didnt match'})
         }
     }
 
@@ -58,7 +57,7 @@ export default class LoginForm extends Component {
         username == '' ? this.setState({username_error:'Cant be blank'}) 
             : this.setState({username_error: ''})
 
-        password == '' ? this.setState({passwords_error:'Cant be blank and both must be equals'}) 
+        password == '' ? this.setState({passwords_error:'Cant be blank'}) 
         : this.setState({passwords_error:''})
     } 
 
@@ -82,14 +81,6 @@ export default class LoginForm extends Component {
                         autoCapitalize={'none'}/>
                     <FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
 
-					<UserInputs 
-                        label='Password Confirmation'
-                        onChangeText={password_confirmation => this.setState({password_confirmation:password_confirmation})}
-                        placeholder = 'Password Confirmation'
-                        secureTextEntry={true}
-                        autoCapitalize={'none'}/>
-                    <FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
-			
                     <Button style={{marginTop: 50}}
                         onPress={this.logIn}
                         title = 'Log in'/>
