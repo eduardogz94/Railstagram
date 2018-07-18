@@ -68,8 +68,9 @@ export default class SignupForm extends Component {
         
 			
             if (!result.cancelled) {
-				const type = result.uri.substr(result.uri.indexOf('.')+1)
-				console.log(type)
+				let type = result.uri.substr(result.uri.indexOf('.')+1)
+				type = (type == 'jpg') ? 'jpeg' : type 
+				alert(type)
 				this.setState({ image:result.base64, show:result.uri, type });
             }
         // }).catch(err => {
