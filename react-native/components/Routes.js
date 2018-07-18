@@ -96,7 +96,7 @@ export const UserStack = createBottomTabNavigator(
         const { routeName } = navigation.state;
         let iconName;
         if (routeName == 'Home') {
-          iconName = ``;
+          iconName = `ios-home${focused ? '' : '-outline'}`;
         } else if (routeName === 'Profile') {
           iconName = `ios-contact${focused ? '' : '-outline'}`;
         } else if (routeName === 'Users') {

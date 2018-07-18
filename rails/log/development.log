@@ -2343,3 +2343,186 @@ Processing by Api::V1::UsersController#index as */*
 Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:30:07 -0400
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 46ms (Views: 26.9ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:30:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:31:24 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/find/cesar" for 172.20.10.5 at 2018-07-18 13:31:27 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"cesar", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username like '%cesar%')[0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.5 at 2018-07-18 13:31:40 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"cesar", "password"=>"[FILTERED]", "user"=>{"username"=>"cesar", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "cesar"], ["password_digest", "a"], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:32:53 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/cesar" for 172.20.10.5 at 2018-07-18 13:32:55 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"cesar", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username like '%cesar%')[0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:33:13 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/cesar" for 172.20.10.5 at 2018-07-18 13:33:20 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"cesar", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username like '%cesar%')[0m
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:33:43 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/cesar" for 172.20.10.5 at 2018-07-18 13:38:09 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"cesar", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username like '%cesar%')[0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:39:29 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/cesar" for 172.20.10.5 at 2018-07-18 13:39:31 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"cesar", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username like '%cesar%')[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:40:33 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/cesar" for 172.20.10.5 at 2018-07-18 13:40:39 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"cesar", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username like '%cesar%')[0m
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:41:11 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/cesar" for 172.20.10.5 at 2018-07-18 13:41:14 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"cesar", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username like '%cesar%')[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:41:36 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.5 at 2018-07-18 13:41:44 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"cesar", "password"=>"[FILTERED]", "user"=>{"username"=>"cesar", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "cesar"], ["password_digest", "a"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/find/cesar" for 172.20.10.5 at 2018-07-18 13:41:46 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"cesar", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username like '%cesar%')[0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:42:22 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/cesar" for 172.20.10.5 at 2018-07-18 13:42:24 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"cesar", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username like '%cesar%')[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:42:43 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 172.20.10.5 at 2018-07-18 13:42:55 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"cesar", "password"=>"[FILTERED]", "user"=>{"username"=>"cesar", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "cesar"], ["password_digest", "a"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/find/cesar" for 172.20.10.5 at 2018-07-18 13:43:01 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"cesar", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username like '%cesar%')[0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 172.20.10.5 at 2018-07-18 13:43:29 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+

@@ -14,27 +14,25 @@ export default class Profile extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            user: {
-                picture: {
-                    url: ''
-                }
+            user: []
             }
-        }
     }
     
     
-    componentWillMount = () => {
+    componentDidMount = () => {
+        alert('mounting profile')
         auth.getItem('session').then(data => {
             fetching({}, 'GET', `${myIp}/api/v1/users/find/${data}`, response => {
                 console.log(response)
                 response.status == 200 
-                    ? this.setState({user:response.user}) 
+                    ? this.setState({user:this.state.user.concat( response.use )}) 
                     : alert('Error retrieving the profile')
             })
         })    
     }
   
     render() {
+        alert(JSON.stringify(this.state.user))
         const { id, username, created_at, picture} = this.state.user;
         return (
         <Error>    
@@ -42,7 +40,7 @@ export default class Profile extends Component {
                 <Card  
                     title={username}
                     >
-                    {/* <Image source={(picture.url != null) ? `${myIp}/${picture.url}` : null}/> */}
+                    <Image source={(picture.url != null) ? `${myIp}/${picture.url}` : null}/>
                     <Text style={{marginBottom: 10}}>
                         {created_at}
                     </Text>
