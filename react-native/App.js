@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 import Auth, { UserContext } from './components/Auth/Auth';
-import { UserStack } from './components/Routes'
+import { UserStack, GuestStack } from './components/Routes'
 
 export default class App extends React.Component {
   render() {

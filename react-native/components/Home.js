@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
-import { Card, Button } from 'react-native-elements'
+import { StyleSheet, ScrollView } from 'react-native';
+import { Card } from 'react-native-elements'
 
 import Error from './Extra/ErrorBoundary'
 import { myIp } from './Extra/MyIp'

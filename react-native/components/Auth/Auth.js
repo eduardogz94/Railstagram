@@ -10,7 +10,6 @@ export default class Auth extends Component {
     this.state = {
       session: ''
     }
-    
   }  
 
   componentDidMount = () => {
@@ -84,10 +83,10 @@ export default class Auth extends Component {
     render() {
     return (
       <UserContext.Provider value={this.state.session}>
-          
+{/*           
           <TouchableOpacity onPress={() => this.checkSession()}>
             <Text style={styles.text} >check session</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
           
           <TouchableOpacity onPress={() => this.resetSession()}>
             <Text style={styles.text}>reset session</Text>

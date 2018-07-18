@@ -8,7 +8,7 @@ export default class User extends Component {
     
   delete = (id) => {
     alert(id)
-      // fetching({}, 'DELETE' , `${myIp}/api/v1/users/${id}`,  response => {
+      // fetching({}, 'DELETE' , `${myIp}/api/v1/edit/${id}`,  response => {
       //   console.log(response)
       //   console.log(response.data)
       //   console.log(response.status)
@@ -25,7 +25,7 @@ export default class User extends Component {
         <ListItem
           roundAvatar
           key={id}
-          avatar = {(picture.url != null) ? `http://10.172.175.104:4000${picture.url}` : null}
+          avatar = {(picture.url != null) ? `${myIp}/${picture.url}` : null}
           title={username}
           subtitle={'Hello World'}
           onPress={() => this.delete(id)}/>
