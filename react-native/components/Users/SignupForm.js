@@ -1,8 +1,8 @@
 import React, { Component }from 'react'
-import { View, ScrollView, Image } from 'react-native'
+import { ScrollView, Image } from 'react-native'
 import { Button } from 'react-native-elements'
 import { FormValidationMessage } from 'react-native-elements'
-import { ImagePicker } from 'expo'
+import { ImagePicker, Permissions } from 'expo'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
@@ -37,13 +37,13 @@ export default class SignupForm extends Component {
 		if (this.state.password === this.state.password_confirmation) {
 
 			const options = {
-				username: this.username,
-				password_digest: this.password,
+				username: this.state.username,
+				password_digest: this.state.password,
 				picture: this.state.image,
 				type: this.state.type
 			}
 
-			fetching(options, 'POST', `http://${myIp}/api/v1/signup`, response => {
+			fetching(options, 'POST', `${myIp}/api/v1/signup`, response => {
 				response.status == 200 
 					? (console.log(response), 
 						console.log('welcome to Rail API!')
@@ -65,6 +65,8 @@ export default class SignupForm extends Component {
 	} 
 	
 	pickImage = async () => {
+	const status =  Permissions.askAsync(Permissions.CAMERA_ROLL).then(async data => {
+		console.log(data)
 		let result = await ImagePicker.launchImageLibraryAsync({
 			allowsEditing: true,
 			aspect: [4, 3],
@@ -77,6 +79,9 @@ export default class SignupForm extends Component {
 			console.log(type)
 			this.setState({ image:result.base64, show:result.uri, type });
 		}
+	}).catch(err => {
+	    console.log(err)
+	})
   	};
 
   	render() {

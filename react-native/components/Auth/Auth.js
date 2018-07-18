@@ -19,16 +19,7 @@ export default class Auth extends Component {
       console.log(this.state)
     }).done();
   }
-
-  componentDidUpdate = (prevProps, prevState) => {
-    this.getItem('session').then(data => {
-      this.state.session == data ? console.log('true') 
-        : this.setState({session:data})
-    }).done();
-  };
   
-  
-
   async getItem(key) {
     try {
       const data = await AsyncStorage.getItem(key)

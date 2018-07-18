@@ -34,7 +34,6 @@ export default class Home extends React.Component {
               <Card key={user.id}  
                   title='HELLO WORLD'
                   image = {require('../assets/images/index.jpeg')}>
-                  
                 <User user={user}/>
               </Card>
             )})}
