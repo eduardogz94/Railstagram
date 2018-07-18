@@ -18,14 +18,10 @@ export default class Home extends React.Component {
   
   componentDidMount() {
     
-    fetching({}, 'GET', `http://${myIp}/api/v1/users`, response => {
-      if (response.status == 200) {
-        this.setState({
-          users: response.user
-        })
-      } else {
-        console.log('there was an error')
-      }
+    fetching({}, 'GET', `${myIp}/api/v1/users`, response => {
+      response.status == 200 
+        ? this.setState({users: response.user})
+        : console.log('there was an error');
     })
   }
   

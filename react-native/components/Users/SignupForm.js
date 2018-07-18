@@ -1,7 +1,6 @@
 import React, { Component }from 'react'
-import { View, TextInput } from 'react-native'
-import { Button } from 'react-native-elements'
-import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
+import { ScrollView } from 'react-native'
+import { Button, FormValidationMessage } from 'react-native-elements'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
@@ -9,36 +8,36 @@ import { fetching } from '../Extra/Fetch'
 import Title from '../Extra/HomeTitle'
 
 import Auth from '../Auth/Auth';
+import UserInputs from './Inputs'
 
-import { inputs } from '../../assets/css/styles'
-import { butons } from '../../assets/css/styles'
+import { inputs , butons } from '../../assets/css/styles'
 
 const auth = new Auth()
 
 export default class SignupForm extends Component {
     constructor(){
 		super()
-
 		this.state = {
 			passwords_error: '',
-			username_error: ''
+			username_error: '',
+			username: '',
+			password: '',
+			password_confirmation: ''
 		}
-        this.username = '',
-        this.password = '',
-        this.password_confirmation = ''
 	}
 	
     
 	signUp = (event) => {
 		event.preventDefault()
-		
-		if (this.password === this.password_confirmation) {
+		this.checkValues()
+		if (this.state.password === this.state.password_confirmation) {
+			
 			const options = {
-				username: this.username,
-				password_digest: this.password,
+				username: this.state.username,
+				password_digest: this.state.password,
 			}
 			
-			fetching(options, 'POST', `http://${myIp}/api/v1/signup`, response => {
+			fetching(options, 'POST', `${myIp}/api/v1/signup`, response => {
 				
 				response.status == 200 
 					? (console.log(response), 
@@ -52,34 +51,41 @@ export default class SignupForm extends Component {
 		}
 	}
 
+	checkValues = () => {
+		const { username, password, password_confirmation } = this.state
+		username == '' ? this.setState({username_error:'Cant be blank'}) 
+			: this.setState({username_error: ''})
+
+		password == '' ? this.setState({passwords_error:'Cant be blank and both must be equals'}) 
+		: this.setState({passwords_error:''})
+	} 
+
   	render() {
 		return (
 		<Error>
-			<View style={inputs.inputWrapper}>
+			<ScrollView style={inputs.inputWrapper}>
 
 				<Title tagline='Sigup Form'/>
-
-					<FormLabel>Name</FormLabel>
-					<FormInput 
-						style={inputs.login}
-                        onChangeText={username => this.username = username}
+					<UserInputs
+						label='Username' 
+                        onChangeText={username => this.setState({username:username})}
                         placeholder = 'Username'
                         autoCapitalize={'none'}
 					/>
 					<FormValidationMessage>{this.state.username_error}</FormValidationMessage>
 					
-					<FormLabel>Password</FormLabel>
-                    <FormInput style={inputs.login}
-                        onChangeText={password => this.password = password}
+					<UserInputs
+						label='Password'
+                        onChangeText={password => this.setState({password:password})}
                         placeholder = 'Password'
                         secureTextEntry={true}
                         autoCapitalize={'none'}
                     />
 					<FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
 
-					<FormLabel>Password Confirmation</FormLabel>
-                    <FormInput style={inputs.login}
-                        onChangeText={password_confirmation => this.password_confirmation = password_confirmation}
+					<UserInputs
+						label='Password Confirmation'
+                        onChangeText={password_confirmation => this.setState({password_confirmation:password_confirmation})}
                         placeholder = 'Password Confirmation'
                         secureTextEntry={true}
                         autoCapitalize={'none'}
@@ -93,7 +99,7 @@ export default class SignupForm extends Component {
 						title = 'Sign up'
 					/>
 
-			</View>
+			</ScrollView>
 		</Error>
 		)
   	}

@@ -13,12 +13,20 @@ export default class Auth extends Component {
     
   }  
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     this.getItem('session').then(data => {
       this.setState({session:data})
       console.log(this.state)
     }).done();
   }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    this.getItem('session').then(data => {
+      this.state.session == data ? console.log('true') 
+        : this.setState({session:data})
+    }).done();
+  };
+  
   
 
   async getItem(key) {

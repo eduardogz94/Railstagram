@@ -15009,3 +15009,184 @@ Processing by Api::V1::UsersController#index as */*
 Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/api/v1/users" for 192.168.0.109 at 2018-07-17 23:26:23 -0400
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (30.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 54ms (Views: 20.1ms | ActiveRecord: 35.4ms)
+
+
+Started GET "/api/v1/users/find/e" for 192.168.0.109 at 2018-07-17 23:26:30 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"e", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "e"], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/api/v1/users/find/ed" for 192.168.0.109 at 2018-07-17 23:26:31 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"ed", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ed"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users/find/edu" for 192.168.0.109 at 2018-07-17 23:26:32 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"edu", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edu"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/find/edug" for 192.168.0.109 at 2018-07-17 23:26:32 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"edug", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edug"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/edugz" for 192.168.0.109 at 2018-07-17 23:26:33 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"edugz", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edugz"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users/find/edug" for 192.168.0.109 at 2018-07-17 23:26:34 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"edug", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edug"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/edu" for 192.168.0.109 at 2018-07-17 23:26:34 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"edu", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edu"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users/find/ed" for 192.168.0.109 at 2018-07-17 23:26:34 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"ed", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ed"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/e" for 192.168.0.109 at 2018-07-17 23:26:35 -0400
+Processing by Api::V1::UsersController#get as */*
+  Parameters: {"username"=>"e", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "e"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users/find/" for 192.168.0.109 at 2018-07-17 23:26:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/find"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/v1/login" for 192.168.0.109 at 2018-07-17 23:26:40 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", ""], ["password_digest", ""], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/login" for 192.168.0.109 at 2018-07-17 23:26:52 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password"=>"[FILTERED]", "user"=>{"username"=>"edugz"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.0.109 at 2018-07-17 23:27:30 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.0.109 at 2018-07-17 23:27:55 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password"=>"[FILTERED]", "user"=>{"username"=>"edugz"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/users" for 192.168.0.109 at 2018-07-17 23:28:45 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.0.109 at 2018-07-17 23:28:53 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"e", "password"=>"[FILTERED]", "user"=>{"username"=>"e"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "e"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.0.109 at 2018-07-17 23:28:59 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password"=>"[FILTERED]", "user"=>{"username"=>"edugz"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.0.109 at 2018-07-17 23:29:25 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.0.109 at 2018-07-17 23:29:33 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password"=>"[FILTERED]", "user"=>{"username"=>"edugz"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/login" for 192.168.0.109 at 2018-07-17 23:29:57 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password"=>"[FILTERED]", "user"=>{"username"=>"edugz"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 192.168.1.105 at 2018-07-17 23:56:02 -0400
+Processing by Api::V1::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/login" for 192.168.1.105 at 2018-07-17 23:56:15 -0400
+Processing by Api::V1::UsersController#log as */*
+  Parameters: {"username"=>"edugz", "password"=>"[FILTERED]", "user"=>{"username"=>"edugz"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password_digest" = $2 LIMIT $3[0m  [["username", "edugz"], ["password_digest", "1"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+

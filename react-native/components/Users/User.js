@@ -8,7 +8,7 @@ export default class User extends Component {
     
   delete = (id) => {
     alert(id)
-      // fetching({}, 'DELETE' , `http://${myIp}/api/v1/users/${id}`,  response => {
+      // fetching({}, 'DELETE' , `${myIp}/api/v1/users/${id}`,  response => {
       //   console.log(response)
       //   console.log(response.data)
       //   console.log(response.status)

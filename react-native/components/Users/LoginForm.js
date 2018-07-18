@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { View, TextInput } from 'react-native'
+import { ScrollView } from 'react-native'
 import { Button } from 'react-native-elements'
-import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
+import { FormValidationMessage } from 'react-native-elements'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
@@ -9,9 +9,9 @@ import { fetching } from '../Extra/Fetch'
 import Title from '../Extra/HomeTitle'
 
 import Auth from '../Auth/Auth';
+import UserInputs from './Inputs'
 
-import { inputs } from '../../assets/css/styles'
-import { butons } from '../../assets/css/styles'
+import { butons, inputs } from '../../assets/css/styles'
 
 const auth = new Auth()
 
@@ -21,28 +21,28 @@ export default class LoginForm extends Component {
 
         this.state = {
             passwords_error: '',
-            username_error: ''
+            username_error: '',
+            username: '',
+            password: '',
+            password_confirmation: ''
         }
-        this.username = '',
-        this.password = '',
-        this.password_confirmation = ''
     }
 
     logIn = (event) => {
         event.preventDefault()
+        this.checkValues()
 
-        if (this.password === this.password_confirmation) {
+        if (this.state.password === this.state.password_confirmation) {
             
             const options = { 
-                username: this.username,
-                password: this.password
+                username: this.state.username,
+                password: this.state.password
             }
             
-            // this.props.auth.multi(['username',username], ['logged', true])
-            fetching(options, 'POST', `http://${myIp}/api/v1/login`, response => {
-               
+            fetching(options, 'POST', `${myIp}/api/v1/login`, response => {
                 response.status == 200 
-                    ? (auth.setItem('session',this.username), 
+                    ? (
+                        auth.setItem('session',this.state.username), 
                         this.props.navigation.navigate('Home')
                     ) 
                     : this.setState({username_error: 'Username doesnt exist'}) ;
@@ -53,46 +53,47 @@ export default class LoginForm extends Component {
         }
     }
 
+    checkValues = () => {
+        const { username, password } = this.state
+        username == '' ? this.setState({username_error:'Cant be blank'}) 
+            : this.setState({username_error: ''})
+
+        password == '' ? this.setState({passwords_error:'Cant be blank and both must be equals'}) 
+        : this.setState({passwords_error:''})
+    } 
+
     render() {
         return (
         <Error>
-            <View style={inputs.inputWrapper}>
-
+            <ScrollView style={inputs.inputWrapper}>
                 <Title tagline='Login Form'/>
-
-                    <FormLabel>Name</FormLabel>
-					<FormInput 
-						style={inputs.login}
-                        onChangeText={username => this.username = username}
+					<UserInputs 
+                        label='Username'
+                        onChangeText={username => this.setState({username:username})}
                         placeholder = 'Username'
-                        autoCapitalize={'none'}
-					/>
-					<FormValidationMessage>{this.state.username_error}</FormValidationMessage>
-					
-					<FormLabel>Password</FormLabel>
-                    <FormInput style={inputs.login}
-                        onChangeText={password => this.password = password}
+                        autoCapitalize={'none'}/>
+                    <FormValidationMessage>{this.state.username_error}</FormValidationMessage>
+				
+                    <UserInputs 
+                        label='Password'
+                        onChangeText={password => this.setState({password:password})}
                         placeholder = 'Password'
                         secureTextEntry={true}
-                        autoCapitalize={'none'}
-                    />
-					<FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
+                        autoCapitalize={'none'}/>
+                    <FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
 
-					<FormLabel>Password Confirmation</FormLabel>
-                    <FormInput style={inputs.login}
-                        onChangeText={password_confirmation => this.password_confirmation = password_confirmation}
+					<UserInputs 
+                        label='Password Confirmation'
+                        onChangeText={password_confirmation => this.setState({password_confirmation:password_confirmation})}
                         placeholder = 'Password Confirmation'
                         secureTextEntry={true}
-                        autoCapitalize={'none'}
-                    />
-					<FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
-
+                        autoCapitalize={'none'}/>
+                    <FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
+			
                     <Button style={{marginTop: 50}}
                         onPress={this.logIn}
-                        title = 'Log in'
-                    />
-                    
-            </View>
+                        title = 'Log in'/>
+            </ScrollView>
         </Error>
         )
     }

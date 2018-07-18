@@ -17,16 +17,10 @@ export default class FindUser extends React.Component {
 	}	
 
 	show = (username) => {
-		fetching({}, 'GET', `http://${myIp}/api/v1/users/find/${username}`, response => {
-			if (response.status == 200 ) {
-				console.log(response)
-				
-				this.setState({
-					users:[ response.user ]
-				})
-			} else {
-				console.log('not true')
-			}
+		fetching({}, 'GET', `${myIp}/api/v1/users/find/${username}`, response => {
+			response.status == 200  
+				? this.setState({users:[response.user]})
+				: console.log('not true')
 		})
 	}
 
