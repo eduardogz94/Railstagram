@@ -29,6 +29,7 @@ module Api::V1
 
     def log
         if @user
+          puts @user
         render json: { user:@user , status: '200' }
       else 
         render json: { data: 'No user found' , status: '404' }
@@ -74,7 +75,7 @@ module Api::V1
     end
 
     def get_user
-      @user = User.where(username: params[:username])
+      @user = User.where("username like ?", "%"+params[:username]+"%")
     end
 
   end

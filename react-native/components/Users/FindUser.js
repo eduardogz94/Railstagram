@@ -16,12 +16,36 @@ export default class FindUser extends React.Component {
 		}
 	}	
 
-	show = (username) => {
-		fetching({}, 'GET', `${myIp}/api/v1/users/find/${username}`, response => {
-			response.status == 200  
-				? this.setState({users:[response.user]})
-				: console.log('not true')
+	componentDidMount() {
+		this.getAll()
+	}
+
+
+	getAll = () => {
+		fetching({}, 'GET', `http://${myIp}/api/v1/users`, response => {
+			this.setState({ users:[] })
+			if (response.status == 200 ) {
+				this.setState({
+					users:this.state.users.concat( response.user )
+				})
+			} else {
+				alert('cannot connect with server')
+			}
 		})
+	}
+
+	show = (username) => {
+		this.setState({ users:[] })
+		fetching({}, 'GET', `${myIp}/api/v1/users/find/${username}`, response => {
+			if (response.status == 200 ) {
+				this.setState({
+					users:this.state.users.concat( response.user )
+				})
+			} else {
+				alert('cannot connect with server')
+			}
+		})
+
 	}
 
 	render() {
@@ -33,7 +57,7 @@ export default class FindUser extends React.Component {
 						round
 						autoCapitalize={'none'}
 						onChangeText={username => this.show(username)}
-						onClearText={username => this.show(username)}
+						onClearText={() => this.getAll()}
 						placeholder='Type Here...' />
 
 					<ScrollView>
