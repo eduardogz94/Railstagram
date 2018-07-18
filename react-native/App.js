@@ -9,11 +9,7 @@ export default class App extends React.Component {
     const UserConsumer = UserContext.Consumer
     return (
       <View style={styles.container}>
-        <Auth>
-          <UserConsumer>
-            {session => <UserStack session={session}></UserStack>}    
-          </UserConsumer>
-        </Auth>
+           <UserStack></UserStack>  
       </View>
     );
   }

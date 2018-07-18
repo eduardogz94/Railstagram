@@ -75,7 +75,7 @@ module Api::V1
     end
 
     def get_user
-      @user = User.where("username like ?", "%"+params[:username]+"%")
+      @user = User.where("username like ?", "%#{params[:username]}%")
     end
 
   end

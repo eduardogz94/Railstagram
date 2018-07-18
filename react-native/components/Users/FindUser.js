@@ -22,7 +22,7 @@ export default class FindUser extends React.Component {
 
 
 	getAll = () => {
-		fetching({}, 'GET', `http://${myIp}/api/v1/users`, response => {
+		fetching({}, 'GET', `${myIp}/api/v1/users`, response => {
 			this.setState({ users:[] })
 			if (response.status == 200 ) {
 				this.setState({
@@ -35,17 +35,20 @@ export default class FindUser extends React.Component {
 	}
 
 	show = (username) => {
-		this.setState({ users:[] })
-		fetching({}, 'GET', `${myIp}/api/v1/users/find/${username}`, response => {
-			if (response.status == 200 ) {
-				this.setState({
-					users:this.state.users.concat( response.user )
-				})
-			} else {
-				alert('cannot connect with server')
-			}
-		})
-
+		if(username == "") {
+			this.getAll()
+		} else {
+			this.setState({ users:[] })
+			fetching({}, 'GET', `${myIp}/api/v1/users/find/${username}`, response => {
+				if (response.status == 200 ) {
+					this.setState({
+						users:this.state.users.concat( response.user )
+					})
+				} else {
+					alert('cannot connect with server')
+				}
+			})
+		}	
 	}
 
 	render() {

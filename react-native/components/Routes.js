@@ -11,12 +11,12 @@ import FindUser from './Users/FindUser'
 import Profile from './Users/Profile'
 
 export const Index = createStackNavigator({
-    Home:{
-        screen:Home,
-        navigationOptions:{
-            title:'Railstagram'
-        }
+  Home:{
+    screen:Home,
+    navigationOptions:{
+      title:'Railstagram', 
     }
+  }
 });
 
 export const Login = createStackNavigator({
@@ -41,7 +41,7 @@ export const Users = createStackNavigator({
     Users:{
         screen:FindUser,
         navigationOptions:{
-            title:'Railstagram'
+            title:'Railstagram',
         }
     }
 });
@@ -52,6 +52,9 @@ export const GuestStack = createBottomTabNavigator(
     Users: Users,
     Login: Login,
     Signup: Signup
+  },
+  {
+    hiddenTabs:['Home']
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -93,22 +96,24 @@ export const UserStack = createBottomTabNavigator(
         const { routeName } = navigation.state;
         let iconName;
         if (routeName == 'Home') {
-          iconName = `ios-home${focused ? '' : '-outline'}`;
+          iconName = ``;
         } else if (routeName === 'Profile') {
           iconName = `ios-contact${focused ? '' : '-outline'}`;
         } else if (routeName === 'Users') {
             iconName = `ios-people${focused ? '' : '-outline'}`;
-        }
-
-        else if (routeName === 'Login') {
+        } else if (routeName === 'Login') {
             iconName = `ios-people${focused ? '' : '-outline'}`;
         }
 
         // You can return any component that you like here! We usually use an
         // icon component from react-native-vector-icons
-        return <Ionicons name={iconName} size={25} color={tintColor} />;
+        return(
+          <Ionicons name={iconName} size={25} color={tintColor} />
+        )
+          
       },
     }),
+    tabBarVisible: false,
     tabBarOptions: {
       activeTintColor: 'purple',
       inactiveTintColor: 'gray',
