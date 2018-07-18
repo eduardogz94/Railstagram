@@ -25,7 +25,7 @@ export default class User extends Component {
         <ListItem
           roundAvatar
           key={id}
-          avatar = {(picture.url != null) ? `http://10.172.175.104:4000${picture.url}` : null}
+          avatar = {(picture.url != null) ? `http://${myIp}${picture.url}` : null}
           title={username}
           subtitle={'Hello World'}
           onPress={() => this.delete(id)}/>
