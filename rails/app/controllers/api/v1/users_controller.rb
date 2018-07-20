@@ -7,32 +7,33 @@ module Api::V1
 
     def index
       @users = User.all
-      render json: { user: @users , status: '200' }
+      render json: { user: @users , status: 200 }
     end
 
     def show
       @user = User.find(params[:id])
+      @posts = @user.posts
       if @user.valid?
-        render json: { user:@user , status: '200' }
+        render json: { user:@user, posts:@posts, status: 200 }
       else 
-        render json: { data: 'No user found' , status: '404' }
+        render json: { data: 'No user found' , status: 404}
       end
     end
 
     def get
       if @user
-        render json: { user:@user , status: '200' }
+        render json: { user:@user , status: 200 }
       else 
-        render json: { data: 'No user found' , status: '404' }
+        render json: { data: 'No user found' , status: 404 }
       end
     end
 
     def log
         if @user
           puts @user
-        render json: { user:@user , status: '200' }
+        render json: { user:@user , status: 200 }
       else 
-        render json: { data: 'No user found' , status: '404' }
+        render json: { data: 'No user found' , status: 404 }
       end
     end
 
@@ -40,27 +41,27 @@ module Api::V1
       @user = User.new(user_params)
       @user.picture = "data:image/#{params[:type]};base64, #{params[:picture]}"
       if @user.save! 
-          render json: { data: 'User created' , status: '200' }
+          render json: { data: 'User created' , status: 200 }
         else 
-          render json: { data:@user.errors, status: '400' }
+          render json: { data:@user.errors, status: 400 }
         end       
     end
       
     def update
       @user = User.update_attributes(user_params)
       if @user.save
-          render json: { data: 'User updated' , status: '200' }
+          render json: { data: 'User updated' , status: 200 }
         else 
-          render json: { data:@user.errors , status: '403' }
+          render json: { data:@user.errors , status: 403 }
         end
     end
 
     def destroy  
       @user = User.destroy(params[:id])
         if @user.save
-          render json: { data: 'User Deleted' , status: '200' }
+          render json: { data: 'User Deleted' , status: 200 }
         else 
-          render json: { data: 'No user found' , status: '404' }
+          render json: { data: 'No user found' , status: 404 }
         end
     end
     

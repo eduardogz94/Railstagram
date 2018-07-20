@@ -36,10 +36,12 @@ export default class Auth extends Component {
   }
   
   setItem = async (key,item) => {
+    alert('working')
     try {
       const data = await AsyncStorage.setItem(key,item)
       this.state = `{${key}:${data}}`
       return data;
+      console.log(this.state)
     } catch (error) {
       console.log(error)
     }
@@ -76,6 +78,10 @@ export default class Auth extends Component {
         throw new Error('No session found');
       }
     }).done()
+  }
+
+  componentWillUpdate() {
+    alert(JSON.stringify(this.state))
   }
 
     render() {

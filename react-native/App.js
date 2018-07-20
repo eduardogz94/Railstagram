@@ -11,7 +11,9 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Auth>
           <UserConsumer>
-            {session => <UserStack session={session}></UserStack>}    
+            {session =>  (
+              (session != null) ? <UserStack session={session}></UserStack> : <GuestStack session={session}></GuestStack>   
+            )}
           </UserConsumer>
         </Auth>
       </View>

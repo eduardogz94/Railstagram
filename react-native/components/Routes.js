@@ -54,9 +54,6 @@ export const GuestStack = createBottomTabNavigator(
     Signup: Signup
   },
   {
-    hiddenTabs:['Home']
-  },
-  {
     navigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, tintColor }) => {
         const { routeName } = navigation.state;
@@ -113,7 +110,6 @@ export const UserStack = createBottomTabNavigator(
           
       },
     }),
-    tabBarVisible: false,
     tabBarOptions: {
       activeTintColor: 'purple',
       inactiveTintColor: 'gray',
