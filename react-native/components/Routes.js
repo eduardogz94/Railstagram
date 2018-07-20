@@ -4,7 +4,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Home from './Home'
 
-import User from './Users/User'
 import LoginForm from './Users/LoginForm'
 import SignupForm from './Users/SignupForm'
 import FindUser from './Users/FindUser'
@@ -12,37 +11,45 @@ import Profile from './Users/Profile'
 
 export const Index = createStackNavigator({
     Home:{
-        screen:Home,
-        navigationOptions:{
-            title:'Railstagram'
-        }
+      screen:Home,
+      navigationOptions:{
+          title:'Railstagram'
+      }
     }
 });
 
+export const User = createStackNavigator({
+  Profile: {
+    screen: Profile,
+    navigationOptions: {
+      title: 'Railstagram'
+    }
+  }
+});
 export const Login = createStackNavigator({
     Login:{
-        screen:LoginForm,
-        navigationOptions:{
-            title:'Railstagram'
-        }
+      screen:LoginForm,
+      navigationOptions:{
+          title:'Railstagram'
+      }
     }
 });
 
 export const Signup = createStackNavigator({
     Signup:{
-        screen:SignupForm,
-        navigationOptions:{
-            title:'Railstagram'
-        }
+      screen:SignupForm,
+      navigationOptions:{
+          title:'Railstagram'
+      }
     }
 });
 
 export const Users = createStackNavigator({
     Users:{
-        screen:FindUser,
-        navigationOptions:{
-            title:'Railstagram'
-        }
+      screen:FindUser,
+      navigationOptions:{
+          title:'Railstagram'
+      }
     }
 });
 
@@ -84,8 +91,7 @@ export const UserStack = createBottomTabNavigator(
   {
     Home:Index,
     Users: Users,
-    Login: Login,
-    Profile:Profile
+    Profile:User
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -97,10 +103,6 @@ export const UserStack = createBottomTabNavigator(
         } else if (routeName === 'Profile') {
           iconName = `ios-contact${focused ? '' : '-outline'}`;
         } else if (routeName === 'Users') {
-            iconName = `ios-people${focused ? '' : '-outline'}`;
-        }
-
-        else if (routeName === 'Login') {
             iconName = `ios-people${focused ? '' : '-outline'}`;
         }
 

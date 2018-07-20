@@ -13,15 +13,13 @@ export default class Auth extends Component {
     }
   }  
 
-  componentDidMount = () => {
+  componentWillMount = () => {
     this.getItem('session').then(data => {
       this.setState({session:data})
     }).done();
 
     this.getItem('id').then(data => {
-      this.setState({
-        id: data
-      })
+      this.setState({id: data})
       console.log(this.state)
     }).done();
   }

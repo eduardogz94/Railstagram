@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Card } from 'react-native-elements'
 
 import Error from './Extra/ErrorBoundary'
@@ -37,17 +37,9 @@ export default class Home extends React.Component {
                 <User user={user}/>
               </Card>
             )})}
-            
       </ScrollView>
     </Error>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-  },
-
-
-});
