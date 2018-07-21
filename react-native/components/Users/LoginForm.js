@@ -39,16 +39,17 @@ export default class LoginForm extends Component {
             }
             
             fetching(options, 'POST', `${myIp}/api/v1/login`, response => {
+                console.log(response)
                 response.status == 200 
                     ? (
                         // auth.logged(this.state.username, JSON.stringify(response.user.id)),
-                        auth.setItem('session',this.state.username),
-                        auth.setItem('id', JSON.stringify(response.user.id)),
+                        alert(auth.setItem('session',JSON.stringify(response.user.id))),
                         this.props.navigation.navigate('Home')
                     ) 
                     : this.setState({username_error: 'Username doesnt exist'}) ;
             })
-            
+        } else {
+        alert('cant send request')
         }
     }
 

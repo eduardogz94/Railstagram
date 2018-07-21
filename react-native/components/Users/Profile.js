@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import { View, Text, Image } from 'react-native'
-import { Card } from 'react-native-elements'
+import { ScrollView, Text, Image } from 'react-native'
+import { Card, Button } from 'react-native-elements'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
+import Title from '../Extra/HomeTitle'
+
 import Auth from '../Auth/Auth';
 
 const auth = new Auth()
@@ -27,22 +29,25 @@ export default class Profile extends Component {
     
     
     componentWillMount = () => {
-        auth.getItem('id').then(data => {
-            fetching({}, 'GET', `${myIp}/api/v1/users/id/${data}`, response => {
+        console.log(this.props)
+            fetching({}, 'GET', `${myIp}/api/v1/users/1`, response => {
                 console.log(response.user)
                 response.status == 200 
                     ? this.setState({user:response.user}) 
                     : alert('Error retrieving the profile')
             })
             console.log(this.state.user)
-        })    
     }
-  
+
+    edit = () => {
+    }
+
     render() {
         const { id, username, created_at, picture} = this.state.user;
         return (
-        <Error>    
-            <View>
+        <Error>   
+            <Title tagline='Profile'/> 
+            <ScrollView>
                 <Card  
                     title={username}
                     image = {(picture.url != null) ? {uri:`${myIp}/${picture.url}`} : null}
@@ -50,8 +55,12 @@ export default class Profile extends Component {
                     <Text style={{marginBottom: 10}}>
                         {created_at}
                     </Text>
+
+                    <Button style={{marginTop: 50}}
+                    onPress={this.edit}
+                    title = 'Edit Profile'/>
                 </Card>
-            </View>
+            </ScrollView>
         </Error>
         )
     }

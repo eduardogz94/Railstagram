@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { ListItem } from 'react-native-elements'
+import { navigate } from 'react-navigation';
 
 import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
-
+import { Usuario } from '../Routes'
 export default class User extends Component {
     
   delete = (id) => {
@@ -28,7 +29,7 @@ export default class User extends Component {
           avatar = {(picture.url != null) ? `${myIp}/${picture.url}` : null}
           title={username}
           subtitle={'Hello World'}
-          onPress={() => this.delete(id)}/>
+          onPress={() => this.props.navigation.navigate('Profile')}/>
       )
   }
 }

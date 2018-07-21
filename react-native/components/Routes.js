@@ -4,46 +4,63 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Home from './Home'
 
-import User from './Users/User'
 import LoginForm from './Users/LoginForm'
 import SignupForm from './Users/SignupForm'
 import FindUser from './Users/FindUser'
 import Profile from './Users/Profile'
+import Uploading from './Post/Upload'
 
 export const Index = createStackNavigator({
-  Home:{
-    screen:Home,
-    navigationOptions:{
-      title:'Railstagram', 
+    Home:{
+      screen:Home,
+      navigationOptions:{
+          title:'Railstagram'
+      }
+    }
+});
+
+export const User = createStackNavigator({
+  Profile: {
+    screen: Profile,
+    navigationOptions: {
+      title: 'Railstagram'
     }
   }
 });
-
 export const Login = createStackNavigator({
     Login:{
-        screen:LoginForm,
-        navigationOptions:{
-            title:'Railstagram'
-        }
+      screen:LoginForm,
+      navigationOptions:{
+          title:'Railstagram'
+      }
     }
 });
 
 export const Signup = createStackNavigator({
     Signup:{
-        screen:SignupForm,
-        navigationOptions:{
-            title:'Railstagram'
-        }
+      screen:SignupForm,
+      navigationOptions:{
+          title:'Railstagram'
+      }
     }
 });
 
 export const Users = createStackNavigator({
-    Users:{
-        screen:FindUser,
-        navigationOptions:{
-            title:'Railstagram',
-        }
+  Users:{
+    screen:FindUser,
+    navigationOptions:{
+        title:'Railstagram'
     }
+  }
+});
+
+export const Upload = createStackNavigator({
+  Users:{
+    screen:Uploading,
+    navigationOptions:{
+        title:'Railstagram'
+    }
+  }
 });
 
 export const GuestStack = createBottomTabNavigator(
@@ -84,8 +101,8 @@ export const UserStack = createBottomTabNavigator(
   {
     Home:Index,
     Users: Users,
-    Login: Login,
-    Profile:Profile
+    Profile:User,
+    Upload:Uploading
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -98,7 +115,7 @@ export const UserStack = createBottomTabNavigator(
           iconName = `ios-contact${focused ? '' : '-outline'}`;
         } else if (routeName === 'Users') {
             iconName = `ios-people${focused ? '' : '-outline'}`;
-        } else if (routeName === 'Login') {
+        } else if (routeName === 'Upload') {
             iconName = `ios-people${focused ? '' : '-outline'}`;
         }
 

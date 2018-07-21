@@ -50,9 +50,9 @@ export default class FindUser extends React.Component {
 			})
 		}	
 	}
-
-	render() {
-		return (
+		
+		render() {
+			return (
 			<Error>
 				<View>
 					<SearchBar

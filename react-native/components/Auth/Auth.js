@@ -5,25 +5,15 @@ import { Text,TouchableOpacity, StyleSheet } from 'react-native';
 export const UserContext = React.createContext();
 
 export default class Auth extends Component {
-  constructor() {
-    super()
-    this.state = {
-      session: '',
-      id: ''
-    }
-  }  
+  
+  state = {
+    session: ''
+  }
 
-  componentDidMount = () => {
-    this.getItem('session').then(data => {
-      this.setState({session:data})
-    }).done();
-
-    this.getItem('id').then(data => {
-      this.setState({
-        id: data
-      })
-      console.log(this.state)
-    }).done();
+  componentWillMount = () => {
+    this.getItem('session').then(session => {
+      this.state = { session }
+    })
   }
   
   getItem = async (key) => {
@@ -36,14 +26,13 @@ export default class Auth extends Component {
   }
   
   setItem = async (key,item) => {
-    alert('working')
     try {
       const data = await AsyncStorage.setItem(key,item)
       this.state = `{${key}:${data}}`
       return data;
-      console.log(this.state)
+      alert(this.state)
     } catch (error) {
-      console.log(error)
+      alert(error)
     }
   }
 
@@ -61,7 +50,7 @@ export default class Auth extends Component {
   resetSession = async () => {
     try{
       const data = await AsyncStorage.clear()
-      this.setState({session:'', id:''})
+      this.setState({session:''})
       console.log(this.state)
 
     } catch (error) {

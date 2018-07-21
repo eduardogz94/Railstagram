@@ -1,6 +1,9 @@
 import React from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Card } from 'react-native-elements'
+import { createStackNavigator } from 'react-navigation';
+
+import {UserStack} from './Routes'
 
 import Error from './Extra/ErrorBoundary'
 import { myIp } from './Extra/MyIp'
@@ -12,16 +15,22 @@ export default class Home extends React.Component {
   constructor() {
     super()
     this.state = {
-      users: []
+      posts: []
     }
   }
   
   componentDidMount() {
     
-    fetching({}, 'GET', `${myIp}/api/v1/users`, response => {
-      response.status == 200 
-        ? this.setState({users: response.user})
-        : console.log('there was an error');
+    fetching({}, 'GET', `${myIp}/api/v1/users/all/posts`, response => {
+      if (response.status == 200) {
+        arr = []
+        for (var i in response.posts) {
+          arr.push({ image:response.posts[i].post_image.url, user:response.users[i]})
+        }
+        this.setState({ posts: this.state.posts.concat( arr ) })
+      } else {
+        alert('error')
+      }
     })
   }
   
@@ -29,25 +38,17 @@ export default class Home extends React.Component {
     return (
     <Error>  
       <ScrollView>
-        {this.state.users.map(user => {
+        {this.state.posts.map((post, i) => {
           return(
-              <Card key={user.id}  
-                  title='HELLO WORLD'
-                  image = {require('../assets/images/index.jpeg')}>
-                <User user={user}/>
-              </Card>
-            )})}
-            
+            <Card key={i}  
+                title={`${post.user}`}
+                image = {(post.image != null) ? {uri:`${myIp}${post.image}`} : null}
+                onPress={() => this.props.navigation.navigate('Profile')}>
+            </Card>
+          )})}
       </ScrollView>
     </Error>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-  },
-
-
-});
