@@ -12,7 +12,9 @@ export default class App extends React.Component {
         <Auth>
           <UserConsumer>
             {session => (
-                ((session == '') ? <UserStack session={session}> </UserStack> : <GuestStack></GuestStack>)
+              ((session == '' || session == null) 
+                  ? <GuestStack/> 
+                  : <UserStack session={session}/>)
             )}
           </UserConsumer>
         </Auth>

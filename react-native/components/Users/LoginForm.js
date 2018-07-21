@@ -29,38 +29,43 @@ export default class LoginForm extends Component {
 
     logIn = (event) => {
         event.preventDefault()
-        this.checkValues()
-
-        if ( (this.state.password || this.state.username) !== '') {
-            
+        const { username, password } = this.state;
+        this.setErrors()
+        
+        if (this.checkInputs()) {
             const options = { 
-                username: this.state.username,
-                password: this.state.password
+                username: username,
+                password: password
             }
             
             fetching(options, 'POST', `${myIp}/api/v1/login`, response => {
-                console.log(response)
                 response.status == 200 
-                    ? (
-                        // auth.logged(this.state.username, JSON.stringify(response.user.id)),
-                        alert(auth.setItem('session',JSON.stringify(response.user.id))),
-                        this.props.navigation.navigate('Home')
-                    ) 
+                    ? ( auth.setItem('session',JSON.stringify(response.user.id)),
+                        this.props.navigation.navigate('Home')) 
                     : this.setState({username_error: 'Username doesnt exist'}) ;
             })
-        } else {
-        alert('cant send request')
         }
     }
 
-    checkValues = () => {
+    checkInputs = () => {
+        const { username, password } = this.state;
+
+        (username !== '' && password !== '')
+            ? data = true 
+            : data = false
+
+        return data;
+    }
+
+    setErrors = () => {
         const { username, password } = this.state
+
         username == '' ? this.setState({username_error:'Cant be blank'}) 
             : this.setState({username_error: ''})
 
         password == '' ? this.setState({passwords_error:'Cant be blank'}) 
-        : this.setState({passwords_error:''})
-    } 
+            : this.setState({passwords_error:''})
+    }  
 
     render() {
         return (
