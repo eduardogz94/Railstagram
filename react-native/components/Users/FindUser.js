@@ -1,10 +1,11 @@
 import React from 'react';
-import {  View, ScrollView } from 'react-native'
-import { List, SearchBar, Button } from 'react-native-elements'
+import { View, ScrollView } from 'react-native'
+import { List, SearchBar } from 'react-native-elements'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
-import { fetching } from '../Extra/Fetch'
+
+import { fetching } from '../Fetch/Fetch'
 
 import User from '../Users/User'
 

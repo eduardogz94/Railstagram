@@ -8,6 +8,7 @@ import LoginForm from './Users/LoginForm'
 import SignupForm from './Users/SignupForm'
 import FindUser from './Users/FindUser'
 import Profile from './Users/Profile'
+import EditProfile from './Users/EditProfile'
 import Uploading from './Post/Upload'
 
 export const Index = createStackNavigator({
@@ -16,14 +17,20 @@ export const Index = createStackNavigator({
       navigationOptions:{
           title:'Railstagram'
       },
-    }
+    },
 });
 
 export const User = createStackNavigator({
   Profile: {
     screen: Profile,
     navigationOptions: {
-      title: 'Railstagram'
+      title: 'Profile'
+    }
+  },
+  Settings: {
+    screen: EditProfile,
+    navigationOptions: {
+      title: 'Edit Profile'
     }
   }
 });
@@ -72,7 +79,7 @@ export const UserStack = createBottomTabNavigator(
     Home:Index,
     Users: Users,
     Profile:User,
-    Upload:Uploading
+    Upload:Upload
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -84,19 +91,19 @@ export const UserStack = createBottomTabNavigator(
         } else if (routeName === 'Profile') {
           iconName = `ios-contact${focused ? '' : '-outline'}`;
         } else if (routeName === 'Users') {
-            iconName = `ios-people${focused ? '' : '-outline'}`;
-          } else if (routeName === 'Upload') {
-            iconName = `ios-people${focused ? '' : '-outline'}`;
-          }
+          iconName = `ios-people${focused ? '' : '-outline'}`;
+        } else if (routeName === 'Upload') {
+          iconName = `ios-people${focused ? '' : '-outline'}`;
+        }
           
-          // You can return any component that you like here! We usually use an
-          // icon component from react-native-vector-icons
-          return(
-            <Ionicons name={iconName} size={25} color={tintColor} />
-          )
+        // You can return any component that you like here! We usually use an
+        // icon component from react-native-vector-icons
+        return(
+          <Ionicons name={iconName} size={25} color={tintColor} />
+        )
           
-        },
-      }),
+      },
+    }),
       tabBarOptions: {
         activeTintColor: 'purple',
         inactiveTintColor: 'gray',

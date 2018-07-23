@@ -8,7 +8,6 @@ import UserInputs from '../Users/Inputs'
 import { inputs , butons } from '../../assets/css/styles'
 import { myIp } from '../Extra/MyIp'
 
-import Title from '../Extra/HomeTitle'
 
 export default class Upload extends Component {
 
@@ -125,7 +124,6 @@ export default class Upload extends Component {
         return (
             <Error>
                 <ScrollView style={inputs.inputWrapper}>
-                    <Title tagline='Upload a post'/>
                         <UserInputs 
                             label='Description'
                             onChangeText={description => this.setState({ description })}

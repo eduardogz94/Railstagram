@@ -42,6 +42,28 @@ export const fetching = (data, method, url, cb) => {
                     })
                 break;
             }
+        case 'PATCH':
+            {
+                let datajson = {
+                    method: 'PATCH',
+                    body: JSON.stringify(data),
+                    withCredentials: true,
+                    credentials: 'include',
+                    headers: {
+                        'Content-type': 'application/json'
+                    }
+                };
+
+                fetch(url, datajson)
+                    .then(res => res.json())
+                    .then(res => {
+                        cb(res);
+                    })
+                    .catch(err => {
+                        console.log(`FETCH COMPONENT > Error while making the request: ${err.message}`);
+                    })
+                break;
+            }
 
         case 'DELETE':
             {

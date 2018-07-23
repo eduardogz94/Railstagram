@@ -6,8 +6,8 @@ import { ImagePicker, Permissions } from 'expo'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
-import { fetching } from '../Extra/Fetch'
-import Title from '../Extra/HomeTitle'
+
+import { fetching } from '../Fetch/Fetch'
 
 import Auth from '../Auth/Auth';
 import UserInputs from './Inputs'

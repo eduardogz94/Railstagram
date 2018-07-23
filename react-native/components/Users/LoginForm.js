@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { ScrollView, Text } from 'react-native'
 import { Button, FormValidationMessage } from 'react-native-elements'
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
-import { fetching } from '../Extra/Fetch'
+
+import { fetching } from '../Fetch/Fetch'
 
 import Auth from '../Auth/Auth';
 import UserInputs from './Inputs'

@@ -1,22 +1,30 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { Card } from 'react-native-elements'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Error from './Extra/ErrorBoundary'
 import { myIp } from './Extra/MyIp'
-import { fetching } from './Extra/Fetch'
-import { Button } from 'react-native-elements';
+
+import { fetching } from './Fetch/Fetch'
+
+import { home } from '../assets/css/home'
 
 export default class Home extends React.Component {
-  static navigationOptions = {
+  static navigationOptions =  {
     headerLeft: (
-      <Ionicons style={{marginLeft: 15}} name="ios-camera" size={31} 
-        color={'purple'} onPress={() => this.props.navigation.navigate('Upload')}></Ionicons>
+      <Ionicons style={home.upload} 
+        name="ios-camera-outline" 
+        size={31} 
+        color={'purple'} 
+        onPress={() => this.props.navigation.navigate('UPload')}></Ionicons>
     ),
     headerRight: (
-      <Ionicons style={{marginRight: 15}} name='ios-chatbubbles' size={31} 
-        color={'purple'} onPress={() => alert('pressed')}/>
+      <Ionicons style={home.chat} 
+        name='ios-chatbubbles-outline' 
+        size={31} 
+        color={'purple'} 
+        onPress={() => alert('pressed')}/>
       ),
   }
 
@@ -44,18 +52,38 @@ export default class Home extends React.Component {
   render() {
     return (
     <Error>  
-      <ScrollView>
+      <ScrollView style={home.container}>
         {this.state.posts.map((post, i) => {
           return(
-            <Card key={i}  
+            <Card 
+                key={i}  
                 title={`${post.user}`}
                 image = {(post.image != null) ? {uri:`${myIp}${post.image}`} : null}>
             
-            <Ionicons style={{marginLeft: 15}} 
-                      name="ios-people" size={31} 
-                      color={'purple'} 
-            onPress={() => this.props.navigation.navigate('Upload')}></Ionicons>
+            <View style={home.buttons}>
             
+              <Ionicons 
+                style={home.like}
+                name="ios-heart-outline" 
+                size={20} 
+                color={'purple'} 
+                onPress={() => this.props.navigation.navigate('Upload')}></Ionicons>
+
+              <Ionicons 
+                style={home.comment} 
+                name="ios-chatboxes-outline" 
+                size={20} 
+                color={'purple'} 
+                onPress={() => this.props.navigation.navigate('Upload')}></Ionicons>
+              
+              <Ionicons 
+                style={home.profile} 
+                name="ios-share-alt" 
+                size={20} 
+                color={'purple'} 
+                onPress={() => this.props.navigation.navigate('Upload')}></Ionicons>
+            
+            </View>
             </Card>    
           )})}
       </ScrollView>
