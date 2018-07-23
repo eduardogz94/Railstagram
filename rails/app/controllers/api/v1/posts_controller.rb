@@ -27,7 +27,7 @@ class PostsController < ApplicationController
         end
         arr.each do |i|
             @user = User.find(i)
-            users.push(@user.username)
+            users.push([@user.username, @user.id])
         end
         render json: { posts: @posts, users: users, status: 200 }
     end
