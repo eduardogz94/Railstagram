@@ -1,5 +1,5 @@
 import React, { Component }from 'react'
-import { ScrollView, Image } from 'react-native'
+import { ScrollView, Image, Text } from 'react-native'
 import { Button } from 'react-native-elements'
 import { FormValidationMessage } from 'react-native-elements'
 import { ImagePicker, Permissions } from 'expo'
@@ -33,8 +33,9 @@ export default class SignupForm extends Component {
     
 	signUp = (event) => {
 		event.preventDefault()
-		const { password, password_confirmation, type, picture } = this.state
-		this.checkValues()
+		const { username,password, password_confirmation, type, image } = this.state
+		this.setErrors()
+
 		if (this.checkInputs()) {
 			if (password === password_confirmation) {
 
@@ -108,7 +109,6 @@ export default class SignupForm extends Component {
 		<Error>
 			<ScrollView style={inputs.inputWrapper}>
 
-				<Title tagline='Sigup Form'/>
 					<UserInputs
 						label='Username' 
                         onChangeText={username => this.setState({username:username})}
@@ -147,6 +147,8 @@ export default class SignupForm extends Component {
 						onPress={this.signUp}
 						title = 'Sign up'
 					/>
+
+					<Text>Already signed up?</Text>
 
 			</ScrollView>
 		</Error>

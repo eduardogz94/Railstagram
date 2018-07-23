@@ -5,15 +5,17 @@ import { Text,TouchableOpacity, StyleSheet } from 'react-native';
 export const UserContext = React.createContext();
 
 export default class Auth extends Component {
-  
-  state = {
-    session: ''
+  constructor() {
+    super()
+    this.state = {
+      session: ''
+    }
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     this.getItem('session').then(session => {
-      this.state = { session }
-    })
+      this.setState({session:session})
+    }).done()
   }
   
   getItem = async (key) => {
@@ -27,12 +29,11 @@ export default class Auth extends Component {
   
   setItem = async (key,item) => {
     try {
-      const data = await AsyncStorage.setItem(key,item)
-      this.state = `{${key}:${data}}`
-      return data;
-      alert(this.state)
+      await AsyncStorage.setItem(key,item)
+      this.state = `{${key}:${item}}`
+      console.log(this.state)
     } catch (error) {
-      alert(error)
+      console.log(error)
     }
   }
 
@@ -49,10 +50,9 @@ export default class Auth extends Component {
 
   resetSession = async () => {
     try{
-      const data = await AsyncStorage.clear()
+      await AsyncStorage.clear()
       this.setState({session:''})
       console.log(this.state)
-
     } catch (error) {
       console.log(error)
     }
@@ -61,16 +61,12 @@ export default class Auth extends Component {
   checkSession() {
     this.getItem('session').then(data => {
       if (data !== null) {
-        alert(data)
+        console.log(data)
           return data;
       } else {
         throw new Error('No session found');
       }
     }).done()
-  }
-
-  componentWillUpdate() {
-    alert(JSON.stringify(this.state))
   }
 
     render() {

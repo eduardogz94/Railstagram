@@ -1,21 +1,22 @@
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
-import { Button } from 'react-native-elements'
-import { FormValidationMessage } from 'react-native-elements'
+import { ScrollView, Text } from 'react-native'
+import { Button, FormValidationMessage } from 'react-native-elements'
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
-import Title from '../Extra/HomeTitle'
 
 import Auth from '../Auth/Auth';
 import UserInputs from './Inputs'
 
 import { butons, inputs } from '../../assets/css/styles'
 
+
 const auth = new Auth()
 
 export default class LoginForm extends Component {
+
     constructor(){
         super()  
 
@@ -71,7 +72,6 @@ export default class LoginForm extends Component {
         return (
         <Error>
             <ScrollView style={inputs.inputWrapper}>
-                <Title tagline='Login Form'/>
 					<UserInputs 
                         label='Username'
                         onChangeText={username => this.setState({username:username})}
@@ -89,10 +89,11 @@ export default class LoginForm extends Component {
 
                     <Button style={{marginTop: 50}}
                         onPress={this.logIn}
-                        title = 'Log in'/>
+                        title = 'Log in'
+                    />
+                    <Text>Havent signup yet?</Text>
             </ScrollView>
         </Error>
         )
     }
 }
-

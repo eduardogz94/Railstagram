@@ -1,6 +1,6 @@
 import React from 'react';
 import {  View, ScrollView } from 'react-native'
-import { List, SearchBar } from 'react-native-elements'
+import { List, SearchBar, Button } from 'react-native-elements'
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
@@ -50,6 +50,10 @@ export default class FindUser extends React.Component {
 			})
 		}	
 	}
+
+	getProfile = (id) => {
+		this.props.navigation.navigate('Profile', id)
+	}
 		
 		render() {
 			return (
@@ -67,7 +71,7 @@ export default class FindUser extends React.Component {
 							<List>
 								{this.state.users.map((user) => {
 									return(
-									<User user={user} key={user.id}/>)
+									<User user={user} key={user.id} getProfile={this.getProfile}/>)
 								})}
 							</List>
 					</ScrollView>
