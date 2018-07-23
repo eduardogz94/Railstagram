@@ -5,16 +5,14 @@ import { Card, Button } from 'react-native-elements'
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Extra/Fetch'
-import Title from '../Extra/HomeTitle'
 
 import Auth from '../Auth/Auth';
-
 const auth = new Auth()
-
 
 export default class Profile extends Component {
     constructor(props) {
         super(props)
+
         this.state = {
             user: {
                 id: '',
@@ -27,26 +25,35 @@ export default class Profile extends Component {
         }
     }
     
-    
     componentWillMount = () => {
-        console.log(this.props)
-            fetching({}, 'GET', `${myIp}/api/v1/users/1`, response => {
-                console.log(response.user)
+        
+        let id;
+        if (this.props.navigation.state.params) {
+            id = this.props.navigation.state.params
+            fetching({}, 'GET', `${myIp}/api/v1/users/${id}`, response => {
                 response.status == 200 
                     ? this.setState({user:response.user}) 
                     : alert('Error retrieving the profile')
             })
-            console.log(this.state.user)
+        } else {
+            auth.getItem('session').then(data => {
+            id = data
+                fetching({}, 'GET', `${myIp}/api/v1/users/${id}`, response => {
+                    response.status == 200 
+                        ? this.setState({user:response.user}) 
+                        : alert('Error retrieving the profile')
+                })
+            })
+        }
     }
 
     edit = () => {
     }
 
     render() {
-        const { id, username, created_at, picture} = this.state.user;
+        const { username, created_at, picture} = this.state.user;
         return (
         <Error>   
-            <Title tagline='Profile'/> 
             <ScrollView>
                 <Card  
                     title={username}

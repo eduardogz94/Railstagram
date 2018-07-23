@@ -15,7 +15,7 @@ export const Index = createStackNavigator({
       screen:Home,
       navigationOptions:{
           title:'Railstagram'
-      }
+      },
     }
 });
 
@@ -27,75 +27,45 @@ export const User = createStackNavigator({
     }
   }
 });
-export const Login = createStackNavigator({
-    Login:{
-      screen:LoginForm,
-      navigationOptions:{
-          title:'Railstagram'
-      }
-    }
-});
 
 export const Signup = createStackNavigator({
-    Signup:{
-      screen:SignupForm,
-      navigationOptions:{
-          title:'Railstagram'
-      }
-    }
+  Signup:{
+    screen:SignupForm,
+    navigationOptions:{
+      title:'Signup'
+    },
+  }
 });
 
 export const Users = createStackNavigator({
   Users:{
     screen:FindUser,
     navigationOptions:{
-        title:'Railstagram'
+      title:'Find Users'
     }
-  }
+  },
+  Profile:{
+    screen:Profile,
+    navigationOptions: {
+      title: 'Profile User'
+    }
+  },
 });
 
 export const Upload = createStackNavigator({
   Users:{
     screen:Uploading,
-    navigationOptions:{
-        title:'Railstagram'
+    navigationOptions: {
+      title:'Upload'
     }
   }
 });
 
-export const GuestStack = createBottomTabNavigator(
-  {
-    Home:Index,
-    Users: Users,
-    Login: Login,
-    Signup: Signup
-  },
-  {
-    navigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, tintColor }) => {
-        const { routeName } = navigation.state;
-        let iconName;
-        if (routeName == 'Home') {
-          iconName = `ios-home${focused ? '' : '-outline'}`;
-        } else if (routeName === 'Login') {
-          iconName = `ios-contact${focused ? '' : '-outline'}`;
-        } else if (routeName === 'Signup') {
-          iconName = `ios-contact${focused ? '' : '-outline'}`;
-        } else if (routeName === 'Users') {
-            iconName = `ios-people${focused ? '' : '-outline'}`;
-        }
-
-        // You can return any component that you like here! We usually use an
-        // icon component from react-native-vector-icons
-        return <Ionicons name={iconName} size={25} color={tintColor} />;
-      },
-    }),
-    tabBarOptions: {
-      activeTintColor: 'purple',
-      inactiveTintColor: 'gray',
-    },
-  }
-);
+export const Login = createStackNavigator({
+    Login:{
+      screen:LoginForm
+    }
+});
 
 export const UserStack = createBottomTabNavigator(
   {
@@ -115,21 +85,21 @@ export const UserStack = createBottomTabNavigator(
           iconName = `ios-contact${focused ? '' : '-outline'}`;
         } else if (routeName === 'Users') {
             iconName = `ios-people${focused ? '' : '-outline'}`;
-        } else if (routeName === 'Upload') {
+          } else if (routeName === 'Upload') {
             iconName = `ios-people${focused ? '' : '-outline'}`;
-        }
-
-        // You can return any component that you like here! We usually use an
-        // icon component from react-native-vector-icons
-        return(
-          <Ionicons name={iconName} size={25} color={tintColor} />
-        )
+          }
           
+          // You can return any component that you like here! We usually use an
+          // icon component from react-native-vector-icons
+          return(
+            <Ionicons name={iconName} size={25} color={tintColor} />
+          )
+          
+        },
+      }),
+      tabBarOptions: {
+        activeTintColor: 'purple',
+        inactiveTintColor: 'gray',
       },
-    }),
-    tabBarOptions: {
-      activeTintColor: 'purple',
-      inactiveTintColor: 'gray',
-    },
-  }
-);
+    }
+  );

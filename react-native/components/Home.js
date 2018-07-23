@@ -1,17 +1,25 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { Card } from 'react-native-elements'
-import { createStackNavigator } from 'react-navigation';
-
-import {UserStack} from './Routes'
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Error from './Extra/ErrorBoundary'
 import { myIp } from './Extra/MyIp'
 import { fetching } from './Extra/Fetch'
-
-import User from './Users/User'
+import { Button } from 'react-native-elements';
 
 export default class Home extends React.Component {
+  static navigationOptions = {
+    headerLeft: (
+      <Ionicons style={{marginLeft: 15}} name="ios-camera" size={31} 
+        color={'purple'} onPress={() => this.props.navigation.navigate('Upload')}></Ionicons>
+    ),
+    headerRight: (
+      <Ionicons style={{marginRight: 15}} name='ios-chatbubbles' size={31} 
+        color={'purple'} onPress={() => alert('pressed')}/>
+      ),
+  }
+
   constructor() {
     super()
     this.state = {
@@ -20,7 +28,6 @@ export default class Home extends React.Component {
   }
   
   componentDidMount() {
-    
     fetching({}, 'GET', `${myIp}/api/v1/users/all/posts`, response => {
       if (response.status == 200) {
         arr = []
@@ -42,9 +49,14 @@ export default class Home extends React.Component {
           return(
             <Card key={i}  
                 title={`${post.user}`}
-                image = {(post.image != null) ? {uri:`${myIp}${post.image}`} : null}
-                onPress={() => this.props.navigation.navigate('Profile')}>
-            </Card>
+                image = {(post.image != null) ? {uri:`${myIp}${post.image}`} : null}>
+            
+            <Ionicons style={{marginLeft: 15}} 
+                      name="ios-people" size={31} 
+                      color={'purple'} 
+            onPress={() => this.props.navigation.navigate('Upload')}></Ionicons>
+            
+            </Card>    
           )})}
       </ScrollView>
     </Error>

@@ -1,5 +1,5 @@
 import React, { Component }from 'react'
-import { ScrollView, Image } from 'react-native'
+import { ScrollView, Image, Text } from 'react-native'
 import { Button } from 'react-native-elements'
 import { FormValidationMessage } from 'react-native-elements'
 import { ImagePicker, Permissions } from 'expo'
@@ -33,35 +33,52 @@ export default class SignupForm extends Component {
     
 	signUp = (event) => {
 		event.preventDefault()
-		this.checkValues()
-		if (this.state.password === this.state.password_confirmation) {
+		const { username,password, password_confirmation, type, image } = this.state
+		this.setErrors()
 
-			const options = {
-				username: this.state.username,
-				password_digest: this.state.password,
-				picture: this.state.image,
-				type: this.state.type
+		if (this.checkInputs()) {
+			if (password === password_confirmation) {
+
+				const options = {
+					username: username,
+					password_digest: password,
+					picture: image,
+					type: type
+				}
+
+				fetching(options, 'POST', `${myIp}/api/v1/signup`, response => {
+					response.status == 200 
+						? (console.log(response), 
+							console.log('welcome to Rail API!'))
+						: this.setState({username_error: 'Username already exist'})
+				})	
+			} else {
+				this.setState({passwords_error: 'Passwords didnt match'})
 			}
-
-			fetching(options, 'POST', `${myIp}/api/v1/signup`, response => {
-				response.status == 200 
-					? (console.log(response), 
-						console.log('welcome to Rail API!')
-					)
-					: this.setState({username_error: 'Username already exist'})
-			})
-		} else {
-			this.setState({passwords_error: 'Passwords didnt match'})
 		}
 	}
 
-	checkValues = () => {
+	checkInputs = () => {
+		const { username, password, password_confirmation } = this.state;
+		
+		(username !== '' && password !== '' && password_confirmation !== '')
+			? data = true 
+			: data = false
+
+		return data;
+	}
+
+	setErrors = () => {
 		const { username, password, password_confirmation } = this.state
+
 		username == '' ? this.setState({username_error:'Cant be blank'}) 
 			: this.setState({username_error: ''})
 
 		password == '' ? this.setState({passwords_error:'Cant be blank and both must be equals'}) 
-		: this.setState({passwords_error:''})
+			: this.setState({passwords_error:''})
+
+		password_confirmation == '' ? this.setState({passwords_error:'Cant be blank and both must be equals'}) 
+			: this.setState({passwords_error:''})
 	} 
 	
 	pickImage = async () => {
@@ -92,7 +109,6 @@ export default class SignupForm extends Component {
 		<Error>
 			<ScrollView style={inputs.inputWrapper}>
 
-				<Title tagline='Sigup Form'/>
 					<UserInputs
 						label='Username' 
                         onChangeText={username => this.setState({username:username})}
@@ -131,6 +147,8 @@ export default class SignupForm extends Component {
 						onPress={this.signUp}
 						title = 'Sign up'
 					/>
+
+					<Text>Already signed up?</Text>
 
 			</ScrollView>
 		</Error>

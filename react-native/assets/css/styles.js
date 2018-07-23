@@ -26,7 +26,7 @@ export const buttons = StyleSheet.create({
 
 export const title = StyleSheet.create({
   main:{
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     fontSize: 30,
     marginHorizontal: 100
   },
