@@ -12,6 +12,7 @@ export default class User extends Component {
           avatar = {(picture.url != null) ? `${myIp}/${picture.url}` : null}
           title={username}
           subtitle={'username'}
+          onPress={this.props.getProfile(id)}
           />
       )
   }
