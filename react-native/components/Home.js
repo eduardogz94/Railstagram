@@ -63,6 +63,10 @@ export default class Home extends React.Component {
             }
         })
     }
+
+    goToProfile = (id) => {
+        this.props.navigation.navigate('User', id)
+    }
   
     render() {
     
@@ -71,7 +75,7 @@ export default class Home extends React.Component {
         <ScrollView style={home.container}>
             {this.state.posts.map((post, i) => {
             return(
-                <Post key={i} user={post.user} description={post.description} img={{uri:`${myIp}/`+post.image}} imageSource={2} likes={105}></Post>  
+                <Post key={i} user={post.user} goToProfile={this.goToProfile} description={post.description} img={{uri:`${myIp}/`+post.image}} imageSource={2} likes={105}></Post>  
             )})}
         </ScrollView>
         </Error>

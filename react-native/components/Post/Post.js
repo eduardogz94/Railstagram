@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Image } from 'react-native'
+import { Text, View, Image, TouchableOpacity } from 'react-native'
 import { myIp } from '../Extra/MyIp'
 
 import { Card, CardItem, Thumbnail, Body, Left, Button, Right, Icon} from 'native-base'
@@ -14,8 +14,10 @@ export default class Post extends Component {
         <Card>
             <CardItem>
                 <Left>
+                <TouchableOpacity activeOpacity = { .5 } onPress={() => this.props.goToProfile(this.props.user.id) }>
                     <Thumbnail 
                         source={{uri: `${myIp}/${this.props.user.avatar}`}}/>
+                </TouchableOpacity>
                     <Body>
                         <Text style={post.username}>{this.props.user.username}</Text>
                         <Text note>Jan 15, 2018</Text>
@@ -28,7 +30,6 @@ export default class Post extends Component {
                 <Image 
                     style={post.main}
                     source={this.props.img}
-
                     />
             </CardItem>
 
@@ -50,8 +51,9 @@ export default class Post extends Component {
                         <Icon 
                             style={post.buttons}
                             name={'ios-send-outline'}
-                            onPress={() => this.props.navigation.navigate('User', post.user.id)}
-                        />
+                            // onPress={() => this.props.navigation.navigate('User', post.user.id)}
+                            onPress={() => alert('a')}
+                            />
                     </Button>
                 </Right>    
             </CardItem>
