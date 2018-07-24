@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { ScrollView, View, Text, Image } from 'react-native'
-import { Button, Tabs, Tab, TabHeading, Icon } from 'native-base'
+import { Button, Tabs, Tab, TabHeading } from 'native-base'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Error from '../Extra/ErrorBoundary'
@@ -8,12 +8,13 @@ import { myIp } from '../Extra/MyIp'
 
 import { userDetails } from '../Fetch/Requests'
 
+import { profile } from '../../assets/css/profile'
+
 import Post from '../Post/Post';
 
 import Auth from '../Auth/Auth';
 const auth = new Auth()
 
-import { profile } from '../../assets/css/profile'
 
 export default class Profile extends Component {
     constructor(props) {
@@ -34,7 +35,7 @@ export default class Profile extends Component {
         }
     }
     
-    componentWillMount = () => {
+    componentDidMount = () => {
         let id;
         if (this.props.navigation.state.params) {
             id = this.props.navigation.state.params
@@ -59,6 +60,10 @@ export default class Profile extends Component {
         }
     }
 
+    goToProfile = (id) => {
+        this.props.navigation.navigate('User', id)
+    }
+
     renderSection = () => {
         if (this.state.index == 0) {
             return( <View style={{flexDirection:'row', flexWrap:'wrap'}}>
@@ -66,15 +71,15 @@ export default class Profile extends Component {
                     </View>)
         } else if (this.state.index == 1) {
                 const { posts } = this.state
-                const { user } = this.state.user
                 return  posts.map((post,index) => {
                     return ( 
-                            <Post 
-                                key={index} 
-                                user={user}
-                                img={{uri:`${myIp}/`+post.post_image.url}}
-                                likes={105}
-                                />
+                        <Post 
+                            key={index} 
+                            user={this.state.user}
+                            img={{uri:`${myIp}/`+post.post_image.url}}
+                            likes={105}
+                            goToProfile={this.goToProfile}
+                        />
                     )
                 })
         }
@@ -98,8 +103,7 @@ export default class Profile extends Component {
     }
 
     segmentClick = (index) => {
-        // console.log('test')
-        this.setState({index:index})
+        this.setState({ index })
     }
 
     render() {

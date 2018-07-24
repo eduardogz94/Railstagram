@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
-import { Button } from 'react-native-elements'
+import { ScrollView, Text } from 'react-native'
+import { Button, Container, Icon, Content, Form, Item, Input, Label } from 'native-base';
+import { FormValidationMessage } from 'react-native-elements'
 
 import Error from '../Extra/ErrorBoundary'
-import { myIp } from '../Extra/MyIp'
 
-import { fetching } from '../Fetch/Fetch'
-
-import UserInputs from './Inputs'
-import { inputs } from '../../assets/css/styles'
 import { editProfile } from '../Fetch/Requests';
+
+import { formStyle } from '../../assets/css/login'
 
 export default class EditProfile extends Component {
     constructor() {
@@ -66,23 +64,39 @@ export default class EditProfile extends Component {
     render() {
     return (
         <Error>
-            <ScrollView style={inputs.inputWrapper}>
-                    <UserInputs 
-                        label='Username'
-                        onChangeText={username => this.setState({username:username})}
-                        placeholder = 'Username'
-                        autoCapitalize={'none'}/>
-                
-                    <UserInputs 
-                        label='Password'
-                        onChangeText={password => this.setState({password:password})}
-                        placeholder = 'Password'
-                        secureTextEntry={true}
-                        autoCapitalize={'none'}/>
-                
-                    <Button style={{marginTop: 50}}
-                        onPress={this.editProfile}
-                        title = 'Edit Profile'/>
+            <ScrollView style={formStyle.main}>
+                <Container>
+                    <Content>
+                        <Form>
+                            <Item floatingLabel>
+                                <Icon active style={formStyle.buttons} name='ios-person'/>
+                                <Label>Username</Label>
+                                <Input 
+                                    onChangeText={username => this.setState({username:username})}
+                                    autoCapitalize={'none'} />
+                            </Item>
+                            <FormValidationMessage>{this.state.username_error}</FormValidationMessage>      
+                            
+                            <Item floatingLabel>
+                                <Icon active style={formStyle.buttons} name='key'/>  
+                                <Label>Password</Label>
+                                <Input 
+                                    onChangeText={password => this.setState({password:password})}
+                                    secureTextEntry={true} 
+                                    autoCapitalize={'none'} />
+                            </Item>
+                            <FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
+                            
+                            <Button 
+                                block bordered dark
+                                style={formStyle.buttonContainer}
+                                onPress={this.editProfile}>
+                                <Text>Edit Profile</Text>
+                                <Icon style={formStyle.buttons} name="ios-log-in"></Icon>
+                            </Button>
+                        </Form>
+                    </Content>
+                </Container>
             </ScrollView>
         </Error>
     )}

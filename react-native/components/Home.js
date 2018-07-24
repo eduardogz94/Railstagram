@@ -1,6 +1,5 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
-import { Card } from 'react-native-elements'
+import { ScrollView } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Error from './Extra/ErrorBoundary'
@@ -11,6 +10,7 @@ import Post from './Post/Post'
 import { getPosts } from './Fetch/Requests'
 
 import { home } from '../assets/css/home'
+
 
 export default class Home extends React.Component {
   static navigationOptions =  {
@@ -74,7 +74,6 @@ export default class Home extends React.Component {
         <Error>  
         <ScrollView style={home.container}>
             {this.state.posts.map((post, i) => {
-            {/* console.log(JSON.stringify(post)) */}
             return(
                 <Post key={i} 
                       user={post.user} 

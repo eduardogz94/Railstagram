@@ -1,30 +1,37 @@
 import React, { Component } from 'react'
 import { Text, View, Image, TouchableOpacity } from 'react-native'
-import { myIp } from '../Extra/MyIp'
-
 import { Card, CardItem, Thumbnail, Body, Left, Button, Right, Icon} from 'native-base'
+
+import { myIp } from '../Extra/MyIp'
 
 import { post } from '../../assets/css/post'
 
 
 export default class Post extends Component {
+    state = {
+
+    }
+
+    componentDidMount = () => {
+      if (this.props.user.avatar) {
+          this.setState({avatar:this.props.user.avatar})
+      } else (
+          this.setState({avatar:this.props.user.picture.url})
+      )
+    }
+    
     render() {
-    console.log(this.props.user)
-    const {username, id } = this.props.user
     return (
       <View>
         <Card>
             <CardItem>
                 <Left>
-                <TouchableOpacity activeOpacity = { .5 } onPress={() => this.props.goToProfile(id) }>
+                <TouchableOpacity activeOpacity = { .5 } onPress={() => this.props.goToProfile(this.props.user.id) }>
                     <Thumbnail 
-                        source={{uri: `${myIp}/${this.props.avatar}`}
-                            
-                        }
-                    />
+                        source={{uri: `${myIp}/${this.state.avatar}`}}/>
                 </TouchableOpacity>
                     <Body>
-                        <Text style={post.username}>{username}</Text>
+                        <Text style={post.username}>{this.props.user.username}</Text>
                         <Text note>Jan 15, 2018</Text>
                     </Body>
                     
@@ -68,7 +75,7 @@ export default class Post extends Component {
 
             <CardItem>
                 <Text>
-                    <Text style={post.username}>{username}</Text>
+                    <Text style={post.username}>{this.props.user.username}</Text>
                         {this.props.description}
                      </Text>
             </CardItem>

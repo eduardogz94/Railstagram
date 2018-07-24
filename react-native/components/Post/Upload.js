@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-
-import { ScrollView, Image, View, TouchableOpacity, Text } from 'react-native'
+import { ScrollView, Image } from 'react-native'
 import { Button, FormValidationMessage } from 'react-native-elements'
-import { ImagePicker, Permissions, Camera } from 'expo'
+import { ImagePicker, Permissions } from 'expo'
+
 import Error from '../Extra/ErrorBoundary'
+
 import UserInputs from '../Users/Inputs'
-import { inputs , butons } from '../../assets/css/styles'
-import { myIp } from '../Extra/MyIp'
+
 import { newPost } from '../Fetch/Requests';
+
+import { inputs } from '../../assets/css/styles'
+
 
 import Auth from '../Auth/Auth';
 const auth = new Auth()
@@ -68,63 +71,9 @@ export default class Upload extends Component {
             }
         })
     }
-    // state = {
-    //     hasCameraPermission: null,
-    //     type: Camera.Constants.Type.back,
-    //   };
-    
-    //   async componentWillMount() {
-    //     const { status } = await Permissions.askAsync(Permissions.CAMERA);
-    //     this.setState({ hasCameraPermission: status === 'granted' });
-    //   }
-    
-    //   takePhoto = async () => {
-    //     if (this.camera) {
-    //         let photo = await this.camera.takePictureAsync({ base64:true })
-    //         base64Img.base64(photo.uri, function(err, data) {
-    //             if (err) { return console.log(err) }
-    //             console.log(data)
-    //         })
-    //         console.log(JSON.stringify(photo))
-            
-    //     }
-
-    // }
 
     render() {
-        // const { hasCameraPermission } = this.state;
-        // if (hasCameraPermission === null) {
-        //   return <View />;
-        // } else if (hasCameraPermission === false) {
-        //   return <Text>No access to camera</Text>;
-        // } else {
-        //   return (
-        //     <View style={{ flex: 1 }}>
-        //       <Camera style={{ flex: 1 }} type={this.state.type} ref={ref => {this.camera = ref; }}>
-        //         <View
-        //           style={{
-        //             flex: 1,
-        //             backgroundColor: 'transparent',
-        //             flexDirection: 'row',
-        //           }}>
-        //           <TouchableOpacity
-        //             style={{
-        //               flex: 0.1,
-        //               alignSelf: 'flex-end',
-        //               alignItems: 'center',
-        //             }}
-        //             onPress={this.takePhoto}>
-        //             <Text
-        //               style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
-        //               {' '}Flip{' '}
-        //             </Text>
-        //           </TouchableOpacity>
-        //         </View>
-        //       </Camera>
-        //     </View>
-        //   )
-        // }
-        let { image, show } = this.state;
+      let { image, show } = this.state;
         return (
             <Error>
                 <ScrollView style={inputs.inputWrapper}>

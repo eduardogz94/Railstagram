@@ -3,9 +3,6 @@ import { View, ScrollView } from 'react-native'
 import { List, SearchBar } from 'react-native-elements'
 
 import Error from '../Extra/ErrorBoundary'
-import { myIp } from '../Extra/MyIp'
-
-import { fetching } from '../Fetch/Fetch'
 
 import User from '../Users/User'
 import { getAllUsers, findUser } from '../Fetch/Requests';

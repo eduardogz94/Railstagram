@@ -4,14 +4,14 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Home from './Home'
 
-import LoginForm from './Users/LoginForm'
-import SignupForm from './Users/SignupForm'
+import LoginView from './Auth/Login'
+import SignupView from './Auth/Signup'
+
 import FindUser from './Users/FindUser'
 import Profile from './Users/Profile'
 import EditProfile from './Users/EditProfile'
 
 import Uploading from './Post/Upload'
-import Post from './Post/Post'
 
 export const Index = createStackNavigator({
     Home:{
@@ -51,9 +51,9 @@ export const User = createStackNavigator({
 
 export const Signup = createStackNavigator({
   Signup:{
-    screen:SignupForm,
+    screen:SignupView,
     navigationOptions:{
-      title:'Signup'
+      title:'Sign up'
     },
   }
 });
@@ -84,7 +84,10 @@ export const Upload = createStackNavigator({
 
 export const Login = createStackNavigator({
     Login:{
-      screen:LoginForm
+      screen:LoginView,
+      navigationOptions: {
+        title:'Log in'
+      }
     }
 });
 
@@ -107,7 +110,7 @@ export const UserStack = createBottomTabNavigator(
         } else if (routeName === 'Users') {
           iconName = `ios-people${focused ? '' : '-outline'}`;
         } else if (routeName === 'Upload') {
-          iconName = `ios-people${focused ? '' : '-outline'}`;
+          iconName = `ios-camera${focused ? '' : '-outline'}`;
         }
           
         // You can return any component that you like here! We usually use an
@@ -127,3 +130,38 @@ export const UserStack = createBottomTabNavigator(
       },
     }
   );
+
+  export const GuestStack = createBottomTabNavigator(
+    {
+      Signup:Signup,
+      Login:Login,
+      Home:Index,
+    },
+    {
+      navigationOptions: ({ navigation }) => ({
+        tabBarIcon: ({ focused, tintColor }) => {
+          const { routeName } = navigation.state;
+          let iconName;
+          if (routeName == 'Login') {
+            iconName = `ios-home${focused ? '' : '-outline'}`;
+          } else if (routeName === 'Signup') {
+            iconName = `ios-contact${focused ? '' : '-outline'}`;
+          }
+            
+          // You can return any component that you like here! We usually use an
+          // icon component from react-native-vector-icons
+          return(
+            <Ionicons name={iconName} size={25} color={tintColor} />
+          )
+            
+        },
+      }),
+        animationEnabled: true,
+        swipeEnabled:true,
+        tabBarOptions: {
+          activeTintColor: 'purple',
+          inactiveTintColor: 'gray',
+          showLabel: false
+        },
+      }
+    );
