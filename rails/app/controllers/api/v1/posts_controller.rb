@@ -32,6 +32,11 @@ class PostsController < ApplicationController
         render json: { posts: @posts, users: users, status: 200 }
     end
 
+    def show_by_user
+        @posts = Post.where(user_id: params[:user_id])
+        render json: { posts: @posts, status: 200 }
+    end
+
     def destroy
         @user = User.find(params[:user_id])
         @post = Post.find(params[:id])
@@ -44,7 +49,7 @@ class PostsController < ApplicationController
 
     private
         def post_params
-            params.require(:post).permit(:user_id, :post_image, :description)
+            params.require(:post).permit(:user_id, :post_image)
         end
 
         def load_user

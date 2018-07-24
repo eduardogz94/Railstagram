@@ -15,7 +15,7 @@ export default class Post extends Component {
             <CardItem>
                 <Left>
                     <Thumbnail 
-                        source={{uri: `${myIp}/${this.props.avatar}`}}/>
+                        source={{uri: `${myIp}/${this.props.user}`}}/>
                     <Body>
                         <Text style={post.username}>{this.props.user.username}</Text>
                         <Text note>Jan 15, 2018</Text>

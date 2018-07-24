@@ -64,7 +64,7 @@ export default class Upload extends Component {
             if (result.status !== false) {
                 this.props.navigation.navigate('Home')
             } else {
-                alert('Error')
+                console.log('Error')
             }
         })
     }
@@ -82,10 +82,10 @@ export default class Upload extends Component {
     //     if (this.camera) {
     //         let photo = await this.camera.takePictureAsync({ base64:true })
     //         base64Img.base64(photo.uri, function(err, data) {
-    //             if (err) { return alert(err) }
-    //             alert(data)
+    //             if (err) { return console.log(err) }
+    //             console.log(data)
     //         })
-    //         alert(JSON.stringify(photo))
+    //         console.log(JSON.stringify(photo))
             
     //     }
 

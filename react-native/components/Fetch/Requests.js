@@ -52,7 +52,7 @@ export const findUser = (username, cb) => {
         if (response.status == 200 ) {
             cb({ users: response.user })
         } else {
-            alert('cannot connect with server')
+            console.log('cannot connect with server')
         }
     })
 }

@@ -42,6 +42,7 @@ export default class Home extends React.Component {
     componentDidMount() {
         getPosts(response => {
             if (response) {
+              console.log(response.user)
                 arr = []
                 for (var i in response) {
                     const { image, description, like, comment, user } = response[i]
@@ -69,9 +70,16 @@ export default class Home extends React.Component {
         <Error>  
         <ScrollView style={home.container}>
             {this.state.posts.map((post, i) => {
-            alert(JSON.stringify(post))
+            console.log(JSON.stringify(post))
             return(
-                <Post key={i} user={post.user} description={post.description} img={{uri:`${myIp}/`+post.image}} imageSource={2} likes={105}></Post>  
+                <Post 
+                  key={i} 
+                  user={post.user} 
+                  description={post.description} 
+                  img={{uri:`${myIp}/`+post.image}} 
+                  imageSource={2} 
+                  likes={105}
+                />  
             )})}
         </ScrollView>
         </Error>
