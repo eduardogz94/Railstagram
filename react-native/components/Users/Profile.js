@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
 
-import { fetching } from '../Fetch/Fetch'
+import { userDetails, userPosts } from '../Fetch/Requests'
 
 import Auth from '../Auth/Auth';
 const auth = new Auth()
@@ -34,7 +34,8 @@ export default class Profile extends Component {
                     url:''
                 },
                 created_at:'',
-            }
+            },
+            posts: []
         }
     }
     
@@ -42,18 +43,26 @@ export default class Profile extends Component {
         let id;
         if (this.props.navigation.state.params) {
             id = this.props.navigation.state.params
-            fetching({}, 'GET', `${myIp}/api/v1/users/${id}`, response => {
-                response.status == 200 
-                    ? this.setState({user:response.user, owner: false}) 
-                    : alert('Error retrieving the profile')
+            alert('y2es')
+            userDetails(id, response => {
+                if (response !== false) {
+                    this.setState({user:response.user, owner: false}) 
+                    alert(this.state.user)
+                } else {
+                    alert('Error retrieving the profile')
+                }
             })
         } else {
             auth.getItem('session').then(data => {
-            id = data
-                fetching({}, 'GET', `${myIp}/api/v1/users/${id}`, response => {
-                    response.status == 200 
-                        ? this.setState({user:response.user, owner: true}) 
-                        : alert('Error retrieving the profile')
+                id = data
+                userDetails(id, response => {
+                    alert(JSON.stringify(response))
+                    if (response !== false) {
+                        this.setState({user:response.user, posts:response.posts, owner: true}) 
+                        alert(JSON.stringify(this.state))
+                    } else {
+                        alert('Error retrieving the profile')
+                    }
                 })
             })
         }
@@ -94,12 +103,13 @@ export default class Profile extends Component {
 
     render() {
         const { username, created_at, picture} = this.state.user;
+ 
         return (
         <Error>   
             <ScrollView style={profile.container}>
                 <View style={profile.profileTab}>
                     <View style={profile.data}>
-                        <Image source={require('../../assets/images/index.jpeg')}
+                        <Image source={{uri: `${myIp}${picture}`}}
                                 style={profile.image}/>
                     </View>
                     <View style={{flex:3}}>

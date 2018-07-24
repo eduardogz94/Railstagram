@@ -32,11 +32,6 @@ class PostsController < ApplicationController
         render json: { posts: @posts, users: users, status: 200 }
     end
 
-    def user_posts
-        @posts = Post.select('posts.post_image, posts.like, posts.comment, posts.created_at, users.username').joins(:user).where(users: { id: params[:user_id] })
-        render json: { posts: @posts, status: 200 }
-    end
-
     def destroy
         @user = User.find(params[:user_id])
         @post = Post.find(params[:id])

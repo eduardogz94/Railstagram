@@ -45,3 +45,13 @@ export const getAllUsers = (cb) => {
         }
     })
 }
+
+export const userDetails = (id, cb) => {
+    fetching({}, 'GET', `${myIp}/api/v1/users/${id}`, response => {
+        if (response.status == 200) {
+            cb({user:response.user, posts:response.posts})
+        } else {
+            cb(false)
+        }
+    })
+}
