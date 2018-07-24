@@ -13,14 +13,6 @@ const auth = new Auth()
 
 import { profile } from '../../assets/css/profile'
 
-var images = [
-    require('../../assets/images/index.jpeg'),
-    require('../../assets/images/index.jpeg'),
-    require('../../assets/images/index.jpeg'),
-    require('../../assets/images/index.jpeg'),
- 
-]
-
 export default class Profile extends Component {
     constructor(props) {
         super(props)

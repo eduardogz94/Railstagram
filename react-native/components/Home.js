@@ -35,14 +35,13 @@ export default class Home extends React.Component {
     constructor() {
         super()
         this.state = {
-        posts: []
+            posts: []
         }
     }
     
     componentDidMount() {
         getPosts(response => {
             if (response) {
-              console.log(response.user)
                 arr = []
                 for (var i in response) {
                     const { image, description, like, comment, user } = response[i]
@@ -52,8 +51,9 @@ export default class Home extends React.Component {
                         like,
                         comment,
                         user:{
-                            username: user[0].username,
-                            id: user[0].id
+                            username: user.username,
+                            id: user.id,
+                            avatar: user.avatar
                         }
                     })
                 }
@@ -85,36 +85,4 @@ export default class Home extends React.Component {
         </Error>
         );
     }
-    }
-
-    {/* <Card 
-        key={i}  
-        title={`${post.user.username}`}
-        image = {(post.image != null) ? {uri:`${myIp}${post.image}`} : null}>
-
-    <View style={home.buttons}>
-    
-        <Ionicons 
-        style={home.like}
-        name="ios-heart-outline" 
-        size={20} 
-        color={'purple'} 
-        onPress={() => this.props.navigation.navigate('Upload')}></Ionicons>
-
-        <Ionicons 
-        style={home.comment} 
-        name="ios-chatboxes-outline" 
-        size={20} 
-        color={'purple'} 
-        onPress={() => this.checkId(post.user.id)}></Ionicons>
-        
-        <Ionicons 
-        style={home.profile} 
-        name="ios-share-alt" 
-        size={20} 
-        color={'purple'} 
-        onPress={() => this.props.navigation.navigate('User', post.user.id)}></Ionicons>
-    
-    </View>
-
-    </Card> */}
+}
