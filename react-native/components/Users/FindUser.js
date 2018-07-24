@@ -72,7 +72,7 @@ export default class FindUser extends React.Component {
 							<List>
 								{this.state.users.map((user) => {
 									return(
-									<User user={user} key={user.id} getProfile={this.getProfile}/>)
+									<User user={user} key={user.id} getProfile={() => this.getProfile()}/>)
 								})}
 							</List>
 					</ScrollView>
