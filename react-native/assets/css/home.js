@@ -23,5 +23,5 @@ export const home = StyleSheet.create({
     },
     chat: {
         marginRight: 15,
-    }
+    },
 });

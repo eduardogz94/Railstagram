@@ -41,22 +41,24 @@ export default class Profile extends Component {
     
     componentWillMount = () => {
         let id;
+        console.log(this.props)
         if (this.props.navigation.state.params) {
+            console.log('navigation props')
             id = this.props.navigation.state.params
             alert('y2es')
             userDetails(id, response => {
                 if (response !== false) {
-                    this.setState({user:response.user, owner: false}) 
+                    this.setState({user:response.user, posts:response.posts, owner: false}) 
                     alert(this.state.user)
                 } else {
                     alert('Error retrieving the profile')
                 }
             })
         } else {
+            console.log('clicked profile')
             auth.getItem('session').then(data => {
                 id = data
                 userDetails(id, response => {
-                    alert(JSON.stringify(response))
                     if (response !== false) {
                         this.setState({user:response.user, posts:response.posts, owner: true}) 
                         alert(JSON.stringify(this.state))
@@ -132,10 +134,16 @@ export default class Profile extends Component {
 
 
                 <View style={profile.rows}>
-                    <Button style={profile.edit} 
+                    {this.state.owner 
+                        ? <Button style={profile.edit} 
                         title={'Edit Profile'}
                         onPress={() => this.props.navigation.navigate('Settings')}
                         />
+
+                        : <Button style={profile.edit} 
+                        title={'Follow'}
+                        />
+                    }    
                 </View>
 
                 <View style={profile.dataText}>
