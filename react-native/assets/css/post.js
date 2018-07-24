@@ -11,5 +11,8 @@ export const post = StyleSheet.create({
     },
     username: {
         fontWeight: '900'
+    },
+    buttons:{
+        color:'purple'
     }
 })

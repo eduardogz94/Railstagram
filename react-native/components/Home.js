@@ -13,24 +13,24 @@ import { getPosts } from './Fetch/Requests'
 import { home } from '../assets/css/home'
 
 export default class Home extends React.Component {
-    static navigationOptions =  {
-        headerLeft: (
-        <Ionicons style={home.upload} 
-            name="ios-camera-outline" 
-            size={31} 
-            color={'purple'} 
-            onPress={() => this.props.navigation.navigate('Photo')}
-            />
-        ),
-        headerRight: (
-        <Ionicons style={home.chat} 
-            name='ios-send-outline' 
-            size={31} 
-            color={'purple'} 
-            onPress={() => alert('pressed')}
-            />
-        ),
-    }
+  static navigationOptions =  {
+    headerLeft: (
+      <Ionicons style={home.upload} 
+        name="ios-camera-outline" 
+        size={31} 
+        color={'purple'} 
+        onPress={() => this.props.navigation.navigate('Photo')}
+        />
+    ),
+    headerRight: (
+      <Ionicons style={home.chat} 
+        name='ios-send-outline' 
+        size={31} 
+        color={'purple'} 
+        onPress={() => console.log('pressed')}
+        />
+      ),
+  }
 
     constructor() {
         super()

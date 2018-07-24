@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { ScrollView, View, Text, Image } from 'react-native'
-import { Button } from 'react-native-elements'
+import { Button } from 'native-base'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Error from '../Extra/ErrorBoundary'
@@ -34,26 +34,23 @@ export default class Profile extends Component {
     
     componentWillMount = () => {
         let id;
-        console.log(this.props)
         if (this.props.navigation.state.params) {
-            console.log('navigation props')
             id = this.props.navigation.state.params
             userDetails(id, response => {
                 if (response !== false) {
                     this.setState({user:response.user, posts:response.posts, owner: false}) 
                 } else {
-                    alert('Error retrieving the profile')
+                    console.log('Error retrieving the profile')
                 }
             })
         } else {
-            console.log('clicked profile')
             auth.getItem('session').then(data => {
                 id = data
                 userDetails(id, response => {
                     if (response !== false) {
                         this.setState({user:response.user, posts:response.posts, owner: true}) 
                     } else {
-                        alert('Error retrieving the profile')
+                        console.log('Error retrieving the profile')
                     }
                 })
             })
@@ -126,14 +123,13 @@ export default class Profile extends Component {
 
                 <View style={profile.rows}>
                     {this.state.owner 
-                        ? <Button style={profile.edit} 
-                        title={'Edit Profile'}
-                        onPress={() => this.props.navigation.navigate('Settings')}
-                        />
+                        ? <Button style={profile.edit} bordered dark onPress={() => this.props.navigation.navigate('Settings')}>
+                                <Text>Edit Profile</Text>
+                            </Button>
 
-                        : <Button style={profile.edit} 
-                        title={'Follow'}
-                        />
+                        : <Button bordered dark style={profile.follow}>
+                                <Text>Follow!</Text>
+                            </Button>
                     }    
                 </View>
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, Image } from 'react-native'
+import { myIp } from '../Extra/MyIp'
 
 import { Card, CardItem, Thumbnail, Body, Left, Button, Right, Icon} from 'native-base'
 
@@ -14,7 +15,7 @@ export default class Post extends Component {
             <CardItem>
                 <Left>
                     <Thumbnail 
-                    />
+                        source={{uri: `${myIp}/${this.props.avatar}`}}/>
                     <Body>
                         <Text style={post.username}>{this.props.user.username}</Text>
                         <Text note>Jan 15, 2018</Text>
@@ -34,15 +35,21 @@ export default class Post extends Component {
             <CardItem style={post.buttonContainer}>
                 <Left>
                     <Button transparent>
-                        <Icon name={'ios-heart-outline'}/>
+                        <Icon 
+                            style={post.buttons}
+                            name={'ios-heart-outline'}/>
                     </Button>
                     <Button transparent>
-                        <Icon name={'ios-chatbubbles-outline'}/>
+                        <Icon 
+                            style={post.buttons}
+                            name={'ios-chatbubbles-outline'}/>
                     </Button>
                 </Left>
                 <Right>
                     <Button transparent>
-                        <Icon name={'ios-send-outline'}
+                        <Icon 
+                            style={post.buttons}
+                            name={'ios-send-outline'}
                             onPress={() => this.props.navigation.navigate('User', post.user.id)}
                         />
                     </Button>
