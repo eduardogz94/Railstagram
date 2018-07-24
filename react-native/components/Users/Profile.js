@@ -17,7 +17,8 @@ var images = [
     require('../../assets/images/index.jpeg'),
     require('../../assets/images/index.jpeg'),
     require('../../assets/images/index.jpeg'),
-    require('../../assets/images/index.jpeg')
+    require('../../assets/images/index.jpeg'),
+ 
 ]
 
 export default class Profile extends Component {
@@ -45,11 +46,9 @@ export default class Profile extends Component {
         if (this.props.navigation.state.params) {
             console.log('navigation props')
             id = this.props.navigation.state.params
-            alert('y2es')
             userDetails(id, response => {
                 if (response !== false) {
                     this.setState({user:response.user, posts:response.posts, owner: false}) 
-                    alert(this.state.user)
                 } else {
                     alert('Error retrieving the profile')
                 }
@@ -61,7 +60,6 @@ export default class Profile extends Component {
                 userDetails(id, response => {
                     if (response !== false) {
                         this.setState({user:response.user, posts:response.posts, owner: true}) 
-                        alert(JSON.stringify(this.state))
                     } else {
                         alert('Error retrieving the profile')
                     }
@@ -84,7 +82,8 @@ export default class Profile extends Component {
     }
 
     sectionOne = () => {
-        return  images.map((image,index) => {
+        const { posts } = this.state
+        return  posts.map((post,index) => {
             return ( 
                     <View key={index} 
                     style={[profile.images,
@@ -92,7 +91,7 @@ export default class Profile extends Component {
                     ]}>
                     
                     <Image style={profile.imageIndex}
-                        source={image}
+                        source={{uri: `${myIp}/${post.post_image.url}`}}
                     />
                 </View>
             )
@@ -111,7 +110,7 @@ export default class Profile extends Component {
             <ScrollView style={profile.container}>
                 <View style={profile.profileTab}>
                     <View style={profile.data}>
-                        <Image source={{uri: `${myIp}${picture}`}}
+                        <Image source={{uri: `${myIp}/${picture.url}`}}
                                 style={profile.image}/>
                     </View>
                     <View style={{flex:3}}>

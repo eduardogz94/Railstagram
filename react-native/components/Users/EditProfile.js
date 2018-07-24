@@ -9,6 +9,7 @@ import { fetching } from '../Fetch/Fetch'
 
 import UserInputs from './Inputs'
 import { inputs } from '../../assets/css/styles'
+import { editProfile } from '../Fetch/Requests';
 
 export default class EditProfile extends Component {
     constructor() {
@@ -31,11 +32,13 @@ export default class EditProfile extends Component {
                 password: password
             }
             
-            fetching(options, 'PATCH', `${myIp}/api/v1/edit/${id}`, response => {
-                response.status == 200 ?
+            editProfile(id, options, response => {
+                if (response !== false) {
                     this.setState({username:response.user.username, owner: true})
-                    : console.log('There was an error with your request')
-            })
+                } else {
+                    console.log('There was an error with your request')
+                }       
+             })
         }
     }
 

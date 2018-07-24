@@ -8,6 +8,7 @@ import { myIp } from '../Extra/MyIp'
 import { fetching } from '../Fetch/Fetch'
 
 import User from '../Users/User'
+import { getAllUsers, findUser } from '../Fetch/Requests';
 
 export default class FindUser extends React.Component {
 	constructor(){
@@ -23,9 +24,8 @@ export default class FindUser extends React.Component {
 
 
 	getAll = () => {
-		fetching({}, 'GET', `${myIp}/api/v1/users`, response => {
-			this.setState({ users:[] })
-			if (response.status == 200 ) {
+		getAllUsers(response => {
+			if (response !== false) {
 				this.setState({
 					users:this.state.users.concat( response.user )
 				})
@@ -40,8 +40,8 @@ export default class FindUser extends React.Component {
 			this.getAll()
 		} else {
 			this.setState({ users:[] })
-			fetching({}, 'GET', `${myIp}/api/v1/users/find/${username}`, response => {
-				if (response.status == 200 ) {
+			findUser(username, response => {
+				if (response !== false) {
 					this.setState({
 						users:this.state.users.concat( response.user )
 					})
@@ -72,7 +72,7 @@ export default class FindUser extends React.Component {
 							<List>
 								{this.state.users.map((user) => {
 									return(
-									<User user={user} key={user.id} getProfile={() => this.getProfile()}/>)
+									<User user={user} key={user.id} getProfile={() => this.getProfile(user.id)}/>)
 								})}
 							</List>
 					</ScrollView>

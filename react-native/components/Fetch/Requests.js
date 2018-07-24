@@ -8,6 +8,9 @@ export const getPosts = cb => {
             for (var i in response.posts) {
                 arr.push({
                     image: response.posts[i].post_image.url,
+                    description: response.posts[i].description,
+                    like: response.posts[i].like,
+                    comment: response.posts[i].comment,
                     user: response.users[i]
                 })
             }
@@ -36,12 +39,20 @@ export const login = (options, cb) => {
 
 export const getAllUsers = (cb) => {
     fetching({}, 'GET', `${myIp}/api/v1/users`, response => {
-        user = []
         if (response.status == 200) {
-            user.push(response.user)
-            cb(user)
+            cb({user: response.user})
         } else {
             cb(false)
+        }
+    })
+}
+
+export const findUser = (username, cb) => {
+    fetching({}, 'GET', `${myIp}/api/v1/users/find/${username}`, response => {
+        if (response.status == 200 ) {
+            cb({ users: response.user })
+        } else {
+            alert('cannot connect with server')
         }
     })
 }
@@ -50,6 +61,34 @@ export const userDetails = (id, cb) => {
     fetching({}, 'GET', `${myIp}/api/v1/users/${id}`, response => {
         if (response.status == 200) {
             cb({user:response.user, posts:response.posts})
+        } else {
+            cb(false)
+        }
+    })
+}
+
+export const editProfile = (id, options, cb) => {
+    fetching(options, 'PATCH', `${myIp}/api/v1/edit/${id}`, response => {
+         if (response.status == 200) {
+            cb({user:response.user, posts:response.posts})
+        } else {
+            cb(false)
+        }
+  })
+}
+
+export const newPost = (body, id, cb) => {
+    fetch(`${myIp}/api/v1/users/${id}/posts`, {
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify( body )
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.status == 200) {
+            cb(true)
         } else {
             cb(false)
         }
