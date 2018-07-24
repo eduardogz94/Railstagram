@@ -24,8 +24,13 @@ export const profile = StyleSheet.create({
         borderRadius: 37.5
     },
     edit: {
-        flex:1,
-        width:'100%',
+        width:150,
+        marginLeft: '33%',
+        justifyContent: 'center',
+    },
+    follow: {
+        flex: 1,
+        width: '120%',
         marginLeft: '40%',
         justifyContent: 'center',
         borderColor: 'black',

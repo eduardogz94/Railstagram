@@ -30,7 +30,7 @@ export default class FindUser extends React.Component {
 					users:this.state.users.concat( response.user )
 				})
 			} else {
-				alert('cannot connect with server')
+				console.log('cannot connect with server')
 			}
 		})
 	}
@@ -46,13 +46,14 @@ export default class FindUser extends React.Component {
 						users:this.state.users.concat( response.user )
 					})
 				} else {
-					alert('cannot connect with server')
+					console.log('cannot connect with server')
 				}
 			})
 		}	
 	}
 
 	getProfile = (id) => {
+		alert(id)
 		this.props.navigation.navigate('User', id)
 	}
 		
@@ -72,7 +73,7 @@ export default class FindUser extends React.Component {
 							<List>
 								{this.state.users.map((user) => {
 									return(
-									<User user={user} key={user.id} getProfile={() => this.getProfile()}/>)
+									<User user={user} key={user.id} getProfile={() => this.getProfile(user.id)}/>)
 								})}
 							</List>
 					</ScrollView>

@@ -27,7 +27,7 @@ export default class Home extends React.Component {
         name='ios-send-outline' 
         size={31} 
         color={'purple'} 
-        onPress={() => alert('pressed')}
+        onPress={() => console.log('pressed')}
         />
       ),
   }
@@ -64,7 +64,7 @@ export default class Home extends React.Component {
       <ScrollView style={home.container}>
         {this.state.posts.map((post, i) => {
           return(
-            <Post key={i} user={post.user} imageSource={2} likes={105}></Post>  
+            <Post key={i} user={post.user} imageSource={2} avatar={post.image} likes={105}></Post>  
           )})}
       </ScrollView>
     </Error>
