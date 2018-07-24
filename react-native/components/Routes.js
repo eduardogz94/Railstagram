@@ -53,7 +53,7 @@ export const Signup = createStackNavigator({
   Signup:{
     screen:SignupForm,
     navigationOptions:{
-      title:'Signup'
+      title:'Sign up'
     },
   }
 });
@@ -84,7 +84,10 @@ export const Upload = createStackNavigator({
 
 export const Login = createStackNavigator({
     Login:{
-      screen:LoginForm
+      screen:LoginForm,
+      navigationOptions: {
+        title:'Log in'
+      }
     }
 });
 
@@ -127,3 +130,38 @@ export const UserStack = createBottomTabNavigator(
       },
     }
   );
+
+  export const GuestStack = createBottomTabNavigator(
+    {
+      Login:Login,
+      Signup:Signup,
+      Home:Index,
+    },
+    {
+      navigationOptions: ({ navigation }) => ({
+        tabBarIcon: ({ focused, tintColor }) => {
+          const { routeName } = navigation.state;
+          let iconName;
+          if (routeName == 'Login') {
+            iconName = `ios-home${focused ? '' : '-outline'}`;
+          } else if (routeName === 'Signup') {
+            iconName = `ios-contact${focused ? '' : '-outline'}`;
+          }
+            
+          // You can return any component that you like here! We usually use an
+          // icon component from react-native-vector-icons
+          return(
+            <Ionicons name={iconName} size={25} color={tintColor} />
+          )
+            
+        },
+      }),
+        animationEnabled: true,
+        swipeEnabled:true,
+        tabBarOptions: {
+          activeTintColor: 'purple',
+          inactiveTintColor: 'gray',
+          showLabel: false
+        },
+      }
+    );

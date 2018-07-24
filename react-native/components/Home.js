@@ -12,6 +12,9 @@ import { getPosts } from './Fetch/Requests'
 
 import { home } from '../assets/css/home'
 
+import Auth from './Auth/Auth';
+const auth = new Auth()
+
 export default class Home extends React.Component {
   static navigationOptions =  {
     headerLeft: (
@@ -40,6 +43,9 @@ export default class Home extends React.Component {
     }
     
     componentDidMount() {
+        auth.getItem('session').then(data => {
+            alert(data)
+        })
         getPosts(response => {
             if (response) {
                 arr = []

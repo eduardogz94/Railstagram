@@ -88,7 +88,7 @@ export default class Profile extends Component {
     }
 
     segmentClick = (index) => {
-        this.setState({index:index})
+        this.setState({ index })
     }
 
     render() {

@@ -40,7 +40,7 @@ export default class LoginForm extends Component {
             
             login(options, response => {
                 if (response !== false) {
-                    auth.setItem('session',JSON.stringify(response)),
+                    auth.setItem('session',JSON.stringify(response))
                     this.props.navigation.navigate('Home')
                 } else {
                     this.setState({username_error: 'Username doesnt exist'}) ;
