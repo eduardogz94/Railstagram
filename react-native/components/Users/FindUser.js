@@ -53,7 +53,7 @@ export default class FindUser extends React.Component {
 	}
 
 	getProfile = (id) => {
-		this.props.navigation.navigate('Profile', id)
+		this.props.navigation.navigate('User', id)
 	}
 		
 		render() {

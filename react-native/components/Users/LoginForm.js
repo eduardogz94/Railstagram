@@ -3,15 +3,14 @@ import { ScrollView, Text } from 'react-native'
 import { Button, FormValidationMessage } from 'react-native-elements'
 
 import Error from '../Extra/ErrorBoundary'
-import { myIp } from '../Extra/MyIp'
 
-import { fetching } from '../Fetch/Fetch'
+import { login } from '../Fetch/Requests'
 
 import Auth from '../Auth/Auth';
+
 import UserInputs from './Inputs'
 
 import { butons, inputs } from '../../assets/css/styles'
-
 
 const auth = new Auth()
 
@@ -39,11 +38,13 @@ export default class LoginForm extends Component {
                 password: password
             }
             
-            fetching(options, 'POST', `${myIp}/api/v1/login`, response => {
-                response.status == 200 
-                    ? ( auth.setItem('session',JSON.stringify(response.user.id)),
-                        this.props.navigation.navigate('Home')) 
-                    : this.setState({username_error: 'Username doesnt exist'}) ;
+            login(options, response => {
+                if (response !== false) {
+                    auth.setItem('session',JSON.stringify(response)),
+                    this.props.navigation.navigate('Home')
+                } else {
+                    this.setState({username_error: 'Username doesnt exist'}) ;
+                }
             })
         }
     }
