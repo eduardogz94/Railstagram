@@ -6,6 +6,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Error from './Extra/ErrorBoundary'
 import { myIp } from './Extra/MyIp'
 
+import Post from './Post/Post'
+
 import { getPosts } from './Fetch/Requests'
 
 import { home } from '../assets/css/home'
@@ -55,10 +57,6 @@ export default class Home extends React.Component {
       }
     })
   }
-
-  checkId(id) {
-    console.log(id)
-  }
   
   render() {
     return (
@@ -66,37 +64,7 @@ export default class Home extends React.Component {
       <ScrollView style={home.container}>
         {this.state.posts.map((post, i) => {
           return(
-            <Card 
-                key={i}  
-                title={`${post.user.username}`}
-                image = {(post.image != null) ? {uri:`${myIp}${post.image}`} : null}>
-            
-              <View style={home.buttons}>
-              
-                <Ionicons 
-                  style={home.like}
-                  name="ios-heart-outline" 
-                  size={20} 
-                  color={'purple'} 
-                  onPress={() => this.props.navigation.navigate('Upload')}></Ionicons>
-
-                <Ionicons 
-                  style={home.comment} 
-                  name="ios-chatboxes-outline" 
-                  size={20} 
-                  color={'purple'} 
-                  onPress={() => this.checkId(post.user.id)}></Ionicons>
-                
-                <Ionicons 
-                  style={home.profile} 
-                  name="ios-share-alt" 
-                  size={20} 
-                  color={'purple'} 
-                  onPress={() => this.props.navigation.navigate('User', post.user.id)}></Ionicons>
-              
-              </View>
-
-            </Card>    
+            <Post key={i} user={post.user} imageSource={2} likes={105}></Post>  
           )})}
       </ScrollView>
     </Error>
@@ -104,3 +72,34 @@ export default class Home extends React.Component {
   }
 }
 
+{/* <Card 
+    key={i}  
+    title={`${post.user.username}`}
+    image = {(post.image != null) ? {uri:`${myIp}${post.image}`} : null}>
+
+  <View style={home.buttons}>
+  
+    <Ionicons 
+      style={home.like}
+      name="ios-heart-outline" 
+      size={20} 
+      color={'purple'} 
+      onPress={() => this.props.navigation.navigate('Upload')}></Ionicons>
+
+    <Ionicons 
+      style={home.comment} 
+      name="ios-chatboxes-outline" 
+      size={20} 
+      color={'purple'} 
+      onPress={() => this.checkId(post.user.id)}></Ionicons>
+    
+    <Ionicons 
+      style={home.profile} 
+      name="ios-share-alt" 
+      size={20} 
+      color={'purple'} 
+      onPress={() => this.props.navigation.navigate('User', post.user.id)}></Ionicons>
+  
+  </View>
+
+</Card> */}

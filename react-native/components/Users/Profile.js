@@ -40,7 +40,9 @@ export default class Profile extends Component {
     
     componentWillMount = () => {
         let id;
+        console.log(this.props)
         if (this.props.navigation.state.params) {
+            console.log('navigation props')
             id = this.props.navigation.state.params
             fetching({}, 'GET', `${myIp}/api/v1/users/${id}`, response => {
                 response.status == 200 
@@ -48,6 +50,7 @@ export default class Profile extends Component {
                     : alert('Error retrieving the profile')
             })
         } else {
+            console.log('clicked profile')
             auth.getItem('session').then(data => {
             id = data
                 fetching({}, 'GET', `${myIp}/api/v1/users/${id}`, response => {
@@ -122,10 +125,16 @@ export default class Profile extends Component {
 
 
                 <View style={profile.rows}>
-                    <Button style={profile.edit} 
+                    {this.state.owner 
+                        ? <Button style={profile.edit} 
                         title={'Edit Profile'}
                         onPress={() => this.props.navigation.navigate('Settings')}
                         />
+
+                        : <Button style={profile.edit} 
+                        title={'Follow'}
+                        />
+                    }    
                 </View>
 
                 <View style={profile.dataText}>

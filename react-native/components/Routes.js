@@ -11,6 +11,7 @@ import Profile from './Users/Profile'
 import EditProfile from './Users/EditProfile'
 
 import Uploading from './Post/Upload'
+import Post from './Post/Post'
 
 export const Index = createStackNavigator({
     Home:{
@@ -30,7 +31,7 @@ export const Index = createStackNavigator({
       navigationOptions: {
         title: 'Upload'
       }
-    }
+    },
 });
 
 export const User = createStackNavigator({
@@ -117,9 +118,12 @@ export const UserStack = createBottomTabNavigator(
           
       },
     }),
+      animationEnabled: true,
+      swipeEnabled:true,
       tabBarOptions: {
         activeTintColor: 'purple',
         inactiveTintColor: 'gray',
+        showLabel: false
       },
     }
   );

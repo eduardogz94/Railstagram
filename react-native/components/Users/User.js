@@ -4,7 +4,6 @@ import { myIp } from '../Extra/MyIp'
 
 export default class User extends Component {
   render() {
-    console.log(this.props)
     const { id, username, picture} = this.props.user;
       return (
         <ListItem
