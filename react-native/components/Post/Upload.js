@@ -7,7 +7,10 @@ import Error from '../Extra/ErrorBoundary'
 import UserInputs from '../Users/Inputs'
 import { inputs , butons } from '../../assets/css/styles'
 import { myIp } from '../Extra/MyIp'
+import { newPost } from '../Fetch/Requests';
 
+import Auth from '../Auth/Auth';
+const auth = new Auth()
 
 export default class Upload extends Component {
 
@@ -16,11 +19,14 @@ export default class Upload extends Component {
         description: '',
         post_image: '',
         show: '',
-        type: ''
+        type: '',
+        user_id: ''
     }
 
     componentDidMount() {
-        alert(JSON.stringify(this.props.navigation))
+        auth.getItem('session').then(user_id => {
+            this.setState({ user_id })
+        })
     }
 
     pickImage = async () => {
@@ -45,22 +51,20 @@ export default class Upload extends Component {
     }
 
     uploadPost = () => {
-        const { post_image, description, type } = this.state
+        var { post_image, description, type } = this.state
+        const id = this.state.user_id
+        
+        description = (description == "") ? null : description 
 
         body = {
-            post_image, type
+            post_image, type, description
         }
-        fetch(`${myIp}/api/v1/users/8/posts`, {
-            method: 'POST',
-            headers: {
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify( body )
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result.status == 200) {
+
+        newPost(body, id, response => {
+            if (result.status !== false) {
                 this.props.navigation.navigate('Home')
+            } else {
+                alert('Error')
             }
         })
     }
@@ -139,7 +143,7 @@ export default class Upload extends Component {
     
                         <Button style={{marginTop: 50}}
                             onPress={this.uploadPost}
-                            title = 'Log in'/>
+                            title = 'New post!'/>
                 </ScrollView>
                 
             </Error>

@@ -17,7 +17,8 @@ var images = [
     require('../../assets/images/index.jpeg'),
     require('../../assets/images/index.jpeg'),
     require('../../assets/images/index.jpeg'),
-    require('../../assets/images/index.jpeg')
+    require('../../assets/images/index.jpeg'),
+ 
 ]
 
 export default class Profile extends Component {
@@ -78,7 +79,8 @@ export default class Profile extends Component {
     }
 
     sectionOne = () => {
-        return  images.map((image,index) => {
+        const { posts } = this.state
+        return  posts.map((post,index) => {
             return ( 
                     <View key={index} 
                     style={[profile.images,
@@ -86,7 +88,7 @@ export default class Profile extends Component {
                     ]}>
                     
                     <Image style={profile.imageIndex}
-                        source={image}
+                        source={{uri: `${myIp}/${post.post_image.url}`}}
                     />
                 </View>
             )
