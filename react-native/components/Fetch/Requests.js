@@ -1,4 +1,7 @@
-export const home = cb => {
+import { fetching } from './Fetch'
+import { myIp } from '../Extra/MyIp'
+
+export const getPosts = cb => {
     fetching({}, 'GET', `${myIp}/api/v1/users/all/posts`, response => {
         if (response.status == 200) {
             arr = []
@@ -10,7 +13,7 @@ export const home = cb => {
             }
             cb(arr)
         } else {
-            cb('error')
+            cb(false)
         }
     })
 }
@@ -26,19 +29,19 @@ export const sign = (options, cb) => {
 export const login = (options, cb) => {
     fetching(options, 'POST', `${myIp}/api/v1/login`, response => {
         response.status == 200 
-            ? cb(true) 
+            ? cb(response.user.id) 
             : cb(false)
     })
 }
 
-export const findUser = (options, cb) => {
+export const getAllUsers = (cb) => {
     fetching({}, 'GET', `${myIp}/api/v1/users`, response => {
         user = []
         if (response.status == 200) {
             user.push(response.user)
             cb(user)
         } else {
-            cb('cannot connect with server')
+            cb(false)
         }
     })
 }

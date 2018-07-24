@@ -4,6 +4,7 @@ import { myIp } from '../Extra/MyIp'
 
 export default class User extends Component {
   render() {
+    console.log(this.props)
     const { id, username, picture} = this.props.user;
       return (
         <ListItem
@@ -12,7 +13,7 @@ export default class User extends Component {
           avatar = {(picture.url != null) ? `${myIp}/${picture.url}` : null}
           title={username}
           subtitle={'username'}
-          onPress={this.props.getProfile(id)}
+          onPress={() => this.props.getProfile(id)}
           />
       )
   }

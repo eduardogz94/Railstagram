@@ -9,6 +9,7 @@ import SignupForm from './Users/SignupForm'
 import FindUser from './Users/FindUser'
 import Profile from './Users/Profile'
 import EditProfile from './Users/EditProfile'
+
 import Uploading from './Post/Upload'
 
 export const Index = createStackNavigator({
@@ -18,6 +19,18 @@ export const Index = createStackNavigator({
           title:'Railstagram'
       },
     },
+    User: {
+      screen: Profile,
+      navigationOptions: {
+        title: 'Profile'
+      }
+    },
+    Photo: {
+      screen: Uploading,
+      navigationOptions: {
+        title: 'Upload'
+      }
+    }
 });
 
 export const User = createStackNavigator({
@@ -51,7 +64,7 @@ export const Users = createStackNavigator({
       title:'Find Users'
     }
   },
-  Profile:{
+  User:{
     screen:Profile,
     navigationOptions: {
       title: 'Profile User'
@@ -60,7 +73,7 @@ export const Users = createStackNavigator({
 });
 
 export const Upload = createStackNavigator({
-  Users:{
+  Post:{
     screen:Uploading,
     navigationOptions: {
       title:'Upload'

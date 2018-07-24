@@ -5,9 +5,8 @@ import { FormValidationMessage } from 'react-native-elements'
 import { ImagePicker, Permissions } from 'expo'
 
 import Error from '../Extra/ErrorBoundary'
-import { myIp } from '../Extra/MyIp'
 
-import { fetching } from '../Fetch/Fetch'
+import { sign } from '../Fetch/Requests'
 
 import Auth from '../Auth/Auth';
 import UserInputs from './Inputs'
@@ -45,13 +44,15 @@ export default class SignupForm extends Component {
 					picture: image,
 					type: type
 				}
-
-				fetching(options, 'POST', `${myIp}/api/v1/signup`, response => {
-					response.status == 200 
-						? (console.log(response), 
-							console.log('welcome to Rail API!'))
-						: this.setState({username_error: 'Username already exist'})
-				})	
+				
+				sign(options, response => {
+					if (response !== false) {
+						console.log('welcome to Rail API!')		
+					} else {
+						this.setState({username_error: 'Username already exist'})
+					}
+				})
+					
 			} else {
 				this.setState({passwords_error: 'Passwords didnt match'})
 			}

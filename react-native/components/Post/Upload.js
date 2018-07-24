@@ -50,7 +50,7 @@ export default class Upload extends Component {
         body = {
             post_image, type
         }
-        fetch(`${myIp}/api/v1/users/1/posts`, {
+        fetch(`${myIp}/api/v1/users/8/posts`, {
             method: 'POST',
             headers: {
                 'Content-Type':'application/json'

@@ -27,13 +27,13 @@ class PostsController < ApplicationController
         end
         arr.each do |i|
             @user = User.find(i)
-            users.push([@user.username, @user.id])
+            users.push([username:@user.username, id:@user.id])
         end
         render json: { posts: @posts, users: users, status: 200 }
     end
 
-    def show_by_user
-        @posts = Post.where(user_id: params[:user_id])
+    def user_posts
+        @posts = Post.select('posts.post_image, posts.like, posts.comment, posts.created_at, users.username').joins(:user).where(users: { id: params[:user_id] })
         render json: { posts: @posts, status: 200 }
     end
 

@@ -53,7 +53,7 @@ export default class FindUser extends React.Component {
 	}
 
 	getProfile = (id) => {
-		this.props.navigation.navigate('Profile', id)
+		this.props.navigation.navigate('User', id)
 	}
 		
 		render() {
@@ -72,7 +72,7 @@ export default class FindUser extends React.Component {
 							<List>
 								{this.state.users.map((user) => {
 									return(
-									<User user={user} key={user.id} getProfile={this.getProfile}/>)
+									<User user={user} key={user.id} getProfile={() => this.getProfile()}/>)
 								})}
 							</List>
 					</ScrollView>
