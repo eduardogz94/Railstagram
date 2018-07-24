@@ -19,16 +19,3 @@ export const inputs = StyleSheet.create({
     color: 'black',
   }
 });
-
-export const buttons = StyleSheet.create({
-  
-})
-
-export const title = StyleSheet.create({
-  main:{
-    backgroundColor: 'transparent',
-    fontSize: 30,
-    marginHorizontal: 100
-  },
-    
-})

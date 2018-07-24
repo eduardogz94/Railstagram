@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { ScrollView, View, Text, Image } from 'react-native'
-import { Button } from 'native-base'
+import { Button, Tabs, Tab, TabHeading, Icon } from 'native-base'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
 
-import { userDetails, userPosts } from '../Fetch/Requests'
+import { userDetails } from '../Fetch/Requests'
+
+import Post from '../Post/Post';
 
 import Auth from '../Auth/Auth';
 const auth = new Auth()
@@ -63,10 +65,18 @@ export default class Profile extends Component {
                         {this.sectionOne()}
                     </View>)
         } else if (this.state.index == 1) {
-            return ( <View>
-
-                    </View>
-            )
+                const { posts } = this.state
+                const { user } = this.state.user
+                return  posts.map((post,index) => {
+                    return ( 
+                            <Post 
+                                key={index} 
+                                user={user}
+                                img={{uri:`${myIp}/`+post.post_image.url}}
+                                likes={105}
+                                />
+                    )
+                })
         }
     }
 
@@ -88,6 +98,7 @@ export default class Profile extends Component {
     }
 
     segmentClick = (index) => {
+        // console.log('test')
         this.setState({index:index})
     }
 
@@ -140,21 +151,39 @@ export default class Profile extends Component {
                 </View>
 
                 <View style={profile.tabs}>
-                    <Ionicons 
-                        style={[this.state.index == 0 ? {color:'purple'} : {}]}
-                        size={25} 
-                        name={'ios-apps'}
-                        onPress={() => this.segmentClick(0)}
-                        active={this.state.index == 0}
-                         />
-                    <Ionicons 
-                        style={[this.state.index == 1 ? {color:'purple'} : {}]}
-                        size={25} 
-                        name={'ios-apps'}
-                        onPress={() => this.segmentClick(1)}
-                        active={this.state.index == 1}
-                         />
+                    <Tabs>
+                        <Tab heading={ 
+                            <TabHeading>
+                                <Ionicons 
+                                    style={[this.state.index == 0 ? {color:'purple'} : {}]}
+                                    size={25} 
+                                    name={'ios-apps'}
+                                    onPress={() => this.segmentClick(0)}
+                                    active={this.state.index == 0}
+                                    />
+                                </TabHeading>}>
+                            
+                        </Tab>
+                        
+                        <Tab heading={ 
+                            <TabHeading>
+                                <Ionicons 
+                                    style={[this.state.index == 1 ? {color:'purple'} : {}]}
+                                    size={25} 
+                                    name={'ios-apps'}
+                                    onPress={() => this.segmentClick(1)}
+                                    active={this.state.index == 1}
+                                        />
+                                </TabHeading>}>
+                            
+                        </Tab>           
+                    </Tabs>
+                    
                 </View>
+              
+    );
+  }
+}
 
                 {this.renderSection()}
 
