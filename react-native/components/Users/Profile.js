@@ -13,6 +13,13 @@ const auth = new Auth()
 
 import { profile } from '../../assets/css/profile'
 
+var images = [
+    require('../../assets/images/index.jpeg'),
+    require('../../assets/images/index.jpeg'),
+    require('../../assets/images/index.jpeg'),
+    require('../../assets/images/index.jpeg')
+]
+
 export default class Profile extends Component {
     constructor(props) {
         super(props)
@@ -52,18 +59,36 @@ export default class Profile extends Component {
         }
     }
 
-    editProfile = () => {
-        this.props.navigation.navigate('Settings')
-    }
-
     renderSection = () => {
         if (this.state.index == 0) {
-            return( <View><Text>This is all the photos</Text></View>)
+            return( <View style={{flexDirection:'row', flexWrap:'wrap'}}>
+                        {this.sectionOne()}
+                    </View>)
+        } else if (this.state.index == 1) {
+            return ( <View>
+
+                    </View>
+            )
         }
     }
 
+    sectionOne = () => {
+        return  images.map((image,index) => {
+            return ( 
+                    <View key={index} 
+                    style={[profile.images,
+                        index % 3 !==0 ? {paddingLeft:2} : {paddingLeft:0}    
+                    ]}>
+                    
+                    <Image style={profile.imageIndex}
+                        source={image}
+                    />
+                </View>
+            )
+        })
+    }
+
     segmentClick = (index) => {
-        console.log(index)
         this.setState({index:index})
     }
 
@@ -75,8 +100,7 @@ export default class Profile extends Component {
                 <View style={profile.profileTab}>
                     <View style={profile.data}>
                         <Image source={require('../../assets/images/index.jpeg')}
-                                style={profile.image}
-                        />
+                                style={profile.image}/>
                     </View>
                     <View style={{flex:3}}>
                         <View style={profile.dashboard}>
@@ -99,16 +123,25 @@ export default class Profile extends Component {
 
                 <View style={profile.rows}>
                     <Button style={profile.edit} 
-                        title={'Edit Profile'}/>
+                        title={'Edit Profile'}
+                        onPress={() => this.props.navigation.navigate('Settings')}
+                        />
                 </View>
 
                 <View style={profile.dataText}>
-                    <Text style={profile.username}>Profile</Text>
-                    <Text>Testing with the data provided</Text>
+                    <Text style={profile.username}>{username}</Text>
+                    <Text>{created_at}</Text>
                     <Text>WASSUP MATE!</Text>
                 </View>
 
                 <View style={profile.tabs}>
+                    <Ionicons 
+                        style={[this.state.index == 0 ? {color:'purple'} : {}]}
+                        size={25} 
+                        name={'ios-apps'}
+                        onPress={() => this.segmentClick(0)}
+                        active={this.state.index == 0}
+                         />
                     <Ionicons 
                         style={[this.state.index == 1 ? {color:'purple'} : {}]}
                         size={25} 
@@ -116,16 +149,9 @@ export default class Profile extends Component {
                         onPress={() => this.segmentClick(1)}
                         active={this.state.index == 1}
                          />
-                    <Ionicons 
-                        style={[this.state.index == 2 ? {color:'purple'} : {}]}
-                        size={25} 
-                        name={'ios-apps'}
-                        onPress={() => this.segmentClick(2)}
-                        active={this.state.index == 2}
-                         />
                 </View>
 
-                {this.renderSection}
+                {this.renderSection()}
 
             </ScrollView>
         </Error>

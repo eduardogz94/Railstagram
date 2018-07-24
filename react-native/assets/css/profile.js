@@ -1,4 +1,8 @@
+import Dimensions from 'Dimensions';
 import { StyleSheet } from 'react-native';
+
+const DEVICE_WIDTH = Dimensions.get('window').width;
+const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 export const profile = StyleSheet.create({
     container: {
@@ -58,6 +62,16 @@ export const profile = StyleSheet.create({
         paddingTop: 5,
         borderTopWidth: 1,
         borderBottomWidth: 1,
+    },
+    images: {
+        width: DEVICE_WIDTH/3,
+        height: DEVICE_HEIGHT/3,
+        marginBottom: 2,
+    },
+    imageIndex: {
+        flex: 1,
+        width:undefined,
+        height:undefined
     }
 
 
