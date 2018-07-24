@@ -35,7 +35,7 @@ export default class Home extends React.Component {
     constructor() {
         super()
         this.state = {
-        posts: []
+            posts: []
         }
     }
     
@@ -51,8 +51,9 @@ export default class Home extends React.Component {
                         like,
                         comment,
                         user:{
-                            username: user[0].username,
-                            id: user[0].id
+                            username: user.username,
+                            id: user.id,
+                            avatar: user.avatar
                         }
                     })
                 }
@@ -69,7 +70,6 @@ export default class Home extends React.Component {
         <Error>  
         <ScrollView style={home.container}>
             {this.state.posts.map((post, i) => {
-            alert(JSON.stringify(post))
             return(
                 <Post key={i} user={post.user} description={post.description} img={{uri:`${myIp}/`+post.image}} imageSource={2} likes={105}></Post>  
             )})}
