@@ -38,6 +38,7 @@ export default class FindUser extends React.Component {
 		} else {
 			this.setState({ users:[] })
 			findUser(username, response => {
+				console.log(response)
 				if (response !== false) {
 					this.setState({
 						users:this.state.users.concat( response.user )
