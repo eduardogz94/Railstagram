@@ -41,7 +41,7 @@ module Api::V1
       @user = User.new(user_params)
       @user.picture = "data:image/#{params[:type]};base64, #{params[:picture]}"
       if @user.save! 
-          render json: { data: 'User created' , status: 200 }
+          render json: { data: 'User created', id:@user.id, status: 200 }
         else 
           render json: { data:@user.errors, status: 400 }
         end       

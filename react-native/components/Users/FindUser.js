@@ -40,7 +40,7 @@ export default class FindUser extends React.Component {
 			findUser(username, response => {
 				if (response !== false) {
 					this.setState({
-						users:this.state.users.concat( response.user )
+						users:this.state.users.concat( response.users )
 					})
 				} else {
 					console.log('cannot connect with server')
@@ -69,7 +69,7 @@ export default class FindUser extends React.Component {
 							<List>
 								{this.state.users.map((user) => {
 									return(
-									<User user={user} key={user.id} getProfile={() => this.getProfile(user.id)}/>)
+									<User user={user} key={user.id} getProfile={() => this.getProfile()}/>)
 								})}
 							</List>
 					</ScrollView>

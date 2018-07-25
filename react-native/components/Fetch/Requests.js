@@ -24,7 +24,7 @@ export const getPosts = cb => {
 export const sign = (options, cb) => {
     fetching(options, 'POST', `${myIp}/api/v1/signup`, response => {
         response.status == 200 
-            ? cb(true) 
+            ? cb(response.id) 
             : cb(false)
     })
 }

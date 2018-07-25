@@ -45,7 +45,8 @@ export default class SignupForm extends Component {
 				
 				sign(options, response => {
 					if (response !== false) {
-						console.log('welcome to Rail API!')		
+						auth.setItem('session',JSON.stringify(response))
+						this.props.navigation.navigate('Home')
 					} else {
 						this.setState({username_error: 'Username already exist'})
 					}
