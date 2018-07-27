@@ -1,5 +1,7 @@
 class User < ApplicationRecord
     has_many :posts, dependent: :destroy
+    has_many :comments, dependent: :destroy
+    has_many :likes, dependent: :destroy
 
     before_save { self.username = username.downcase }
     mount_base64_uploader :picture, PictureUploader
