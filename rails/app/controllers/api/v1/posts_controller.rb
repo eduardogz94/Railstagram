@@ -22,19 +22,43 @@ class PostsController < ApplicationController
         @posts = Post.all
         arr = []
         users = []
+        post = []
         @posts.each do |i|
             arr.push(i.user_id)
         end
         arr.each do |i|
             @user = User.find(i)
-            users.push({username:@user.username, id:@user.id, avatar:@user.picture.url})
+            users.push({ username:@user.username, id:@user.id, avatar:@user.picture.url })
         end
-        render json: { posts: @posts, users: users, status: 200 }
+        @posts.each do |i|
+            post.push({
+                id: i.id, 
+                description: i.description,
+                user_id: i.user_id, 
+                created_at: i.created_at, 
+                post_image: i.post_image,
+                comments: Post.find(i.id).comments.count,
+                likes: Post.find(i.id).likes.count
+            })
+        end
+        render json: { posts: post, users: users, status: 200 }
     end
 
     def show_by_user
         @posts = Post.where(user_id: params[:user_id])
-        render json: { posts: @posts, status: 200 }
+        post = []
+        @posts.each do |i|
+            post.push({
+                id: i.id, 
+                description: i.description,
+                user_id: i.user_id, 
+                created_at: i.created_at, 
+                post_image: i.post_image,
+                comments: Post.find(i.id).comments.count,
+                likes: Post.find(i.id).likes.count
+            })
+        end
+        render json: { posts: post, status: 200 }
     end
 
     def destroy
