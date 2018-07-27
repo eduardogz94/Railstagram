@@ -15,9 +15,9 @@ export default class Post extends Component {
     componentDidMount = () => {
       if (this.props.user.avatar) {
           this.setState({avatar:this.props.user.avatar})
-    //   } else (
-    //       this.setState({avatar:this.props.user.picture.url})
-    //   )
+      } else {
+          this.setState({avatar:this.props.user.picture.url})
+        
       }
     }
     

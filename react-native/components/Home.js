@@ -36,7 +36,7 @@ export default class Home extends React.Component {
         super()
         this.state = {
             posts: []
-        }
+        } 
     }
     
     componentDidMount() {
@@ -77,7 +77,7 @@ export default class Home extends React.Component {
             return(
                 <Post key={i} 
                       user={post.user} 
-                      goToProfile={() => this.goToProfile()} 
+                      goToProfile={this.goToProfile} 
                       description={post.description} 
                       img={{uri:`${myIp}/`+post.image}} 
                       imageSource={2} 
