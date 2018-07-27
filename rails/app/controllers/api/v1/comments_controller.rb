@@ -17,6 +17,21 @@ class CommentsController < ApplicationController
         end
     end
 
+    def index
+        @comments = Comment.where(post_id: params[:post_id])
+        render json: { status: 200, comments: @comments }
+    end
+
+    def destroy
+        @user = User.find(params[:user_id])
+        @comment = Comment.find(params[:id])
+        if @comment.destroy
+            render json: { status: 200 }
+        else
+            render json: { status: 500}
+        end
+    end
+
     private
         def comment_params
             params.permit(:text, :post_id, :user_id)
