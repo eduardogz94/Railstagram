@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
             get '/users/find/:username',   to: 'users#get'
 
-            get '/user/:user_id/posts', to: 'posts#user_posts'
+            get '/user/:user_id/posts', to: 'posts#show_by_user'
             
             post '/signup',  to: 'users#create'
             post '/login',   to: 'users#log'

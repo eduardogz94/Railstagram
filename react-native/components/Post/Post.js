@@ -4,6 +4,8 @@ import { Card, CardItem, Thumbnail, Body, Left, Button, Right, Icon} from 'nativ
 
 import { myIp } from '../Extra/MyIp'
 
+import { like } from '../Fetch/Requests'
+
 import { post } from '../../assets/css/post'
 
 
@@ -13,7 +15,7 @@ export default class Post extends Component {
     }
 
     componentDidMount = () => {
-        console.log(this.props.like)
+        console.log(this.props)
       if (this.props.user.avatar) {
           this.setState({avatar:this.props.user.avatar})
       } else {
@@ -56,7 +58,7 @@ export default class Post extends Component {
                     <Button transparent>
                         <Icon 
                             style={post.buttons}
-                            name={'ios-heart'}
+                            name={'ios-heart-outline'}
                             onPress={() => this.like()}
                             />
                     </Button>

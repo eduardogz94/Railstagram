@@ -77,7 +77,7 @@ export default class Profile extends Component {
                             key={index} 
                             user={this.state.user}
                             img={{uri:`${myIp}/`+post.post_image.url}}
-                            likes={105}
+                            likes={post.like}
                             goToProfile={this.goToProfile}
                         />
                     )
@@ -188,7 +188,6 @@ export default class Profile extends Component {
     );
   }
 }
-
                 {this.renderSection()}
 
             </ScrollView>

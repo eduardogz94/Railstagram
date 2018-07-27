@@ -9,8 +9,8 @@ export const getPosts = cb => {
                 arr.push({
                     image: response.posts[i].post_image.url,
                     description: response.posts[i].description,
-                    like: response.posts[i].like,
-                    comment: response.posts[i].comment,
+                    likes: response.posts[i].likes,
+                    comments: response.posts[i].comments,
                     user: response.users[i]
                 })
             }
@@ -96,7 +96,7 @@ export const newPost = (body, id, cb) => {
 }
 
 export const like = (id, postId, cb) => {
-    fetching(options, 'POST', `${myIp}/api/v1/users/${id}/posts/${postId}/like`, response => {
+    fetching(options, 'POST', `${myIp}/api/v1/users/${id}/posts/${postId}/likes`, response => {
         response.status == 200 ?
             cb(true) :
             cb(false)
