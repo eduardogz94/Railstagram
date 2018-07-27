@@ -16,6 +16,8 @@ Rails.application.routes.draw do
             get '/posts/:post_id/likes', to: 'likes#index'
             get '/posts/:post_id/comments', to: 'comments#index'
 
+            get'/user/:user_id/post/:post_id/check_like', to:'likes#check' 
+
             get '/users/find/:username',   to: 'users#get'
 
             get '/user/:user_id/posts', to: 'posts#show_by_user'
