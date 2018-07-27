@@ -3,11 +3,15 @@ Rails.application.routes.draw do
     namespace :api do
         namespace :v1 do
             resources :users, only: [:index, :show] do
+                member do
+                    get :following, :followers
+                end
                 resources :posts do
                     resources :comments, only: [:create, :destroy]
                     resources :likes, only: [:create, :destroy]
                 end
             end
+            resources :relationships,       only: [:create, :destroy]
 
             get '/posts/:post_id/likes', to: 'likes#index'
             get '/posts/:post_id/comments', to: 'comments#index'
