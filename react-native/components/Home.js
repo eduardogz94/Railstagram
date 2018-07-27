@@ -45,6 +45,7 @@ export default class Home extends React.Component {
                 arr = []
                 for (var i in response) {
                     const { image, description, like, comment, user } = response[i]
+                    console.log(like)
                     arr.push({ 
                         image, 
                         description,
@@ -80,8 +81,7 @@ export default class Home extends React.Component {
                       goToProfile={this.goToProfile} 
                       description={post.description} 
                       img={{uri:`${myIp}/`+post.image}} 
-                      imageSource={2} 
-                      likes={105}></Post>  
+                      likes={post.like}></Post>  
             )})}
         </ScrollView>
         </Error>

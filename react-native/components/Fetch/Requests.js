@@ -94,3 +94,11 @@ export const newPost = (body, id, cb) => {
         }
     })
 }
+
+export const like = (id, postId, cb) => {
+    fetching(options, 'POST', `${myIp}/api/v1/users/${id}/posts/${postId}/like`, response => {
+        response.status == 200 ?
+            cb(true) :
+            cb(false)
+    })
+}

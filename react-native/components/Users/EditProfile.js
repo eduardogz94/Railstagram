@@ -7,7 +7,7 @@ import Error from '../Extra/ErrorBoundary'
 
 import { editProfile } from '../Fetch/Requests';
 
-import { formStyle } from '../../assets/css/login'
+import { formStyle } from '../../assets/css/form'
 
 export default class EditProfile extends Component {
     constructor() {

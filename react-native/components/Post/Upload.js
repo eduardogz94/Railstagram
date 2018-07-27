@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
 import { ScrollView, Image } from 'react-native'
+import { Input } from 'native-base';
 import { Button, FormValidationMessage } from 'react-native-elements'
 import { ImagePicker, Permissions } from 'expo'
 
 import Error from '../Extra/ErrorBoundary'
 
-import UserInputs from '../Users/Inputs'
-
 import { newPost } from '../Fetch/Requests';
-
-import { inputs } from '../../assets/css/styles'
-
 
 import Auth from '../Auth/Auth';
 const auth = new Auth()
@@ -76,8 +72,8 @@ export default class Upload extends Component {
       let { image, show } = this.state;
         return (
             <Error>
-                <ScrollView style={inputs.inputWrapper}>
-                        <UserInputs 
+                <ScrollView >
+                        <Input 
                             label='Description'
                             onChangeText={description => this.setState({ description })}
                             placeholder = 'Description'

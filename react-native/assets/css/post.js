@@ -9,7 +9,7 @@ export const post = StyleSheet.create({
     buttonContainer:{
         height:45
     },
-    username: {
+    bold: {
         fontWeight: '900'
     },
     buttons:{

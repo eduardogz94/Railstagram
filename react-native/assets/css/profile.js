@@ -80,6 +80,14 @@ export const profile = StyleSheet.create({
         flex: 1,
         width:undefined,
         height:undefined
+    },
+    userData:{
+        fontSize: 10,
+        color:'gray'
+    },
+    sectionOne:{
+        flexDirection: 'row',
+        flexWrap: 'wrap',
     }
 
 

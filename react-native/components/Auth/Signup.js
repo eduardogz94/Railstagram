@@ -8,7 +8,7 @@ import Error from '../Extra/ErrorBoundary'
 
 import { sign } from '../Fetch/Requests'
 
-import { formStyle } from '../../assets/css/login'
+import { formStyle } from '../../assets/css/form'
 
 import Auth from '../Auth/Auth';
 const auth = new Auth()

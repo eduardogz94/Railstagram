@@ -66,7 +66,7 @@ export default class Profile extends Component {
 
     renderSection = () => {
         if (this.state.index == 0) {
-            return( <View style={{flexDirection:'row', flexWrap:'wrap'}}>
+            return( <View style={profile.sectionOne}>
                         {this.sectionOne()}
                     </View>)
         } else if (this.state.index == 1) {
@@ -119,17 +119,17 @@ export default class Profile extends Component {
                     </View>
                     <View style={{flex:3}}>
                         <View style={profile.dashboard}>
-                           <View style={{alignItems:'center'}}>
+                           <View style={profile.stats}>
                                 <Text>20</Text>
-                                <Text style={{fontSize:10, color:'gray'}}>posts</Text>
+                                <Text style={profile.userData}>posts</Text>
                            </View>
-                           <View style={{alignItems:'center'}}>
+                           <View style={profile.stats}>
                                 <Text>700</Text>
-                                <Text style={{fontSize:10, color:'gray'}}>Followers</Text>
+                                <Text style={profile.userData}>Followers</Text>
                            </View>
-                           <View style={{alignItems:'center'}}>
+                           <View style={profile.stats}>
                                 <Text>765</Text>
-                                <Text style={{fontSize:10, color:'gray'}}>Following</Text>
+                                <Text style={profile.userData}>Following</Text>
                            </View> 
                         </View>
                     </View>

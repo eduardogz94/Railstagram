@@ -13,12 +13,17 @@ export default class Post extends Component {
     }
 
     componentDidMount = () => {
+        console.log(this.props.like)
       if (this.props.user.avatar) {
           this.setState({avatar:this.props.user.avatar})
       } else {
           this.setState({avatar:this.props.user.picture.url})
         
       }
+    }
+
+    like = () => {
+
     }
     
     render() {
@@ -32,8 +37,8 @@ export default class Post extends Component {
                         source={{uri: `${myIp}/${this.state.avatar}`}}/>
                 </TouchableOpacity>
                     <Body>
-                        <Text style={post.username}>{this.props.user.username}</Text>
-                        <Text note>Jan 15, 2018</Text>
+                        <Text style={post.bold}>{this.props.user.username}</Text>
+                        <Text style={post.bold}>Jan 15, 2018</Text>
                     </Body>
                     
                 </Left>
@@ -51,7 +56,9 @@ export default class Post extends Component {
                     <Button transparent>
                         <Icon 
                             style={post.buttons}
-                            name={'ios-heart-outline'}/>
+                            name={'ios-heart'}
+                            onPress={() => this.like()}
+                            />
                     </Button>
                     <Button transparent>
                         <Icon 
@@ -71,12 +78,12 @@ export default class Post extends Component {
             </CardItem>
 
             <CardItem>
-                <Text>{this.props.likes}</Text>
+                <Text style={post.bold}>{this.props.likes} likes</Text>
             </CardItem>
 
             <CardItem>
                 <Text>
-                    <Text style={post.username}>{this.props.user.username}</Text>
+                    <Text style={post.bold}>{this.props.user.username}  </Text>
                         {this.props.description}
                      </Text>
             </CardItem>
