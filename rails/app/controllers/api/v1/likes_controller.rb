@@ -17,8 +17,20 @@ class LikesController < ApplicationController
         end
     end
 
+    def index
+        @likes = Like.where(post_id: params[:post_id])
+        render json: { status: 200, likes: @likes }
+    end
 
-
+    def destroy
+        @user = User.find(params[:user_id])
+        @like = Like.find(params[:id])
+        if @like.destroy
+            render json: { status: 200 }
+        else
+            render json: { status: 500}
+        end
+    end
 
     private
         def like_params
