@@ -32,6 +32,16 @@ class LikesController < ApplicationController
         end
     end
 
+    def check 
+        @post = Post.find(params[:post_id]).likes
+        users = []
+        @post.each do |i|
+            users.push(i.user_id)
+        end
+        liked = users.include?(Integer(params[:user_id]))
+        render json: { status: 200, liked: liked }
+    end
+
     private
         def like_params
             params.permit(:post_id, :user_id)
