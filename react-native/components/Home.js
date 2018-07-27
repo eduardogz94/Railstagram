@@ -44,8 +44,9 @@ export default class Home extends React.Component {
             if (response) {
                 arr = []
                 for (var i in response) {
-                    const { image, description, likes, comments, user } = response[i]
+                    const { post_id, image, description, likes, comments, user } = response[i]
                     arr.push({ 
+                        id:post_id,
                         image, 
                         description,
                         likes,
@@ -76,6 +77,7 @@ export default class Home extends React.Component {
             {this.state.posts.map((post, i) => {
             return(
                 <Post key={i} 
+                      id={post.id}
                       user={post.user} 
                       goToProfile={this.goToProfile} 
                       description={post.description} 

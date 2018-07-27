@@ -7,6 +7,7 @@ export const getPosts = cb => {
             arr = []
             for (var i in response.posts) {
                 arr.push({
+                    post_id:response.posts[i].id,
                     image: response.posts[i].post_image.url,
                     description: response.posts[i].description,
                     likes: response.posts[i].likes,
@@ -39,41 +40,33 @@ export const login = (options, cb) => {
 
 export const getAllUsers = (cb) => {
     fetching({}, 'GET', `${myIp}/api/v1/users`, response => {
-        if (response.status == 200) {
-            cb({user: response.user})
-        } else {
-            cb(false)
-        }
+        response.status == 200 
+            ? cb({user: response.user})
+            : cb(false)
     })
 }
 
 export const findUser = (username, cb) => {
     fetching({}, 'GET', `${myIp}/api/v1/users/find/${username}`, response => {
-        if (response.status == 200 ) {
-            cb({ users: response.user })
-        } else {
-            console.log('cannot connect with server')
-        }
+        response.status == 200
+            ? cb({ users: response.user })
+            : console.log('cannot connect with server')
     })
 }
 
 export const userDetails = (id, cb) => {
     fetching({}, 'GET', `${myIp}/api/v1/users/${id}`, response => {
-        if (response.status == 200) {
-            cb({user:response.user, posts:response.posts})
-        } else {
-            cb(false)
-        }
+        response.status == 200
+            ? cb({user:response.user, posts:response.posts})
+            : cb(false)
     })
 }
 
 export const editProfile = (id, options, cb) => {
     fetching(options, 'PATCH', `${myIp}/api/v1/edit/${id}`, response => {
-         if (response.status == 200) {
-            cb({user:response.user, posts:response.posts})
-        } else {
-            cb(false)
-        }
+        response.status == 200
+            ? cb({user:response.user, posts:response.posts})
+            : cb(false)
   })
 }
 
@@ -87,18 +80,40 @@ export const newPost = (body, id, cb) => {
     })
     .then(response => response.json())
     .then(result => {
-        if (result.status == 200) {
-            cb(true)
-        } else {
-            cb(false)
-        }
+        result.status == 200
+            ? cb(true)
+            : cb(false)
     })
 }
 
 export const like = (id, postId, cb) => {
-    fetching(options, 'POST', `${myIp}/api/v1/users/${id}/posts/${postId}/likes`, response => {
-        response.status == 200 ?
-            cb(true) :
-            cb(false)
+    fetching({}, 'POST', `${myIp}/api/v1/users/${id}/posts/${postId}/likes`, response => {
+        response.status == 200 
+            ? cb(true) 
+            : cb(false)
+    })
+}
+
+export const getLike = (id, postId, cb) => {
+    fetching({}, 'GET', `${myIp}/api/v1/posts/${postId}/likes`, response => {
+        response.status == 200 
+            ? cb(true) 
+            : cb(false)
+    })
+}
+
+export const comment = (options,id, postId, cb) => {
+    fetching(options, 'POST', `${myIp}/api/v1/users/${id}/posts/${postId}/comments`, response => {
+        response.status == 200 
+            ? cb(true) 
+            : cb(false)
+    })
+}
+
+export const getComments = (postId, cb) => {
+    fetching({}, 'GET', `${myIp}/api/v1/posts/${postId}/comments`, response => {
+        response.status == 200 
+            ? cb(response.comments) 
+            : cb(false)
     })
 }

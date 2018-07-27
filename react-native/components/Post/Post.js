@@ -4,24 +4,36 @@ import { Card, CardItem, Thumbnail, Body, Left, Button, Right, Icon} from 'nativ
 
 import { myIp } from '../Extra/MyIp'
 
-import { like } from '../Fetch/Requests'
+import { like, getLike, getComments } from '../Fetch/Requests'
 
 import { post } from '../../assets/css/post'
 
 
 export default class Post extends Component {
     state = {
-
+        comments: []
     }
 
     componentDidMount = () => {
-        console.log(this.props)
       if (this.props.user.avatar) {
           this.setState({avatar:this.props.user.avatar})
       } else {
           this.setState({avatar:this.props.user.picture.url})
-        
       }
+
+      let id = this.props.id
+
+      getComments(id, comments => {
+            if (comments !== '') {
+                this.setState({comments:comments})
+            }
+      })
+
+      getLike(this.props.user.id, id, liked => {
+            if (liked == true) {
+                this.setState({liked:true})
+            }
+      })
     }
 
     like = () => {
@@ -88,6 +100,12 @@ export default class Post extends Component {
                     <Text style={post.bold}>{this.props.user.username}  </Text>
                         {this.props.description}
                      </Text>
+            </CardItem>
+
+            <CardItem>
+                <Text>
+                    {this.state.comments}
+                </Text>
             </CardItem>
 
         </Card>
