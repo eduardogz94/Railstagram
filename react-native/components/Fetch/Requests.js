@@ -125,3 +125,27 @@ export const getComments = (postId, cb) => {
             : cb(false)
     })
 }
+
+export const getFollowing = (id, cb) => {
+    fetching({}, 'GET', `${myIp}/api/v1/users/${id}/following`, response => {
+        response.status == 200
+            ? cb(response.following)
+            : cb(false)
+    })
+}
+
+export const getFollowers = (id, cb) => {
+    fetching({}, 'GET', `${myIp}/api/v1/users/${id}/followers`, response => {
+        response.status == 200 
+            ? cb(response.followers) 
+            : cb(false)
+    })
+}
+
+export const follow = (options, cb) => {
+    fetching(options, 'POST', `${myIp}/api/v1/relationships`, response => {
+        response.status == 200
+            ? cb(true)
+            : cb(false) 
+    })
+}

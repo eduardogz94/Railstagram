@@ -7,11 +7,10 @@ import { post } from '../../assets/css/post'
 
 export default class Comments extends Component {
   render() {
-    console.log(this.props)
     return (
         <ListItem icon>
             <Left>
-                <Text style={post.username}>{this.props.comment.text}</Text>
+                <Text style={post.username}>{this.props.comment.username}</Text>
             </Left>
             
             <Body>
@@ -19,7 +18,7 @@ export default class Comments extends Component {
             </Body>
         
             <Right>
-                <Text style={post.date}>{this.props.comment.created_at}</Text>
+                <Text style={post.date}>{this.props.comment.created}</Text>
                 <Button
                     transparent
                     style={post.deleteComment} 

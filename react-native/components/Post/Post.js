@@ -88,7 +88,6 @@ export default class Post extends Component {
                 </TouchableOpacity>
                     <Body>
                         <Text style={post.bold}>{this.props.user.username}</Text>
-                        <Text style={post.bold}>Jan 15, 2018</Text>
                     </Body>
                     
                 </Left>

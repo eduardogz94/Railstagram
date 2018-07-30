@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
 
-import { userDetails } from '../Fetch/Requests'
+import { userDetails, getFollowers, getFollowing, follow } from '../Fetch/Requests'
 
 import { profile } from '../../assets/css/profile'
 
@@ -31,33 +31,71 @@ export default class Profile extends Component {
                 },
                 created_at:'',
             },
-            posts: []
+            posts: [],
+            followers: [],
+            following: []
         }
     }
     
     componentDidMount = () => {
         let id;
+        
         if (this.props.navigation.state.params) {
             id = this.props.navigation.state.params
+            
             userDetails(id, response => {
-                if (response !== false) {
-                    this.setState({user:response.user, posts:response.posts, owner: false}) 
-                } else {
-                    console.log('Error retrieving the profile')
-                }
-            })
+                response !== false
+                    ? this.setState({user:response.user, posts:response.posts, owner: false}) 
+                    : console.log('Error retrieving the profile')
+                    
+                })
+            this.getFollow(id)
+
         } else {
+            
             auth.getItem('session').then(data => {
                 id = data
+
                 userDetails(id, response => {
-                    if (response !== false) {
-                        this.setState({user:response.user, posts:response.posts, owner: true}) 
-                    } else {
-                        console.log('Error retrieving the profile')
-                    }
+                    response !== false 
+                        ? this.setState({user:response.user, posts:response.posts, owner: true}) 
+                        : console.log('Error retrieving the profile')
                 })
+
+                this.getFollow(id)
             })
+
         }
+    }
+
+    getFollow = id => {
+        getFollowers(id, response => {
+            response !== false
+                ? this.setState({followers:response.length})
+                : console.log('none')
+        })
+
+        getFollowing(id, response => {
+            response !== false
+                ? this.setState({following:response.length})
+                : console.log('none')
+        })
+    }
+
+    follow = () => {
+        auth.getItem('session').then(data => {
+            
+            let options = {
+                follower_id: data,
+                followed_id: this.props.navigation.state.params
+            }
+
+            follow(options, response => {
+                response !== false
+                    ? console.log('followed')
+                    : console.log('false')
+            })
+        })
     }
 
     goToProfile = (id) => {
@@ -71,6 +109,7 @@ export default class Profile extends Component {
                     </View>)
         } else if (this.state.index == 1) {
                 const { posts } = this.state
+                console.log(posts)
                 return  posts.map((post,index) => {
                     return ( 
                         <Post 
@@ -119,16 +158,19 @@ export default class Profile extends Component {
                     </View>
                     <View style={{flex:3}}>
                         <View style={profile.dashboard}>
+                           
                            <View style={profile.stats}>
                                 <Text>20</Text>
                                 <Text style={profile.userData}>posts</Text>
                            </View>
+
                            <View style={profile.stats}>
-                                <Text>700</Text>
+                                <Text>{this.state.followers}</Text>
                                 <Text style={profile.userData}>Followers</Text>
                            </View>
+                           
                            <View style={profile.stats}>
-                                <Text>765</Text>
+                                <Text>{this.state.following}</Text>
                                 <Text style={profile.userData}>Following</Text>
                            </View> 
                         </View>
@@ -142,7 +184,7 @@ export default class Profile extends Component {
                                 <Text>Edit Profile</Text>
                             </Button>
 
-                        : <Button bordered dark style={profile.follow}>
+                        : <Button bordered dark style={profile.follow} onPress={() => this.follow()}>
                                 <Text>Follow!</Text>
                             </Button>
                     }    
@@ -183,8 +225,7 @@ export default class Profile extends Component {
                         </Tab>           
                     </Tabs>
                     
-                </View>
-              
+                </View>          
     );
   }
 }
@@ -195,20 +236,3 @@ export default class Profile extends Component {
         )
     }
 }
-{/* <Card
-    style={profile.card}  
-    title={username}
-    image = {(picture.url != null) ? {uri:`${myIp}/${picture.url}`} : null}
-    >
-                       
-    <Text style={profile.text}>
-        {created_at}
-    </Text>
-
-    {this.state.owner 
-        ? <Button 
-                style={profile.edit}
-                onPress={this.editProfile}
-                title = 'Edit Profile'/> 
-        : console.log('cant edit')}
-</Card> */}
