@@ -18,8 +18,31 @@ class CommentsController < ApplicationController
     end
 
     def index
-        @comments = Comment.where(post_id: params[:post_id])
-        render json: { status: 200, comments: @comments }
+        @comment = Comment.where(post_id: params[:post_id])
+        users = []
+        arr = []
+        comments = []
+
+        @comment.each do |i|
+            arr.push(i.user_id)
+        end
+
+        arr.each do |i|
+            @user = User.find(i)
+            users.push({ username: @user.username })
+        end
+
+        c = 0
+        @comment.each do |i|
+            comments.push({ 
+                text: i.text,
+                username: users[c][:username],
+                created: i.created_at 
+            })
+            c += 1
+        end
+
+        render json: { status: 200, comments: comments }
     end
 
     def destroy
