@@ -82,7 +82,7 @@ export default class Home extends React.Component {
                       goToProfile={this.goToProfile} 
                       description={post.description} 
                       img={{uri:`${myIp}/`+post.image}} 
-                      likes={post.likes}></Post>  
+                      likes={post.likes}/>  
             )})}
         </ScrollView>
         </Error>

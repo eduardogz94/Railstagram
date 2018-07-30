@@ -1,43 +1,79 @@
 import React, { Component } from 'react'
 import { Text, View, Image, TouchableOpacity } from 'react-native'
-import { Card, CardItem, Thumbnail, Body, Left, Button, Right, Icon} from 'native-base'
+import { Card, CardItem, Thumbnail, Body, Left, Button, Right, List } from 'native-base'
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { myIp } from '../Extra/MyIp'
 
-import { like, getLike, getComments } from '../Fetch/Requests'
+import { like, getLike, getComments, unlike } from '../Fetch/Requests'
 
 import { post } from '../../assets/css/post'
 
+import Comment from './Comments'
+
+import Auth from '../Auth/Auth';
+const auth = new Auth()
 
 export default class Post extends Component {
     state = {
-        comments: []
+        comments: [],
+        liked: false,
+        likes: this.props.likes,
+        comment: false
     }
 
-    componentDidMount = () => {
+    componentDidMount = async () => {
       if (this.props.user.avatar) {
-          this.setState({avatar:this.props.user.avatar})
+          this.setState({ avatar:this.props.user.avatar })
       } else {
-          this.setState({avatar:this.props.user.picture.url})
+          this.setState({ avatar:this.props.user.picture.url })
       }
 
       let id = this.props.id
 
       getComments(id, comments => {
             if (comments !== '') {
-                this.setState({comments:comments})
+                this.setState({ comments })
             }
       })
 
-      getLike(this.props.user.id, id, liked => {
-            if (liked == true) {
-                this.setState({liked:true})
+      const loggedId = await auth.getItem('session')
+      getLike(loggedId, this.props.id, liked => {
+          if (liked != false) {
+              this.setState({ liked: true, like_id: liked })
             }
-      })
+        })
+    }
+    
+    likePost = async () => {
+        const loggedId = await auth.getItem('session')
+        like(loggedId, this.props.id, response => {
+            if (response != false) {
+                this.setState({ 
+                    liked: true, 
+                    like_id: response,
+                    likes: +this.state.likes + 1
+                })
+            }
+        })
     }
 
-    like = () => {
+    unlikePost = async () => {
+        const loggedId = await auth.getItem('session')  
+        unlike(loggedId, this.props.id, this.state.like_id, response => {
+            if (response) {
+                this.setState({
+                    liked: false,
+                    like_id: '',
+                    likes: +this.state.likes - 1
+                })
+            }
+        })
+    }
 
+    getComment = () => {
+        console.log('clicked comment')
+        this.props.navigation.navigate('Comments')
     }
     
     render() {
@@ -68,31 +104,43 @@ export default class Post extends Component {
             <CardItem style={post.buttonContainer}>
                 <Left>
                     <Button transparent>
-                        <Icon 
+                        {this.state.liked == true ?
+                             (<Ionicons
+                            size={25} 
+                            style={post.buttons}
+                            name={'ios-heart'}
+                            onPress = {() => this.unlikePost()}
+                            />)
+                            :  (<Ionicons
+                            size={25} 
                             style={post.buttons}
                             name={'ios-heart-outline'}
-                            onPress={() => this.like()}
-                            />
+                            onPress={() => this.likePost()}
+                            />)}
                     </Button>
                     <Button transparent>
-                        <Icon 
+                        <Ionicons
+                            size={25} 
                             style={post.buttons}
-                            name={'ios-chatbubbles-outline'}/>
+                            name={'ios-chatbubbles-outline'}
+                            onPress={() => this.getComment()} />
+                        
                     </Button>
                 </Left>
                 <Right>
                     <Button transparent>
-                        <Icon 
+                        <Ionicons
+                            size={25} 
                             style={post.buttons}
                             name={'ios-send-outline'}
-                            onPress={() => alert('a')}
+                            onPress={() => console.log('a')}
                             />
                     </Button>
                 </Right>    
             </CardItem>
 
             <CardItem>
-                <Text style={post.bold}>{this.props.likes} likes</Text>
+                <Text style={post.bold}>{this.state.likes} likes</Text>
             </CardItem>
 
             <CardItem>
@@ -102,12 +150,13 @@ export default class Post extends Component {
                      </Text>
             </CardItem>
 
-            <CardItem>
-                <Text>
-                    {this.state.comments}
-                </Text>
-            </CardItem>
-
+            <List>
+                {this.state.comments !== '' ? 
+                    this.state.comments.map((comment,index) => {
+                        return(<Comment key={index} comment={comment}/>)
+                    }) 
+                    : console.log('test')}
+            </List>
         </Card>
       </View>
     )

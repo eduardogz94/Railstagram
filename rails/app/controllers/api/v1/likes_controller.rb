@@ -11,7 +11,7 @@ class LikesController < ApplicationController
     def create
         @like = @user.likes.build(like_params)
         if @like.save!
-            render json: { status: 200 }
+            render json: { status: 200, like_id: @like.id }
         else
             render json: { err: @like, status: 403 }
         end
@@ -28,7 +28,7 @@ class LikesController < ApplicationController
         if @like.destroy
             render json: { status: 200 }
         else
-            render json: { status: 500}
+            render json: { status: 500 }
         end
     end
 
@@ -36,10 +36,22 @@ class LikesController < ApplicationController
         @post = Post.find(params[:post_id]).likes
         users = []
         @post.each do |i|
-            users.push(i.user_id)
+            users.push({user:i.user_id, like_id:i.id})
         end
-        liked = users.include?(Integer(params[:user_id]))
-        render json: { status: 200, liked: liked }
+        liked = {status: false, like_id: ''}
+        users.each do |i|
+            if (i[:user] == Integer(params[:user_id])) 
+                liked[:status] = true
+                liked[:like_id] = i[:like_id]
+            end
+        end
+        
+        # liked = users.include?(:user => Integer(params[:user_id]))
+        # if (liked)
+        #     render json: { status: 200, liked: liked }
+        # else
+        # end
+        render json: { liked: liked }
     end
 
     private

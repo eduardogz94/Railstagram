@@ -11,6 +11,8 @@ import FindUser from './Users/FindUser'
 import Profile from './Users/Profile'
 import EditProfile from './Users/EditProfile'
 
+import Comments from './Post/Comments'
+
 import Uploading from './Post/Upload'
 
 export const Index = createStackNavigator({
@@ -28,6 +30,12 @@ export const Index = createStackNavigator({
     },
     Photo: {
       screen: Uploading,
+      navigationOptions: {
+        title: 'Upload'
+      }
+    },
+    Comments: {
+      screen: Comments,
       navigationOptions: {
         title: 'Upload'
       }

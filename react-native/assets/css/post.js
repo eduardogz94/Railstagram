@@ -9,10 +9,24 @@ export const post = StyleSheet.create({
     buttonContainer:{
         height:45
     },
+    username:{
+        fontWeight: '900',
+        fontSize: 8,
+    },
     bold: {
         fontWeight: '900'
     },
     buttons:{
         color:'purple'
+    },
+    comments:{
+        fontSize: 8,
+    },
+    date: {
+        fontSize: 8,
+        color:'gray'
+    },
+    deleteComment: {
+        paddingLeft: -900,
     }
 })

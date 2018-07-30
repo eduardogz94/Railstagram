@@ -89,15 +89,23 @@ export const newPost = (body, id, cb) => {
 export const like = (id, postId, cb) => {
     fetching({}, 'POST', `${myIp}/api/v1/users/${id}/posts/${postId}/likes`, response => {
         response.status == 200 
-            ? cb(true) 
+            ? cb(response.like_id) 
             : cb(false)
     })
 }
 
+export const unlike = (user_id, postId, id, cb) => {
+    fetching({}, 'DELETE', `${myIp}/api/v1/users/${user_id}/posts/${postId}/likes/${id}`, response => {
+        response.status == 200 ?
+            cb(true) :
+            cb(false)
+    })
+}
+
 export const getLike = (id, postId, cb) => {
-    fetching({}, 'GET', `${myIp}/api/v1/posts/${postId}/likes`, response => {
-        response.status == 200 
-            ? cb(true) 
+    fetching({}, 'GET', `${myIp}/api/v1/user/${id}/post/${postId}/check_like`, response => {
+        response.liked.status == true 
+            ? cb(response.liked.like_id) 
             : cb(false)
     })
 }
