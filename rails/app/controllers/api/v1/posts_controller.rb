@@ -2,6 +2,7 @@ module Api::V1
 
 class PostsController < ApplicationController
     before_action :load_user, only: [:create, :destroy]
+    # before_action :authenticate_user, only: [:create, :destroy, :index]
 
     def new
         @post = Post.new
