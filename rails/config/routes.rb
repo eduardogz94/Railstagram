@@ -11,7 +11,11 @@ Rails.application.routes.draw do
                     resources :likes, only: [:create, :destroy]
                 end
             end
-            resources :relationships,       only: [:create, :destroy]
+            resources :relationships, only: [:create, :destroy]
+            
+            post 'user_token' => 'user_token#create'
+
+            post 'check_follow' => 'users#check_follow'
 
             get '/posts/:post_id/likes', to: 'likes#index'
             get '/posts/:post_id/comments', to: 'comments#index'

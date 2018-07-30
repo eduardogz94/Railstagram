@@ -8,19 +8,7 @@
 users = User.create(
   [
     {
-      username: 'Eduardo',
-      password: '125'
+      email: 'dandy',
+      password: '$2a$10$uQ4uqBKmvANlaRdWl8UYSe4LAmiCOWoTdVfN5XSRwgo4dExrXbh5G'
     },
-    {
-      username: 'edugz94',
-      password: '521'
-    },
-    {
-      username: 'cbrzn',
-      password: '653'
-    },
-    {
-      username: 'Jean',
-      password: '753'
-    }
   ])

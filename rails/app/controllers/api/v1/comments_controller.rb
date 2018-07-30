@@ -32,14 +32,14 @@ class CommentsController < ApplicationController
             users.push({ username: @user.username })
         end
 
-        c = 0
+        index = 0
         @comment.each do |i|
             comments.push({ 
                 text: i.text,
-                username: users[c][:username],
+                username: users[index][:username],
                 created: i.created_at 
             })
-            c += 1
+            index += 1
         end
 
         render json: { status: 200, comments: comments }

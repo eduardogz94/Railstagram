@@ -76,10 +76,18 @@ module Api::V1
       @users = @user.followers
       render json: { status: 200, followers: @users }
     end
+
+
+    def check_follow
+      follower = User.find(params[:follower_id])
+      followed = User.find(params[:followed_id])
+      render json: { status: follower.following?(followed) }
+    end
+    
     private 
 
     def user_params
-      params.require(:user).permit(:username, :password_digest, :picture)
+      params.require(:user).permit(:email, :username, :password_digest, :picture)
     end
 
     def set_user
