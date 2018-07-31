@@ -67,7 +67,7 @@ export default class LoginForm extends Component {
                 <Container>
                     <Content>
                         <Form>
-                            <Logo>
+                            <Logo/>
                             <Item floatingLabel>
                                 <Icon active style={formStyle.buttons} name='ios-person'/>
                                 <Label>Email</Label>

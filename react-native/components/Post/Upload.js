@@ -59,7 +59,7 @@ export default class Upload extends Component {
 
         newPost(body, id, response => {
             if (response !== false) {
-                this.props.navigation.navigate('Home')
+                this.props.navigation.navigate('Home', body)
             } else {
                 console.log('Error')
             }

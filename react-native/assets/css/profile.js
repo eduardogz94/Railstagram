@@ -24,8 +24,8 @@ export const profile = StyleSheet.create({
         borderRadius: 37.5
     },
     edit: {
-        flex: 1,
-        marginRight: '7%',
+        flex: 2,
+        marginRight: '2%',
         marginLeft: '30%',
         justifyContent: 'center',
         borderColor: 'black',
@@ -38,6 +38,11 @@ export const profile = StyleSheet.create({
         justifyContent: 'center',
         borderColor: 'black',
         backgroundColor: 'white'
+    },
+    logout: {
+        marginRight: 15,
+        width: '14%',
+        justifyContent: 'center',
     },
     text: {
         marginBottom: '5%',
