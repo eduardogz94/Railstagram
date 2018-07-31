@@ -15,7 +15,7 @@ class Auth extends Component {
             newSession({email, password}, async token => {
                 if (token != false) {
                     try {
-                        const session = await AsyncStorage.setItem('token', token)
+                        await AsyncStorage.setItem('token', token)
                         this.setState({ token })
                     } catch (e) {
                         alert(e)

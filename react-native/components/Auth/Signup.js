@@ -26,7 +26,6 @@ export default class SignupForm extends Component {
 			type: null
 		}
 	}
-	
     
 	signUp = (event) => {
 		event.preventDefault()

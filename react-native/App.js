@@ -10,13 +10,6 @@ export default class App extends React.Component {
         token: null
     }
 
-    componentWillMount () {
-        AsyncStorage.getItem('token').then(token => {
-            this.setState({ token })
-        })
-    }
-
-
     render() {
         const UserConsumer = UserContext.Consumer
         const { token } = this.state
