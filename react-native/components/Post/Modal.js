@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native'
-import { ListItem, Button, Icon, Left, Body, Right, List, Input, Item, Label, Footer, Content, Container } from 'native-base'
+import { ListItem, Button, Icon, Left, Body, Right, List, Input, Item, Label, Footer, Content, Form, Container } from 'native-base'
 
 import { getComments, comment } from '../Fetch/Requests'
 
@@ -48,20 +48,23 @@ export default class CommentModal extends Component {
   render() {
     return (
         <Container style={post.commentsModal}>
-            <ScrollView >
-                
+            <ScrollView >    
                     <List>
                         {this.state.comments.map((comment, index) => {
                             return (<Comments key={index} comment={comment}/>)})}
                     </List>
             </ScrollView>
             <Footer>
-                <Input
-                    rounded
-                    label='Comment'
-                    onChangeText={comment => this.setState({comment:comment})}
-                    autoCapitalize={'none'} />
-                <TouchableOpacity activeOpacity = { 0.2 } onPress={() => this.comment()}><Text>Comment Now!</Text></TouchableOpacity>
+                <Item  
+                    style={{backgroundColor:'purple', width:'50%', height:'80%', marginVertical: '1%'}}
+                    rounded>
+                    <Label style={{color:'white', marginHorizontal: '8%'}}>as</Label>
+                    <Input
+                        style={{color:'white'}}
+                        onChangeText={comment => this.setState({comment:comment})}
+                        autoCapitalize={'none'} />
+                </Item>
+                    <TouchableOpacity style={{marginVertical: '5%', marginHorizontal:'10%'}} activeOpacity = { 0.2 } onPress={() => this.comment()}><Text>Comment Now!</Text></TouchableOpacity>
             </Footer>
         </Container>
     )
