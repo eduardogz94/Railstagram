@@ -13,6 +13,8 @@ Rails.application.routes.draw do
             end
             resources :relationships, only: [:create, :destroy]
             
+            mount ActionCable.server => '/cable'
+
             post 'check_follow' => 'users#check_follow'
             
             get 'current_user' => 'users#current'

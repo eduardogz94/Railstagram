@@ -5,5 +5,16 @@ module ApplicationCable
         def connect
           self.current_user = find_verified_user
         end
+
+        def find_verified_user
+            # or however you want to verify the user on your system
+            client_id = request.params[:client]
+            verified_user = User.find(client_id)
+            if verified_user 
+                verified_user
+            else
+                reject_unauthorized_connection
+            end
+          end
     end
 end

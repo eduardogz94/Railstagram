@@ -10,11 +10,13 @@ import SignupView from './Auth/Signup'
 import UserContext from './Auth/Auth'
 import FindUser from './Users/FindUser'
 import Profile from './Users/Profile'
+import Inbox from './Chat/Inbox'
 import EditProfile from './Users/EditProfile'
 
 import Modal from './Post/Modal'
 
 import Uploading from './Post/Upload'
+import Chat from './Chat/Chat';
 
 export const Index = createStackNavigator({
     Home:{
@@ -35,8 +37,20 @@ export const Index = createStackNavigator({
         title: 'Upload'
       }
     },
+    Inbox: {
+        screen: Inbox,
+        navigationOptions: {
+            title: 'Inbox'
+        }
+    },
     Comments: {
       screen: Modal,
+    },
+    Chat:{
+        screen: Chat,
+        navigationOptions: {
+            title: 'Chat'
+        }
     }
 });
 
@@ -102,7 +116,8 @@ export const UserStack = createBottomTabNavigator({
     Home:Index,
     Users: Users,
     Profile:User,
-    Upload:Upload
+    Upload:Upload,
+    Inbox:Inbox
 },
 {
     navigationOptions: ({ navigation }) => ({
@@ -117,6 +132,8 @@ export const UserStack = createBottomTabNavigator({
         iconName = `ios-people${focused ? '' : '-outline'}`;
         } else if (routeName === 'Upload') {
         iconName = `ios-camera${focused ? '' : '-outline'}`;
+        } else if (routeName ==='Inbox') {
+        iconName = `ios-chatbubbles${focused? '' : '-outline'}`
         }
         
         // You can return any component that you like here! We usually use an

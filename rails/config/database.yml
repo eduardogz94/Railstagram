@@ -3,13 +3,13 @@ development:
   encoding: unicode
   database: railstagram_dev
   pool: 5
-  username: eduardo
-  password: eagzv.999
+  username: cesar 
+  password: cesar420
 
 test:
   adapter: postgresql
   encoding: unicode
   database: railstagram_test
   pool: 5
-  username: eduardo
-  password: eagzv.999
+  username: cesar 
+  password: cesar420

@@ -27,7 +27,7 @@ export default class Home extends React.Component {
         name='ios-send-outline' 
         size={31} 
         color={'purple'} 
-        onPress={() => console.log('pressed')}
+        onPress={() => this.props.navigation.navigate('Chat')}
         />
       ),
   }
