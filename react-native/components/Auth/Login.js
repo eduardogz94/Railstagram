@@ -10,45 +10,12 @@ import { login } from '../Fetch/Requests'
 import { formStyle } from '../../assets/css/form'
 
 import Auth, { UserContext } from '../Auth/Auth';
-// const auth = new Auth()
 
 export default class LoginForm extends Component {
-
-    // constructor(){
-    //     super()  
-
-    //     this.state = {
-    //         passwords_error: '',
-    //         email_error: '',
-    //         email: '',
-    //         password: ''
-    //     }
-    // }
-
     state = {
         email: "",
         password: ""
     }    
-
-    // logIn = () => {
-        // const { email, password } = this.state;
-        // this.setErrors()
-        // if (this.checkInputs()) {
-        //     const options = { 
-        //         email,
-        //         password
-        //     }
-        //     newSession(options, response => {
-                // if (response !== false) {
-                //     auth.setItem('session',JSON.stringify(response))
-                //     this.props.navigation.navigate('Home')
-                // } else {
-                //     this.setState({email_error: 'email doesnt exist'}) ;
-                // }
-        //         alert(response)
-        //     })
-        // }
-    // }
 
     checkInputs = () => {
         const { email, password } = this.state;
