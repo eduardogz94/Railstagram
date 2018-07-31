@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Text } from 'react-native'
+import { Text, ScrollView } from 'react-native'
 import { ListItem, Button, Icon, Left, Body, Right} from 'native-base'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { post } from '../../assets/css/post'
+
 
 export default class Comments extends Component {
   render() {
@@ -19,6 +20,7 @@ export default class Comments extends Component {
         
             <Right>
                 <Text style={post.date}>{this.props.comment.created}</Text>
+                
                 <Button
                     transparent
                     style={post.deleteComment} 
@@ -27,8 +29,7 @@ export default class Comments extends Component {
                     <Icon style={{ color:'purple'}} name={'ios-close'}/>
                 </Button>
             </Right>
-        
         </ListItem>
-    )
+        )
   }
 }

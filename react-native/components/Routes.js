@@ -12,36 +12,34 @@ import FindUser from './Users/FindUser'
 import Profile from './Users/Profile'
 import EditProfile from './Users/EditProfile'
 
-import Comments from './Post/Comments'
+import Modal from './Post/Modal'
 
 import Uploading from './Post/Upload'
 
-    export const Index = createStackNavigator({
-        Home:{
-            screen:Home,
-            navigationOptions:{
-                title:'Railstagram'
-            },
-        },
-        User: {
-            screen: Profile,
-            navigationOptions: {
-                title: 'Profile'
-            }
-        },
-        Photo: {
-            screen: Uploading,
-            navigationOptions: {
-                title: 'Upload'
-            }
-        },
-        Comments: {
-            screen: Comments,
-            navigationOptions: {
-                title: 'Upload'
-          }
-        },
-    });
+export const Index = createStackNavigator({
+    Home:{
+      screen:Home,
+      navigationOptions:{
+          title:'Railstagram'
+      },
+    },
+    User: {
+      screen: Profile,
+      navigationOptions: {
+        title: 'Profile'
+      }
+    },
+    Photo: {
+      screen: Uploading,
+      navigationOptions: {
+        title: 'Upload'
+      }
+    },
+    Comments: {
+      screen: Modal,
+    },
+});
+
 
     export const User = createStackNavigator({
         Profile: {

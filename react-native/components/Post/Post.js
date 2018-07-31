@@ -70,13 +70,10 @@ export default class Post extends Component {
             }
         })
     }
-
-    getComment = () => {
-        console.log('clicked comment')
-        this.props.navigation.navigate('Comments')
-    }
+    
     
     render() {
+        console.log(this.props)
     return (
       <View>
         <Card>
@@ -122,7 +119,7 @@ export default class Post extends Component {
                             size={25} 
                             style={post.buttons}
                             name={'ios-chatbubbles-outline'}
-                            onPress={() => this.getComment()} />
+                            onPress={() => this.props.comment(this.props.id)} />
                         
                     </Button>
                 </Left>
@@ -145,7 +142,7 @@ export default class Post extends Component {
             <CardItem>
                 <Text>
                     <Text style={post.bold}>{this.props.user.username}  </Text>
-                        {this.props.description}
+                        a{this.props.description}
                      </Text>
             </CardItem>
 

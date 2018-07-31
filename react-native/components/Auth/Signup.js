@@ -155,7 +155,6 @@ export default class SignupForm extends Component {
 							<Button
 								block bordered dark
 								style={formStyle.buttonContainer}
-								rightIcon={{name: 'code'}}
 								onPress={this.signUp}>
 								<Text>Sign up now!</Text>
 								<Icon style={formStyle.buttons} name="ios-log-in"></Icon>

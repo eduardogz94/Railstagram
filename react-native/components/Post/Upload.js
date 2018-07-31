@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import { ScrollView, Image } from 'react-native'
-import { Input } from 'native-base';
-import { Button, FormValidationMessage } from 'react-native-elements'
+import { ScrollView, Image, Text } from 'react-native'
+import { Button, Container, Icon, Content, Form, Item, Input, Label } from 'native-base';
 import { ImagePicker, Permissions } from 'expo'
 
 import Error from '../Extra/ErrorBoundary'
 
 import { newPost } from '../Fetch/Requests';
+
+import { formStyle } from '../../assets/css/form'
 
 import Auth from '../Auth/Auth';
 const auth = new Auth()
@@ -41,7 +42,6 @@ export default class Upload extends Component {
             if (!result.cancelled) {
                 const type = result.uri.substr(result.uri.indexOf('.')+1)
                 type = (type == 'jpg') ? 'jpeg' : type 
-                console.log(type)
                 this.setState({ post_image:result.base64, show:result.uri, type });
             }
         }).catch(err => {
@@ -55,12 +55,10 @@ export default class Upload extends Component {
         
         description = (description == "") ? null : description 
 
-        body = {
-            post_image, type, description
-        }
+        body = { post_image, type, description }
 
         newPost(body, id, response => {
-            if (result.status !== false) {
+            if (response !== false) {
                 this.props.navigation.navigate('Home')
             } else {
                 console.log('Error')
@@ -69,27 +67,39 @@ export default class Upload extends Component {
     }
 
     render() {
-      let { image, show } = this.state;
+      let { post_image, show } = this.state;
         return (
             <Error>
-                <ScrollView >
-                        <Input 
-                            label='Description'
-                            onChangeText={description => this.setState({ description })}
-                            placeholder = 'Description'
-                            autoCapitalize={'none'}/>
-                        <FormValidationMessage>{this.state.description_error}</FormValidationMessage>
-                        <Button
-                            title="Pick an image from camera roll"
-                            onPress={this.pickImage}
-                            />
-                        {image &&
-                        <Image source={{ uri: show }} style={{ width: 200, height: 200 }} />}
-    
-                        <Button style={{marginTop: 50}}
-                            onPress={this.uploadPost}
-                            title = 'New post!'/>
-                </ScrollView>
+                <Container>
+                    <ScrollView >
+                        <Form>
+                            <Item>
+                                <Icon active style={formStyle.buttons} name='ios-person'/>
+                                <Input 
+                                    placeholder='Caption'
+                                    onChangeText={description => this.setState({ description })}
+                                    autoCapitalize={'none'}/>
+                            </Item>
+                        
+                            <Button bordered dark block
+                                style={formStyle.buttonContainer}
+                                onPress={this.pickImage}>
+                                <Text>Pick an image from camerall roll</Text>
+                                <Icon style={formStyle.buttons} name="ios-camera"></Icon>
+                            </Button>
+                            
+                            {post_image &&
+                                <Image source={{ uri: show }} style={formStyle.image} />}
+        
+                            <Button bordered dark block
+                                style={formStyle.buttonContainer}
+                                onPress={this.uploadPost}>
+                                <Text>New Post!</Text>
+                                <Icon style={formStyle.buttons} name="ios-log-in"></Icon>
+                            </Button>
+                        </Form>
+                    </ScrollView>
+                </Container>
                 
             </Error>
         )
