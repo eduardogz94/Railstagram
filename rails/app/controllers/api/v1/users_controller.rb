@@ -43,6 +43,7 @@ module Api::V1
 
     def create
         @user = User.new(user_params)
+        @user.password_digest = BCrypt::Password.create(params[:password_digest])
         @user.picture = "data:image/#{params[:type]};base64, #{params[:picture]}"
         if @user.save! 
             render json: { data: 'User created', id:@user.id, status: 200 }

@@ -6,6 +6,7 @@ import { newSession, currentUser } from '../Fetch/Requests';
 export const UserContext = React.createContext({
     token: null,
     setSession: () => {},
+    removeSession: () => {}
 });
 
 class Auth extends Component {
@@ -26,6 +27,14 @@ class Auth extends Component {
                 }
             })
         },
+        removeSession: async () => {
+            try {
+                await AsyncStorage.clear()
+                this.props.update(null)
+            } catch (e) {
+                alert(e)
+            }
+        }
     }
     
     getItem = async (key) => {

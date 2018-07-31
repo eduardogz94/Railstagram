@@ -11,7 +11,7 @@ export default class App extends React.Component {
     }
 
     componentWillMount () {
-        
+        // AsyncStorage.clear().then(data=>{})
         AsyncStorage.getItem('token').then(token => {
             this.setState({ token })
         })
@@ -29,9 +29,9 @@ export default class App extends React.Component {
             <View style={styles.container}>
                 <Auth update={this.updateToken}>
                     {(token != null) ? 
-                            <UserConsumer>
-                                {session => <UserStack token={token}/>}
-                            </UserConsumer>
+                        <UserConsumer>
+                            {session => <UserStack token={token}/>}
+                        </UserConsumer>
                     : <GuestStack />
                     }
                 </Auth>
