@@ -48,23 +48,21 @@ export default class CommentModal extends Component {
   render() {
     return (
         <Container style={post.commentsModal}>
-            
-            <Content>
-                <List>
-                    {this.state.comments.map((comment, index) => {
-                        return (<Comments key={index} comment={comment}/>)})}
-                </List>
-            </Content>
-            
+            <ScrollView >
+                
+                    <List>
+                        {this.state.comments.map((comment, index) => {
+                            return (<Comments key={index} comment={comment}/>)})}
+                    </List>
+            </ScrollView>
             <Footer>
-                    <Input
-                        rounded
-                        label='Comment'
-                        onChangeText={comment => this.setState({comment:comment})}
-                        autoCapitalize={'none'} />
-                    <TouchableOpacity activeOpacity = { 0.2 } onPress={() => this.comment()}><Text>Comment Now!</Text></TouchableOpacity>
+                <Input
+                    rounded
+                    label='Comment'
+                    onChangeText={comment => this.setState({comment:comment})}
+                    autoCapitalize={'none'} />
+                <TouchableOpacity activeOpacity = { 0.2 } onPress={() => this.comment()}><Text>Comment Now!</Text></TouchableOpacity>
             </Footer>
-        
         </Container>
     )
   }

@@ -73,6 +73,7 @@ export default class Post extends Component {
     
     
     render() {
+        console.log(this.props)
     return (
       <View>
         <Card>
@@ -141,7 +142,7 @@ export default class Post extends Component {
             <CardItem>
                 <Text>
                     <Text style={post.bold}>{this.props.user.username}  </Text>
-                        {this.props.description}
+                        a{this.props.description}
                      </Text>
             </CardItem>
 

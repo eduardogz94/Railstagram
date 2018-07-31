@@ -58,7 +58,7 @@ export default class Upload extends Component {
         body = { post_image, type, description }
 
         newPost(body, id, response => {
-            if (result.status !== false) {
+            if (response !== false) {
                 this.props.navigation.navigate('Home')
             } else {
                 console.log('Error')
