@@ -20,6 +20,10 @@ module Api::V1
         end
     end
 
+    def current
+        render json: { user: current_user }
+    end
+
     def get
         if @user
             render json: { user:@user , status: 200 }

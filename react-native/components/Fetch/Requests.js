@@ -22,6 +22,18 @@ export const getPosts = cb => {
     })
 }
 
+export const currentUser = (token, cb) => {
+    fetch(`${myIp}/api/v1/current_user`, {
+        headers: {
+            'Authorization':`Beared ${token}`
+        }
+    })
+    .then(response => response.json())
+    .then(result => {
+        cb(result.user)
+    })
+}
+
 export const sign = (options, cb) => {
     fetching(options, 'POST', `${myIp}/api/v1/signup`, response => {
         response.status == 200 
