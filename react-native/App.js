@@ -11,6 +11,7 @@ export default class App extends React.Component {
     }
 
     componentWillMount () {
+        
         AsyncStorage.getItem('token').then(token => {
             this.setState({ token })
         })

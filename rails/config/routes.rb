@@ -15,6 +15,8 @@ Rails.application.routes.draw do
             
             post 'check_follow' => 'users#check_follow'
             
+            get 'current_user' => 'users#current'
+
             get '/posts/:post_id/likes', to: 'likes#index'
             get '/posts/:post_id/comments', to: 'comments#index'
             
