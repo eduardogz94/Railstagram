@@ -19,7 +19,9 @@ export default class SignupForm extends Component {
 		this.state = {
 			passwords_error: '',
 			username_error: '',
+			email_error: '',
 			username: '',
+			email:'',
 			password: '',
 			password_confirmation: '',
 			image: null,
@@ -29,13 +31,14 @@ export default class SignupForm extends Component {
     
 	signUp = (event) => {
 		event.preventDefault()
-		const { username,password, password_confirmation, type, image } = this.state
+		const { username, email, password, password_confirmation, type, image } = this.state
 		this.setErrors()
 
 		if (this.checkInputs()) {
 			if (password === password_confirmation) {
 
 				const options = {
+					email, 
 					username: username,
 					password_digest: password,
 					picture: image,
@@ -44,8 +47,8 @@ export default class SignupForm extends Component {
 				
 				sign(options, response => {
 					if (response !== false) {
-						auth.setItem('session',JSON.stringify(response))
-						this.props.navigation.navigate('Home')
+						alert('You have registered! Please log in')
+						this.props.navigation.navigate('Login')
 					} else {
 						this.setState({username_error: 'Username already exist'})
 					}
@@ -58,9 +61,9 @@ export default class SignupForm extends Component {
 	}
 
 	checkInputs = () => {
-		const { username, password, password_confirmation } = this.state;
+		const { email, username, password, password_confirmation } = this.state;
 		
-		(username !== '' && password !== '' && password_confirmation !== '')
+		(username !== '' && password !== '' && password_confirmation !== '' && email !== '')
 			? data = true 
 			: data = false
 
@@ -68,7 +71,7 @@ export default class SignupForm extends Component {
 	}
 
 	setErrors = () => {
-		const { username, password, password_confirmation } = this.state
+		const { email, username, password, password_confirmation } = this.state
 
 		username == '' ? this.setState({username_error:'Cant be blank'}) 
 			: this.setState({username_error: ''})
@@ -78,6 +81,11 @@ export default class SignupForm extends Component {
 
 		password_confirmation == '' ? this.setState({passwords_error:'Cant be blank and both must be equals'}) 
 			: this.setState({passwords_error:''})
+		password_confirmation == '' ? this.setState({passwords_error:'Cant be blank and both must be equals'}) 
+			: this.setState({passwords_error:''})
+
+		email == '' ? this.setState({email_error:'Cant be blank'}) 
+			: this.setState({email_error:''})
 	} 
 	
 	pickImage = async () => {
@@ -110,6 +118,14 @@ export default class SignupForm extends Component {
 				<Container>
 					<Content>
 						<Form>
+							<Item floatingLabel>
+								<Label>Email</Label>
+								<Input 
+									onChangeText={email => this.setState({email})}
+									autoCapitalize={'none'} />
+							</Item>
+							<FormValidationMessage>{this.state.email_error}</FormValidationMessage>      
+							
 							<Item floatingLabel>
 								<Icon active style={formStyle.buttons} name='ios-person'/>
 								<Label>Username</Label>

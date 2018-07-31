@@ -12,7 +12,7 @@ import { profile } from '../../assets/css/profile'
 
 import Post from '../Post/Post';
 
-import Auth from '../Auth/Auth';
+import Auth, { UserContext } from '../Auth/Auth';
 const auth = new Auth()
 
 
