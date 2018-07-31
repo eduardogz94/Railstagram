@@ -15,7 +15,8 @@ class Auth extends Component {
             newSession({email, password}, async token => {
                 if (token != false) {
                     try {
-                        await AsyncStorage.setItem('token', token)
+                        const session = await AsyncStorage.setItem('token', token)
+                        this.props.update(token)
                         this.setState({ token })
                     } catch (e) {
                         alert(e)
@@ -25,14 +26,14 @@ class Auth extends Component {
         },
     }
  
-    // getItem = async (key) => {
-    //     try {
-    //     const data = await AsyncStorage.getItem(key)
-    //     return data;    
-    //     } catch (error) {
-    //     console.log(error)
-    //     }
-    // }
+    getItem = async (key) => {
+        try {
+        const data = await AsyncStorage.getItem(key)
+        return data;    
+        } catch (error) {
+        console.log(error)
+        }
+    }
     
     // setItem = async (key,item) => {
     //     try {
@@ -44,16 +45,14 @@ class Auth extends Component {
     //     }
     // }
 
-    // logged = async (session,id) => {
-    //     try {
-    //     console.log(session)
-    //     console.log(id)
-    //     await AsyncStorage.multiSet(['session', session], ['id', id])
-    //     this.state = {session:session, id:id}
-    //     } catch (error) {
-    //     console.log(error)
-    //     }
-    // }
+    multi = async (session,id) => {
+        try {
+        await AsyncStorage.multiSet(['session', session], ['id', id])
+        this.state = {session:session, id:id}
+        } catch (error) {
+        console.log(error)
+        }
+    }
 
     // resetSession = async () => {
     //     try{
@@ -79,7 +78,6 @@ class Auth extends Component {
         render() {
             return (
                 <UserContext.Provider value={this.state}>
-                <Text> {this.state.token} </Text>
                     {this.props.children}
                 </UserContext.Provider>
             )
