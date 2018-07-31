@@ -9,48 +9,51 @@ import { login } from '../Fetch/Requests'
 
 import { formStyle } from '../../assets/css/form'
 
-import Auth from '../Auth/Auth';
-const auth = new Auth()
+import Auth, { UserContext } from '../Auth/Auth';
+// const auth = new Auth()
 
 export default class LoginForm extends Component {
 
-    constructor(){
-        super()  
+    // constructor(){
+    //     super()  
 
-        this.state = {
-            passwords_error: '',
-            username_error: '',
-            username: '',
-            password: ''
-        }
-    }
+    //     this.state = {
+    //         passwords_error: '',
+    //         email_error: '',
+    //         email: '',
+    //         password: ''
+    //     }
+    // }
 
-    logIn = (event) => {
-        event.preventDefault()
-        const { username, password } = this.state;
-        this.setErrors()
-        
-        if (this.checkInputs()) {
-            const options = { 
-                username: username,
-                password: password
-            }
-            
-            login(options, response => {
-                if (response !== false) {
-                    auth.setItem('session',JSON.stringify(response))
-                    this.props.navigation.navigate('Home')
-                } else {
-                    this.setState({username_error: 'Username doesnt exist'}) ;
-                }
-            })
-        }
-    }
+    state = {
+        email: "",
+        password: ""
+    }    
+
+    // logIn = () => {
+        // const { email, password } = this.state;
+        // this.setErrors()
+        // if (this.checkInputs()) {
+        //     const options = { 
+        //         email,
+        //         password
+        //     }
+        //     newSession(options, response => {
+                // if (response !== false) {
+                //     auth.setItem('session',JSON.stringify(response))
+                //     this.props.navigation.navigate('Home')
+                // } else {
+                //     this.setState({email_error: 'email doesnt exist'}) ;
+                // }
+        //         alert(response)
+        //     })
+        // }
+    // }
 
     checkInputs = () => {
-        const { username, password } = this.state;
+        const { email, password } = this.state;
 
-        (username !== '' && password !== '')
+        (email !== '' && password !== '')
             ? data = true 
             : data = false
 
@@ -58,10 +61,10 @@ export default class LoginForm extends Component {
     }
 
     setErrors = () => {
-        const { username, password } = this.state
+        const { email, password } = this.state
 
-        username == '' ? this.setState({username_error:'Cant be blank'}) 
-            : this.setState({username_error: ''})
+        email == '' ? this.setState({email_error:'Cant be blank'}) 
+            : this.setState({email_error: ''})
 
         password == '' ? this.setState({passwords_error:'Cant be blank'}) 
             : this.setState({passwords_error:''})
@@ -69,6 +72,7 @@ export default class LoginForm extends Component {
       
 
     render() {
+        const { email, password } = this.state
         return (
         <Error>
             <ScrollView style={formStyle.main}>
@@ -78,30 +82,39 @@ export default class LoginForm extends Component {
 
                             <Item floatingLabel>
                                 <Icon active style={formStyle.buttons} name='ios-person'/>
-                                <Label>Username</Label>
+                                <Label>Email</Label>
                                 <Input 
-                                    onChangeText={username => this.setState({username:username})}
+                                    onChangeText={email => this.setState({email})}
                                     autoCapitalize={'none'} />
                             </Item>
-                            <FormValidationMessage>{this.state.username_error}</FormValidationMessage>      
+                            <FormValidationMessage>{this.state.email_error}</FormValidationMessage>      
                             
                             <Item floatingLabel>
                                 <Icon active style={formStyle.buttons} name='key'/>  
                                 <Label>Password</Label>
                                 <Input 
-                                    onChangeText={password => this.setState({password:password})}
+                                    onChangeText={password => this.setState({password})}
                                     secureTextEntry={true} 
                                     autoCapitalize={'none'} />
                             </Item>
                             <FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
-                            
-                            <Button 
-                                block bordered dark
-                                style={formStyle.buttonContainer}
-                                onPress={this.logIn}>
-                                <Text>Login!</Text>
-                                <Icon style={formStyle.buttons} name="ios-log-in"></Icon>
-                            </Button>
+                           
+                           
+                            <UserContext.Consumer>
+                                {({token, setSession}) => (
+                                    <Button 
+                                    block bordered dark
+                                    style={formStyle.buttonContainer}
+                                    onPress={() => setSession(email, password) }>  
+                                    <Text>Login!</Text>
+                                    <Icon style={formStyle.buttons} name="ios-log-in"></Icon>
+                                    </Button>
+                                )}
+                            </UserContext.Consumer>
+                           
+                           
+                           
+                          
 
                             <Text>Havent signup yet?</Text>
                         </Form>

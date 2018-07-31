@@ -1,30 +1,42 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, AsyncStorage } from 'react-native';
 
 import Auth, { UserContext } from './components/Auth/Auth';
 import { UserStack, GuestStack } from './components/Routes'
 
 export default class App extends React.Component {
-  render() {
-    const UserConsumer = UserContext.Consumer
-    return (
-      <View style={styles.container}>
-        <Auth>
-          <UserConsumer>
-            {session => (
-              ((session == '' || session == null) 
-                  ? <GuestStack /> 
-                  : <UserStack session={session}/>)
-            )}
-          </UserConsumer>
-        </Auth>
-      </View>
-    );
-  }
+
+    state = {
+        token: null
+    }
+
+    componentWillMount () {
+        AsyncStorage.getItem('token').then(token => {
+            this.setState({ token })
+        })
+    }
+
+
+    render() {
+        const UserConsumer = UserContext.Consumer
+        const { token } = this.state
+        return (
+            <View style={styles.container}>
+            <Auth>
+                {(token != null) ? 
+                        <UserConsumer>
+                            {token => <UserStack token={token}/>}
+                        </UserConsumer>
+                : <GuestStack/>
+                }
+            </Auth>
+        </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
+    container: {
+        flex: 1
+    },
 });

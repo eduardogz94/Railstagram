@@ -30,11 +30,11 @@ export const sign = (options, cb) => {
     })
 }
 
-export const login = (options, cb) => {
-    fetching(options, 'POST', `${myIp}/api/v1/login`, response => {
-        response.status == 200 
-            ? cb(response.user.id) 
-            : cb(false)
+export const newSession = (auth, cb) => {
+    fetching({auth}, 'POST', `${myIp}/api/v1/user_token`, response => {
+        response.status != 400 ? 
+        cb(response.jwt) 
+        : cb(false)
     })
 }
 

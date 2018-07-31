@@ -17,10 +17,10 @@ class User < ApplicationRecord
     # before_save { self.username = username.downcase }
     mount_base64_uploader :picture, PictureUploader
 
-    # validates :username,  presence: true, uniqueness: { case_sensitive: false }
+    validates :username,  presence: true, uniqueness: { case_sensitive: false }
     
     has_secure_password
-    # validates :password_digest, presence: true
+    validates :password_digest, presence: true
     
     def User.digest(string)
       cost = ActiveModel::SecurePassword.min_cost ? 

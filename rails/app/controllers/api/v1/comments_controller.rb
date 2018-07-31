@@ -41,7 +41,6 @@ class CommentsController < ApplicationController
             })
             index += 1
         end
-
         render json: { status: 200, comments: comments }
     end
 
