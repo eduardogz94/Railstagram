@@ -16,21 +16,25 @@ export default class App extends React.Component {
         })
     }
 
+    updateToken = token => {
+        this.setState({ token })
+    }
+
 
     render() {
         const UserConsumer = UserContext.Consumer
         const { token } = this.state
         return (
             <View style={styles.container}>
-            <Auth>
-                {(token != null) ? 
-                        <UserConsumer>
-                            {token => <UserStack token={token}/>}
-                        </UserConsumer>
-                : <GuestStack/>
-                }
-            </Auth>
-        </View>
+                <Auth update={this.updateToken}>
+                    {(token != null) ? 
+                            <UserConsumer>
+                                {session => <UserStack token={token}/>}
+                            </UserConsumer>
+                    : <GuestStack />
+                    }
+                </Auth>
+            </View>
         );
     }
 }

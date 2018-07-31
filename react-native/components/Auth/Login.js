@@ -105,7 +105,7 @@ export default class LoginForm extends Component {
                                     <Button 
                                     block bordered dark
                                     style={formStyle.buttonContainer}
-                                    onPress={() => setSession(email, password) }>  
+                                    onPress={() => {setSession(email, password)}}>
                                     <Text>Login!</Text>
                                     <Icon style={formStyle.buttons} name="ios-log-in"></Icon>
                                     </Button>

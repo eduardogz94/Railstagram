@@ -122,7 +122,7 @@ export const Index = createStackNavigator({
             // You can return any component that you like here! We usually use an
             // icon component from react-native-vector-icons
             return(
-                    <Ionicons name={iconName} size={25} color={tintColor} />
+                <Ionicons name={iconName} size={25} color={tintColor} />
             )
             
         },
@@ -145,8 +145,8 @@ export const Index = createStackNavigator({
         {
         navigationOptions: ({ navigation }) => ({
             tabBarIcon: ({ focused, tintColor }) => {
-            const { routeName } = navigation.state;
-            let iconName;
+                const { routeName } = navigation.state;
+                let iconName;
             if (routeName == 'Login') {
                 iconName = `ios-home${focused ? '' : '-outline'}`;
             } else if (routeName === 'Signup') {

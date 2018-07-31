@@ -16,6 +16,7 @@ class Auth extends Component {
                 if (token != false) {
                     try {
                         const session = await AsyncStorage.setItem('token', token)
+                        this.props.update(token)
                         this.setState({ token })
                     } catch (e) {
                         alert(e)
@@ -79,7 +80,6 @@ class Auth extends Component {
         render() {
             return (
                 <UserContext.Provider value={this.state}>
-                <Text> {this.state.token} </Text>
                     {this.props.children}
                 </UserContext.Provider>
             )
