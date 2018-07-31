@@ -11,7 +11,7 @@ import FindUser from './Users/FindUser'
 import Profile from './Users/Profile'
 import EditProfile from './Users/EditProfile'
 
-import Comments from './Post/Comments'
+import Modal from './Post/Modal'
 
 import Uploading from './Post/Upload'
 
@@ -35,10 +35,7 @@ export const Index = createStackNavigator({
       }
     },
     Comments: {
-      screen: Comments,
-      navigationOptions: {
-        title: 'Upload'
-      }
+      screen: Modal,
     },
 });
 

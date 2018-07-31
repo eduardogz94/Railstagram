@@ -110,7 +110,7 @@ export const getLike = (id, postId, cb) => {
     })
 }
 
-export const comment = (options,id, postId, cb) => {
+export const comment = (options, id, postId, cb) => {
     fetching(options, 'POST', `${myIp}/api/v1/users/${id}/posts/${postId}/comments`, response => {
         response.status == 200 
             ? cb(true) 

@@ -92,7 +92,7 @@ export default class Profile extends Component {
 
             follow(options, response => {
                 response !== false
-                    ? console.log('followed')
+                    ? this.setState({followers:+this.state.followers + 1})
                     : console.log('false')
             })
         })
@@ -160,7 +160,7 @@ export default class Profile extends Component {
                         <View style={profile.dashboard}>
                            
                            <View style={profile.stats}>
-                                <Text>20</Text>
+                                <Text>{this.state.posts.length}</Text>
                                 <Text style={profile.userData}>posts</Text>
                            </View>
 

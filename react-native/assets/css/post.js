@@ -20,13 +20,22 @@ export const post = StyleSheet.create({
         color:'purple'
     },
     comments:{
-        fontSize: 8,
+        fontSize: 10,
     },
     date: {
         fontSize: 8,
         color:'gray'
     },
     deleteComment: {
-        paddingLeft: -900,
+        marginTop: 2,
+    },
+    commentInput:{
+        color:'black'
+    },
+    commentsModal: {
+        backgroundColor: 'white'
+    },
+    commentInput: {
+        marginTop: '15%',
     }
 })

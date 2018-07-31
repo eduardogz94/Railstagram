@@ -40,6 +40,11 @@ export default class Home extends React.Component {
     }
     
     componentDidMount() {
+        this.loadPosts()
+    }
+    
+    loadPosts = () => {
+        
         getPosts(response => {
             if (response) {
                 arr = []
@@ -65,27 +70,41 @@ export default class Home extends React.Component {
         })
     }
 
+    componentWillMount = () => {
+      this.loadPosts()
+    }
+    
+    
+    
+    
+
     goToProfile = (id) => {
         this.props.navigation.navigate('User', id)
+    }
+
+    getComment = (id) => {
+        this.props.navigation.navigate('Comments', id)
     }
   
     render() {
     
         return (
-        <Error>  
-        <ScrollView style={home.container}>
-            {this.state.posts.map((post, i) => {
-            return(
-                <Post key={i} 
-                      id={post.id}
-                      user={post.user} 
-                      goToProfile={this.goToProfile} 
-                      description={post.description} 
-                      img={{uri:`${myIp}/`+post.image}} 
-                      likes={post.likes}/>  
-            )})}
-        </ScrollView>
-        </Error>
+            <Error>  
+                <ScrollView style={home.container}>
+                    {this.state.posts.map((post, i) => {
+                    return(
+                        <Post key={i} 
+                            id={post.id}
+                            user={post.user} 
+                            goToProfile={this.goToProfile} 
+                            description={post.description} 
+                            img={{uri:`${myIp}/`+post.image}} 
+                            likes={post.likes}
+                            comment={this.getComment}
+                            />  
+                    )})}
+                </ScrollView>
+            </Error>
         );
     }
 }

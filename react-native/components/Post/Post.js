@@ -70,11 +70,7 @@ export default class Post extends Component {
             }
         })
     }
-
-    getComment = () => {
-        console.log('clicked comment')
-        this.props.navigation.navigate('Comments')
-    }
+    
     
     render() {
     return (
@@ -122,7 +118,7 @@ export default class Post extends Component {
                             size={25} 
                             style={post.buttons}
                             name={'ios-chatbubbles-outline'}
-                            onPress={() => this.getComment()} />
+                            onPress={() => this.props.comment(this.props.id)} />
                         
                     </Button>
                 </Left>
