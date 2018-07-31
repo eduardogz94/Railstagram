@@ -44,6 +44,7 @@ export const sign = (options, cb) => {
 
 export const newSession = (auth, cb) => {
     fetching({auth}, 'POST', `${myIp}/api/v1/user_token`, response => {
+        alert(response)
         response.status != 400 ? 
         cb(response.jwt) 
         : cb(false)

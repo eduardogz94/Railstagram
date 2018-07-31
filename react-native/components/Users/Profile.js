@@ -180,14 +180,29 @@ export default class Profile extends Component {
 
                 <View style={profile.rows}>
                     {this.state.owner 
-                        ? <Button style={profile.edit} bordered dark onPress={() => this.props.navigation.navigate('Settings')}>
+                        ? (<Button style={profile.edit} bordered dark onPress={() => this.props.navigation.navigate('Settings')}>
                                 <Text>Edit Profile</Text>
-                            </Button>
+                            </Button>)
 
                         : <Button bordered dark style={profile.follow} onPress={() => this.follow()}>
                                 <Text>Follow!</Text>
-                            </Button>
-                    }    
+                            </Button>}
+                        
+                        {this.state.owner 
+                            ?
+                            <UserContext>
+                            {({token, setSession, removeSession}) => (
+                                <Button 
+                                    bordered dark 
+                                    style={profile.logout} 
+                                    onPress={() => removeSession()}>
+                                    <Text>Logout</Text>
+                                </Button>
+                            )}
+                            </UserContext>
+                            : 
+                            this.state.owner
+                        }
                 </View>
 
                 <View style={profile.dataText}>

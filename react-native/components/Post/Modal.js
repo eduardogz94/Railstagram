@@ -58,9 +58,9 @@ export default class CommentModal extends Component {
                 <Item  
                     style={{backgroundColor:'purple', width:'50%', height:'80%', marginVertical: '1%'}}
                     rounded>
-                    <Label style={{color:'white', marginHorizontal: '8%'}}>as</Label>
+                    <Label style={{color:'white', marginHorizontal: '8%', fontSize:8}}>Comment</Label>
                     <Input
-                        style={{color:'white'}}
+                        style={{color:'white', fontSize:10}}
                         onChangeText={comment => this.setState({comment:comment})}
                         autoCapitalize={'none'} />
                 </Item>

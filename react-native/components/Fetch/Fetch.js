@@ -38,7 +38,7 @@ export const fetching = (data, method, url, cb) => {
                         cb(res);
                     })
                     .catch(err => {
-                        console.log(`FETCH COMPONENT > Error while making the request: ${err.message}`);
+                        console.log(`FETCH COMPONENT > Error while making the request: ${err}`);
                     })
                 break;
             }

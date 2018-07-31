@@ -9,6 +9,8 @@ import { login } from '../Fetch/Requests'
 
 import { formStyle } from '../../assets/css/form'
 
+import Logo from '../Extra/Logo';
+
 import Auth, { UserContext } from '../Auth/Auth';
 
 export default class LoginForm extends Component {
@@ -46,7 +48,7 @@ export default class LoginForm extends Component {
                 <Container>
                     <Content>
                         <Form>
-
+                            <Logo/>
                             <Item floatingLabel>
                                 <Icon active style={formStyle.buttons} name='ios-person'/>
                                 <Label>Email</Label>

@@ -70,14 +70,6 @@ export default class Home extends React.Component {
         })
     }
 
-    componentWillMount = () => {
-      this.loadPosts()
-    }
-    
-    
-    
-    
-
     goToProfile = (id) => {
         this.props.navigation.navigate('User', id)
     }
