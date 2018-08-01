@@ -30,22 +30,21 @@ export default class Inbox extends Component {
             <View>
                 <Label> Direct Messages </Label>
                 <ScrollView>
-							<List>
-								{this.state.users.map((user) => {
-									return(
-                                        <ListItem
-                                            roundAvatar
-                                            key={user.id}
-                                            avatar = {(user.picture.url != null) ? `${myIp}/${user.picture.url}` : null}
-                                            title={user.username}
-                                            subtitle={'username'}
-                                            onPress={() => this.props.navigation.navigate('Chat', {username:user.username})}
-                                            />
-                                    )}
+                        <List>
+                            {this.state.users.map((user) => {
+                                return(
+                                    <ListItem
+                                        roundAvatar
+                                        key={user.id}
+                                        avatar = {(user.picture.url != null) ? `${myIp}${user.picture.url}` : null}
+                                        title={user.username}
+                                        subtitle={'username'}
+                                        onPress={() => this.props.navigation.navigate('Chat', {username:user.username})}
+                                    />
                                 )}
-							</List>
-					</ScrollView>
-
+                            )}
+                        </List>
+                </ScrollView>
             </View>
         )
     }

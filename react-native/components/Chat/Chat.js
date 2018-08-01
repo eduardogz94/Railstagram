@@ -5,88 +5,56 @@ import { ScrollView, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-
 import myIp from '../Extra/MyIp'
 
 import Auth from '../Auth/Auth'
+import MsgBox from './MsgBox';
+import ChatTitle from './ChatTitle';
+import Messages from './Messages';
 
 const auth = new Auth()
 
 export default class Chat extends Component {
     state = {
         history: [],
-        message: '',
-        user_id: '',
         room_id: ''
     }
     
-        componentDidMount = async () => {
-            this.initSocket()
-            const user_id = await auth.getItem('session')
-            // const room_id = this.navigation
-            this.setState({ user_id })
-        }
-        
-        initSocket = () => {
-            let cable = ActionCable.createConsumer(`ws://172.20.10.3:4000/cable?client=5&room_id=1`)
-            this.chats = cable.subscriptions.create({channel: 'ChatChannel', room_id: 1}, {
-                connected(data) {
+    componentDidMount = async () => {
+        this.initSocket()
+    }
+    
+    initSocket = async () => {
+        const user_id = await auth.getItem('session')
+        let cable = ActionCable.createConsumer(`ws://172.20.10.4:4000/cable?client=${user_id}`)
+        this.chats = cable.subscriptions.create({channel: 'ChatChannel', room_id: 1}, {
+            connected(data) {
+                
+            },
+            received: (data) => {
+                let { history } = this.state
+                history.push({ msg:data.content, id:data.user_id })
+                this.setState({ history })
+            },
+            send_message: async function(content) {
+                const user_id = await auth.getItem('session')
+                this.perform('send_message', {
+                    content,
+                    user_id,
+                    room_id: 1
+                })
+            }
+        })
+    }
 
-                },
-                received(data) {
-                    alert('Incoming message: ' + JSON.stringify(data))
-                    this.setState({ history: this.state.history.concat ( {msg:data.content} )})
-                },
-                send_message: function(content) {
-                     this.perform('send_message', {
-                        content
-                    });
-                }
-            })
-        }
-
-        sendMessage = (message) => {
-            this.chats.send_message(message)
-        }
-
-
-
+    sendMessage = (message) => {
+        this.chats.send_message(message)
+    }
         
     render() {
-        const { message, history } = this.state
+        const { history } = this.state
         return (
         <View>
-            <Label> {this.props.navigation.state.params.username} </Label>
-            
-
-                {/* <Input
-                    onChangeText={message => this.setState({ message })}
-                    autoCapitalize={'none'} />
-                <TouchableOpacity 
-                    activeOpacity = { 0.2 } 
-                    onPress={() => this.sendMessage(message)}>
-                        <Text>Comment Now!</Text>
-                </TouchableOpacity> */}
-
-                    <Input  
-                        style={{backgroundColor:'white', height: '70%'}}
-                        readonly
-                    >
-                    {history.map((msgs, i) => {
-                        return (
-                            <Label key={i}>
-                                {msgs.msg}
-                            </Label>
-                        )
-                    })}
-                    </Input>
-
-                <Item  
-                style={{backgroundColor:'white', width:'100%', height:'30%'}}
-                    rounded>
-                    <Input
-                        style={{color:'black', fontSize:16}}
-                        onChangeText={message => this.setState({message})}
-                        autoCapitalize={'none'} />
-                    <TouchableOpacity activeOpacity = { 0.2 } onPress={() => this.sendMessage(message)}><Text>Send</Text></TouchableOpacity>
-                </Item>
-
+            <ChatTitle username={this.props.navigation.state.params.username}/> 
+            <Messages history={history}/>
+            <MsgBox sendMessage={this.sendMessage}/>
         </View>
     )
   }

@@ -23,7 +23,6 @@ class User < ApplicationRecord
     has_secure_password
     validates :password_digest, presence: true
     
-
     # Follows a user.
     def follow(other_user)
         active_relationships.create(followed_id: other_user.id)

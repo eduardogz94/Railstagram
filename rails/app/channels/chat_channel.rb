@@ -7,6 +7,7 @@ class ChatChannel < ApplicationCable::Channel
     end
 
     def send_message(data)
-        Message.create!(content: data['content'])
+        conversation =  Conversation.find(data['room_id'])
+        conversation.messages.create!(content: data['content'], user_id: data['user_id'])
     end
   end
