@@ -37,7 +37,8 @@ class CommentsController < ApplicationController
             comments.push({ 
                 text: i.text,
                 username: users[index][:username],
-                created: i.created_at 
+                created: i.created_at,
+                id: i.id
             })
             index += 1
         end

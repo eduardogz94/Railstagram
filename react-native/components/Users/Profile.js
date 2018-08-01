@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import { ScrollView, View, Text, Image } from 'react-native'
-import { Button, Tabs, Tab, TabHeading } from 'native-base'
+import { Button } from 'native-base'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Error from '../Extra/ErrorBoundary'
 import { myIp } from '../Extra/MyIp'
 
-import { userDetails, getFollowers, getFollowing, follow } from '../Fetch/Requests'
+import { userDetails, getFollowers, getFollowing, follow, checkFollow, unfollow } from '../Fetch/Requests'
 
 import { profile } from '../../assets/css/profile'
 
 import Post from '../Post/Post';
+
+import { getDate } from '../Extra/Utilities'
 
 import Auth, { UserContext } from '../Auth/Auth';
 const auth = new Auth()
@@ -33,39 +35,53 @@ export default class Profile extends Component {
             },
             posts: [],
             followers: [],
-            following: []
+            following: [],
+            follows: false
         }
     }
     
-    componentDidMount = () => {
+    componentDidMount = async () => {
         let id;
         
         if (this.props.navigation.state.params) {
             id = this.props.navigation.state.params
-            
             userDetails(id, response => {
                 response !== false
                     ? this.setState({user:response.user, posts:response.posts, owner: false}) 
                     : console.log('Error retrieving the profile')
-                    
                 })
+
+            this.checkFollows(id)
+                
             this.getFollow(id)
 
         } else {
-            
-            auth.getItem('session').then(data => {
-                id = data
+            let data = await auth.getItem('session')
+            id = data
 
-                userDetails(id, response => {
-                    response !== false 
-                        ? this.setState({user:response.user, posts:response.posts, owner: true}) 
-                        : console.log('Error retrieving the profile')
-                })
-
-                this.getFollow(id)
+            userDetails(id, response => {
+                response !== false 
+                    ? this.setState({user:response.user, posts:response.posts, owner: true}) 
+                    : console.log('Error retrieving the profile')
             })
 
+            this.getFollow(id)
         }
+    }
+
+    checkFollows = async (following) => {
+        let follower_id = await auth.getItem('session')
+
+        let follows = {
+            followed_id:following,
+            follower_id:follower_id,
+        }
+
+        checkFollow(follows , response => {
+            if (response == true) {
+                this.setState({follows:true})
+            }
+        })
     }
 
     getFollow = id => {
@@ -82,8 +98,8 @@ export default class Profile extends Component {
         })
     }
 
-    follow = () => {
-        auth.getItem('session').then(data => {
+    follow = async () => {
+        const data = await auth.getItem('session')
             
             let options = {
                 follower_id: data,
@@ -92,9 +108,23 @@ export default class Profile extends Component {
 
             follow(options, response => {
                 response !== false
-                    ? this.setState({followers:+this.state.followers + 1})
+                    ? this.setState({followers:+this.state.followers + 1, follows:true})
                     : console.log('false')
             })
+    }
+
+    unfollow = async () => {
+        let data = await auth.getItem('session')
+            
+        let options = {
+            follower_id: data,
+            followed_id: this.props.navigation.state.params
+        }
+
+        unfollow(options, response => {
+            response !== false 
+                ? this.setState({followers: +this.state.followers - 1, follows:false}) 
+                : console.log('false')
         })
     }
 
@@ -145,6 +175,24 @@ export default class Profile extends Component {
         this.setState({ index })
     }
 
+    buttons = () => {
+        if (this.state.owner == true) {
+            return(<Button style={profile.edit} bordered dark onPress={() => this.props.navigation.navigate('Settings')}>
+                        <Text>Edit Profile</Text>
+                    </Button>)
+        } 
+        else if (this.state.follows == false) {
+            return(<Button bordered dark style={profile.follow} onPress={() => this.follow()}>
+                        <Text>Follow!</Text>
+                    </Button>)
+        }
+        else if (this.state.follows == true) {
+            return(<Button bordered dark style={profile.unfollow} onPress={() => this.unfollow()}>
+                        <Text style={profile.unfollowText}>Unfollow!</Text>
+                    </Button>)
+        } 
+    }
+
     render() {
         const { username, created_at, picture} = this.state.user;
  
@@ -179,62 +227,54 @@ export default class Profile extends Component {
 
 
                 <View style={profile.rows}>
-                    {this.state.owner 
-                        ? (<Button style={profile.edit} bordered dark onPress={() => this.props.navigation.navigate('Settings')}>
-                                <Text>Edit Profile</Text>
-                            </Button>)
+                    {this.buttons()}
 
-                        : <Button bordered dark style={profile.follow} onPress={() => this.follow()}>
-                                <Text>Follow!</Text>
-                            </Button>}
-                        
-                        {this.state.owner 
-                            ? <Button bordered dark style={profile.logout}><Text>Logout</Text></Button>
-                            : this.state.owner}
-                       
+                    {this.state.owner 
+                        ? <UserContext>
+                            {({token, setSession, removeSession}) => (
+                                <Button 
+                                    bordered dark 
+                                    style={profile.logout} 
+                                    onPress={() => removeSession()}>
+                                    <Text>Logout</Text>
+                                </Button>
+                            )}
+                        </UserContext>
+                        : 
+                        this.state.owner
+                    }
                 </View>
 
                 <View style={profile.dataText}>
                     <Text style={profile.username}>{username}</Text>
-                    <Text>{created_at}</Text>
+                    {getDate(created_at)}
                     <Text>WASSUP MATE!</Text>
                 </View>
 
                 <View style={profile.tabs}>
-                    <Tabs>
-                        <Tab heading={ 
-                            <TabHeading>
-                                <Ionicons 
-                                    style={[this.state.index == 0 ? {color:'purple'} : {}]}
-                                    size={25} 
-                                    name={'ios-apps'}
-                                    onPress={() => this.segmentClick(0)}
-                                    active={this.state.index == 0}
-                                    />
-                                </TabHeading>}>
-                            
-                        </Tab>
+                    <View>
+                        <Ionicons 
+                            style={[this.state.index == 0 ? {color:'purple'} : {}]}
+                            size={40} 
+                            name={'ios-apps'}
+                            onPress={() => this.segmentClick(0)}
+                            active={this.state.index == 0}
+                        />
                         
-                        <Tab heading={ 
-                            <TabHeading>
-                                <Ionicons 
-                                    style={[this.state.index == 1 ? {color:'purple'} : {}]}
-                                    size={25} 
-                                    name={'ios-apps'}
-                                    onPress={() => this.segmentClick(1)}
-                                    active={this.state.index == 1}
-                                        />
-                                </TabHeading>}>
-                            
-                        </Tab>           
-                    </Tabs>
+                    </View>
                     
+                    <View>
+                        <Ionicons 
+                            style={[this.state.index == 1 ? {color:'purple'} : {}]}
+                            size={40} 
+                            name={'ios-photos'}
+                            onPress={() => this.segmentClick(1)}
+                            active={this.state.index == 1}
+                        />
+                    </View>           
                 </View>          
-    );
-  }
-}
-                {this.renderSection()}
 
+                {this.renderSection()}
             </ScrollView>
         </Error>
         )

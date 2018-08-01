@@ -39,6 +39,17 @@ export const profile = StyleSheet.create({
         borderColor: 'black',
         backgroundColor: 'white'
     },
+    unfollow: {
+        flex: 1,
+        marginRight: '7%',
+        marginLeft: '30%',
+        justifyContent: 'center',
+        borderColor: 'black',
+        backgroundColor: 'purple'
+    },
+    unfollowText: {
+        color:'white'
+    },
     logout: {
         marginRight: 15,
         width: '14%',

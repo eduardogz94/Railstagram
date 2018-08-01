@@ -1,5 +1,5 @@
 import React, { Component }from 'react'
-import { ScrollView, Image, Text } from 'react-native'
+import { ScrollView, Image, Text, View } from 'react-native'
 import { Button, Container, Icon, Content, Form, Item, Input, Label } from 'native-base';
 import { FormValidationMessage } from 'react-native-elements'
 import { ImagePicker, Permissions } from 'expo'
@@ -7,6 +7,8 @@ import { ImagePicker, Permissions } from 'expo'
 import Error from '../Extra/ErrorBoundary'
 
 import { sign } from '../Fetch/Requests'
+
+import Logo from '../Extra/Logo';
 
 import { formStyle } from '../../assets/css/form'
 
@@ -114,22 +116,26 @@ export default class SignupForm extends Component {
 
 		return (
 		<Error>
-			<ScrollView>
+			<ScrollView style={formStyle.main}>
 				<Container>
 					<Content>
+						<View style={formStyle.background}>
+							<Logo/>
+						</View>
 						<Form>
 							<Item floatingLabel>
-								<Label>Email</Label>
-								<Input 
+								<Icon active style={formStyle.buttons} name='ios-person'/>
+								<Label style={formStyle.labels}>Email</Label>
+								<Input style={formStyle.inputs} 
 									onChangeText={email => this.setState({email})}
 									autoCapitalize={'none'} />
 							</Item>
 							<FormValidationMessage>{this.state.email_error}</FormValidationMessage>      
 							
 							<Item floatingLabel>
-								<Icon active style={formStyle.buttons} name='ios-person'/>
-								<Label>Username</Label>
-								<Input 
+								<Icon active style={formStyle.buttons} name='ios-contact'/>
+								<Label style={formStyle.labels}>Username</Label>
+								<Input style={formStyle.inputs} 
 									onChangeText={username => this.setState({username:username})}
 									autoCapitalize={'none'} />
 							</Item>
@@ -137,8 +143,8 @@ export default class SignupForm extends Component {
 							
 							<Item floatingLabel>
 								<Icon active style={formStyle.buttons} name='key'/>  
-								<Label>Password</Label>
-								<Input 
+								<Label style={formStyle.labels}>Password</Label>
+								<Input style={formStyle.inputs} 
 									onChangeText={password => this.setState({password:password})}
 									secureTextEntry={true} 
 									autoCapitalize={'none'} />
@@ -147,8 +153,8 @@ export default class SignupForm extends Component {
 
 							<Item floatingLabel>
 								<Icon active style={formStyle.buttons} name='key'/>  
-								<Label>Password Confirmation</Label>
-								<Input 
+								<Label style={formStyle.labels}>Password Confirmation</Label>
+								<Input style={formStyle.inputs} 
 									onChangeText={password_confirmation => this.setState({password_confirmation:password_confirmation})}
 									secureTextEntry={true} 
 									autoCapitalize={'none'} />
@@ -159,8 +165,8 @@ export default class SignupForm extends Component {
 								block bordered dark
 								style={formStyle.buttonContainer}
 								onPress={this.pickImage}>
-								<Text>Pick your avatar!</Text>
-								<Icon style={formStyle.buttons} name="ios-camera"></Icon>
+								<Text style={formStyle.loginButtonText}>Pick your avatar!</Text>
+								<Icon style={formStyle.icons} name="ios-camera"></Icon>
 							</Button>	
 							{image &&
 							<Image source={{ uri: show }} 
@@ -171,12 +177,11 @@ export default class SignupForm extends Component {
 								block bordered dark
 								style={formStyle.buttonContainer}
 								onPress={this.signUp}>
-								<Text>Sign up now!</Text>
-								<Icon style={formStyle.buttons} name="ios-log-in"></Icon>
+								<Text style={formStyle.loginButtonText}>Sign up now!</Text>
+								<Icon style={formStyle.icons} name="ios-log-in"></Icon>
 							</Button>	
 
 						</Form>
-						<Text>Already signed up?</Text>
 
 					</Content>	
 			</Container>						

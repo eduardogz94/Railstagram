@@ -28,6 +28,7 @@ class Auth extends Component {
             })
         },
         removeSession: async () => {
+            alert('YES')
             try {
                 await AsyncStorage.clear()
                 this.props.update(null)

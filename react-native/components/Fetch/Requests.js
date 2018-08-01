@@ -44,7 +44,6 @@ export const sign = (options, cb) => {
 
 export const newSession = (auth, cb) => {
     fetching({auth}, 'POST', `${myIp}/api/v1/user_token`, response => {
-        alert(response)
         response.status != 400 ? 
         cb(response.jwt) 
         : cb(false)
@@ -123,6 +122,15 @@ export const getLike = (id, postId, cb) => {
     })
 }
 
+export const uncomment = (user_id, postId, id, cb) => {
+    fetching({}, 'DELETE', `${myIp}/api/v1/users/${user_id}/posts/${postId}/comments/${id}`, response => {
+        console.log(response)
+        response.status == 200 ?
+            cb(true) :
+            cb(false)
+    })
+}
+
 export const comment = (options, id, postId, cb) => {
     fetching(options, 'POST', `${myIp}/api/v1/users/${id}/posts/${postId}/comments`, response => {
         response.status == 200 
@@ -160,5 +168,22 @@ export const follow = (options, cb) => {
         response.status == 200
             ? cb(true)
             : cb(false) 
+    })
+}
+
+export const unfollow = (options, cb) => {
+    fetching(options, 'POST', `${myIp}/api/v1/unfollow`, response => {
+        // console.log(response)
+        response.status == 200 ?
+            cb(true) :
+            cb(false)
+    })
+}
+
+export const checkFollow = (options, cb) => {
+    fetching(options, 'POST', `${myIp}/api/v1/check_follow`, response => {
+        response.status
+            ? cb(true)
+            : cb(false)
     })
 }

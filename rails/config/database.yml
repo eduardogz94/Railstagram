@@ -3,7 +3,7 @@ development:
   encoding: unicode
   database: railstagram_dev
   pool: 5
-  username: eduardo
+  username: eduardo 
   password: eagzv.999
 
 test:
@@ -11,5 +11,5 @@ test:
   encoding: unicode
   database: railstagram_test
   pool: 5
-  username: eduardo
+  username: eduardo 
   password: eagzv.999

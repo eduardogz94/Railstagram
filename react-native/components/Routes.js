@@ -4,16 +4,17 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Home from './Home'
 
-import Auth from './Auth/Auth'
 import LoginView from './Auth/Login'
 import SignupView from './Auth/Signup'
-import UserContext from './Auth/Auth'
+
 import FindUser from './Users/FindUser'
 import Profile from './Users/Profile'
 import EditProfile from './Users/EditProfile'
 
-import Modal from './Post/Modal'
+import Inbox from './Chat/Inbox'
+import Chat from './Chat/Chat';
 
+import Modal from './Post/Modal'
 import Uploading from './Post/Upload'
 
 export const Index = createStackNavigator({
@@ -35,8 +36,20 @@ export const Index = createStackNavigator({
         title: 'Upload'
       }
     },
+    Inbox: {
+        screen: Inbox,
+        navigationOptions: {
+            title: 'Inbox'
+        }
+    },
     Comments: {
       screen: Modal,
+    },
+    Chat:{
+        screen: Chat,
+        navigationOptions: {
+            title: 'Chat'
+        }
     }
 });
 
@@ -101,8 +114,9 @@ export const Login = createStackNavigator({
 export const UserStack = createBottomTabNavigator({
     Home:Index,
     Users: Users,
+    Upload:Upload,
+    Inbox:Inbox,
     Profile:User,
-    Upload:Upload
 },
 {
     navigationOptions: ({ navigation }) => ({
@@ -117,6 +131,8 @@ export const UserStack = createBottomTabNavigator({
         iconName = `ios-people${focused ? '' : '-outline'}`;
         } else if (routeName === 'Upload') {
         iconName = `ios-camera${focused ? '' : '-outline'}`;
+        } else if (routeName ==='Inbox') {
+        iconName = `ios-chatbubbles${focused? '' : '-outline'}`
         }
         
         // You can return any component that you like here! We usually use an

@@ -2,6 +2,7 @@ class User < ApplicationRecord
     has_many :posts, dependent: :destroy
     has_many :comments, dependent: :destroy
     has_many :likes, dependent: :destroy
+    has_and_belongs_to_many :conversations, dependent: :destroy
 
     has_many :active_relationships, class_name:  "Relationship",
     foreign_key: "follower_id",
@@ -22,7 +23,6 @@ class User < ApplicationRecord
     has_secure_password
     validates :password_digest, presence: true
     
-
     # Follows a user.
     def follow(other_user)
         active_relationships.create(followed_id: other_user.id)
