@@ -153,14 +153,17 @@ export default class Post extends Component {
                      </Text>
             </CardItem>
 
-            <List>
+            {/* <List>
                 {this.state.comments !== '' ? 
                     this.state.comments.map((comment,index) => {
                         
                         return(<Comment key={index} comment={comment} delete={this.uncomment} id={this.props.id}/>)
                     }) 
                     : console.log('test')}
-            </List>
+            </List> */}
+            <Button transparent onPress={() => this.props.comment(this.props.id)}>
+                <Text style={post.viewAll}>View All Comments..</Text>
+            </Button>
         </Card>
       </View>
     )

@@ -3,6 +3,9 @@ import { View } from 'native-base';
 import ActionCable from 'react-native-actioncable'
 
 import MsgBox from './MsgBox';
+
+import { ws } from '../Extra/MyIp'
+
 import ChatTitle from './ChatTitle';
 import Messages from './Messages';
 import { checkConv, historyConv, createConv } from '../Fetch/Requests';
@@ -30,7 +33,7 @@ export default class Chat extends Component {
     
     initSocket = async () => {
         const user_id = await auth.getItem('session')
-        this.cable = ActionCable.createConsumer(`ws://172.20.10.4:4000/cable?client=${user_id}`)
+        this.cable = ActionCable.createConsumer(`ws://192.168.1.121:4000/cable?client=${user_id}`)
     }
 
     connectToChannel = (room_id, first_time) => {

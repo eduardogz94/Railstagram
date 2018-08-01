@@ -1,1 +1,5 @@
-export const myIp = `http://172.20.10.7:4000`
+const default_ping = '192.168.1.121'
+
+export const myIp = `http://${default_ping}:4000`
+
+export const ws = `ws://${default_ping}:4000`

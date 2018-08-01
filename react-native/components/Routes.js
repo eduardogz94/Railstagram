@@ -122,7 +122,8 @@ export const UserStack = createBottomTabNavigator({
     Home:Index,
     Users: Users,
     Upload:Upload,
-    Inbox:Dm
+    Inbox:Dm,
+    Profile:User,
 },
 {
     navigationOptions: ({ navigation }) => ({

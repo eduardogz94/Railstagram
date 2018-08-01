@@ -23,6 +23,11 @@ export const post = StyleSheet.create({
         fontSize: 10,
         color:'gray'
     },
+    viewAll:{
+        fontWeight: '600',
+        color: 'gray',
+        marginLeft: '3%',
+    },
     date: {
         fontSize: 8,
         color:'gray'
