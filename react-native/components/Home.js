@@ -45,6 +45,7 @@ export default class Home extends React.Component {
                     })
                 }
                 this.setState({ posts: this.state.posts.concat(arr)})
+                // console.log(this.state)
             } else {
                 console.log('error')
             }

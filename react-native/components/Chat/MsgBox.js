@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Input, Item, Text } from "native-base";
-import { Image, TouchableOpacity } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 
 
 class MsgBox extends React.Component {

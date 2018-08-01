@@ -68,9 +68,11 @@ export default class EditProfile extends Component {
                 <Container>
                     <Content>
                         <Form>
+                           
                             <Item floatingLabel>
                                 <Icon active style={formStyle.buttons} name='ios-person'/>
                                 <Label>Username</Label>
+                           
                                 <Input 
                                     onChangeText={username => this.setState({username:username})}
                                     autoCapitalize={'none'} />
@@ -80,6 +82,7 @@ export default class EditProfile extends Component {
                             <Item floatingLabel>
                                 <Icon active style={formStyle.buttons} name='key'/>  
                                 <Label>Password</Label>
+                           
                                 <Input 
                                     onChangeText={password => this.setState({password:password})}
                                     secureTextEntry={true} 

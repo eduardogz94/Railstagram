@@ -134,6 +134,14 @@ export const getLike = (id, postId, cb) => {
     })
 }
 
+export const uncomment = (user_id, postId, id, cb) => {
+    fetching({}, 'DELETE', `${myIp}/api/v1/users/${user_id}/posts/${postId}/comments/${id}`, response => {
+        response.status == 200 ?
+            cb(true) :
+            cb(false)
+    })
+}
+
 export const comment = (options, id, postId, cb) => {
     fetching(options, 'POST', `${myIp}/api/v1/users/${id}/posts/${postId}/comments`, response => {
         response.status == 200 
@@ -174,6 +182,23 @@ export const follow = (options, cb) => {
     })
 }
 
+export const unfollow = (options, cb) => {
+    fetching(options, 'POST', `${myIp}/api/v1/unfollow`, response => {
+        // console.log(response)
+        response.status == 200 ?
+            cb(true) :
+            cb(false)
+    })
+}
+
+export const checkFollow = (options, cb) => {
+    fetching(options, 'POST', `${myIp}/api/v1/check_follow`, response => {
+        response.status
+            ? cb(true)
+            : cb(false)
+    })
+}
+   
 export const checkConv = (options, cb) => {
     fetching(options, 'POST', `${myIp}/api/v1/chat/exists`, response => {
         response.status == 200

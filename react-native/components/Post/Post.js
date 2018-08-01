@@ -4,8 +4,9 @@ import { Card, CardItem, Thumbnail, Body, Left, Button, Right, List } from 'nati
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { myIp } from '../Extra/MyIp'
+import { getDate } from '../Extra/Utilities'
 
-import { like, getLike, getComments, unlike } from '../Fetch/Requests'
+import { like, getLike, getComments, unlike, uncomment } from '../Fetch/Requests'
 
 import { post } from '../../assets/css/post'
 
@@ -55,6 +56,23 @@ export default class Post extends Component {
                     likes: +this.state.likes + 1
                 })
             }
+        })
+    }
+
+    uncomment = async (comment_id) => {
+        const user_id = await auth.getItem('session')
+        const post_id = this.props.id
+        uncomment(user_id, post_id, comment_id, response => {
+            response  
+                ? (
+                    alert('Comment Deleted'),
+                    getComments(post_id, comments => {
+                            if (comments !== '') {
+                                this.setState({ comments })
+                            }
+                    })
+                 ) 
+                : alert('error')
         })
     }
 
@@ -122,16 +140,6 @@ export default class Post extends Component {
                         
                     </Button>
                 </Left>
-                <Right>
-                    <Button transparent>
-                        <Ionicons
-                            size={25} 
-                            style={post.buttons}
-                            name={'ios-send-outline'}
-                            onPress={() => console.log('a')}
-                            />
-                    </Button>
-                </Right>    
             </CardItem>
 
             <CardItem>
@@ -148,7 +156,8 @@ export default class Post extends Component {
             <List>
                 {this.state.comments !== '' ? 
                     this.state.comments.map((comment,index) => {
-                        return(<Comment key={index} comment={comment}/>)
+                        
+                        return(<Comment key={index} comment={comment} delete={this.uncomment} id={this.props.id}/>)
                     }) 
                     : console.log('test')}
             </List>

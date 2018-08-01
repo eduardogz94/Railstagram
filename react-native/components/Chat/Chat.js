@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-import { Button, Container, Icon, Content, Form, Item, Input, Label, View } from 'native-base';
+import { View } from 'native-base';
 import ActionCable from 'react-native-actioncable'
-import { ScrollView, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native'
-import myIp from '../Extra/MyIp'
 
-import Auth from '../Auth/Auth'
 import MsgBox from './MsgBox';
 import ChatTitle from './ChatTitle';
 import Messages from './Messages';
 import { checkConv, historyConv, createConv } from '../Fetch/Requests';
 
+import Auth from '../Auth/Auth'
 const auth = new Auth()
 
 export default class Chat extends Component {

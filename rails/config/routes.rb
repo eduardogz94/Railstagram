@@ -11,7 +11,7 @@ Rails.application.routes.draw do
                     resources :likes, only: [:create, :destroy]
                 end
             end
-            resources :relationships, only: [:create, :destroy]
+            resources :relationships, only: [:create]
             
             mount ActionCable.server => '/cable'
 
@@ -38,6 +38,8 @@ Rails.application.routes.draw do
             patch '/edit/:id', to: 'users#update'
             
             delete '/edit/:id', to: 'users#destroy'
+
+            post '/unfollow', to: 'relationships#destroy'
 
         end
     end

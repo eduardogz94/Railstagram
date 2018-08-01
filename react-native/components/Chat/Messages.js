@@ -1,7 +1,5 @@
 import React from "react";
-import Sender from "./Sender";
-import { View, Label, Text } from "native-base";
-import { AsyncStorage } from 'react-native'
+import { View, Text } from "native-base";
 
 class Messages extends React.Component {
 

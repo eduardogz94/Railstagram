@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
 
         arr.each do |i|
             @user = User.find(i)
-            users.push({ username: @user.username })
+            users.push({ username: @user.username, user_id:@user.id })
         end
 
         index = 0
@@ -37,7 +37,9 @@ class CommentsController < ApplicationController
             comments.push({ 
                 text: i.text,
                 username: users[index][:username],
-                created: i.created_at 
+                created: i.created_at,
+                id: i.id,
+                user_id: users[index][:user_id],
             })
             index += 1
         end

@@ -21,6 +21,7 @@ export const post = StyleSheet.create({
     },
     comments:{
         fontSize: 10,
+        color:'gray'
     },
     date: {
         fontSize: 8,

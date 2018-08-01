@@ -76,6 +76,7 @@ export default class Upload extends Component {
                             <Item>
                                 <Icon active style={formStyle.buttons} name='ios-person'/>
                                 <Input 
+                                    style={formStyle.inputs}
                                     placeholder='Caption'
                                     onChangeText={description => this.setState({ description })}
                                     autoCapitalize={'none'}/>
@@ -84,8 +85,8 @@ export default class Upload extends Component {
                             <Button bordered dark block
                                 style={formStyle.buttonContainer}
                                 onPress={this.pickImage}>
-                                <Text>Pick an image from camerall roll</Text>
-                                <Icon style={formStyle.buttons} name="ios-camera"></Icon>
+                                <Text style={formStyle.icons}>Pick an image from camerall roll</Text>
+                                <Icon style={formStyle.icons} name="ios-camera"></Icon>
                             </Button>
                             
                             {post_image &&
@@ -94,8 +95,8 @@ export default class Upload extends Component {
                             <Button bordered dark block
                                 style={formStyle.buttonContainer}
                                 onPress={this.uploadPost}>
-                                <Text>New Post!</Text>
-                                <Icon style={formStyle.buttons} name="ios-log-in"></Icon>
+                                <Text style={formStyle.icons}>New Post!</Text>
+                                <Icon style={formStyle.icons} name="ios-log-in"></Icon>
                             </Button>
                         </Form>
                     </ScrollView>

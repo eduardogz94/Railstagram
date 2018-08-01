@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Button, Container, Icon, Content, Form, Item, Input, Label, View } from 'native-base';
-import ActionCable from 'react-native-actioncable'
-import { ScrollView, Text, TouchableOpacity } from 'react-native'
-import { List, SearchBar, ListItem } from 'react-native-elements'
+import { ScrollView } from 'react-native'
+import { Label, View } from 'native-base';
+import { List, ListItem } from 'react-native-elements'
+
 import myIp from '../Extra/MyIp'
+
 import { getAllUsers } from '../Fetch/Requests';
-import User from '../Users/User'
 
 export default class Inbox extends Component {
     state = {
@@ -25,7 +25,6 @@ export default class Inbox extends Component {
     }
 
     render() {
-        const { message } = this.state
         return (
             <View>
                 <Label> Direct Messages </Label>
