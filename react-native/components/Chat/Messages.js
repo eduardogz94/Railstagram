@@ -36,9 +36,9 @@ class Messages extends React.Component {
             <View> 
                 {this.props.history.map((msgs, i) => { 
                    
-                        <Text style={(msgs.id == this.state.user_id) ? direct.right : direct.left }>
-                            {msgs.msg}
-                        </Text>
+                        {msgs.id == this.state.user_id 
+                            ? (<Text style={direct.right}>{msgs.msg}</Text>) 
+                            : (<Text style={direct.right}>{msgs.msg}</Text>) }
                     {/* {this.checkMsg(msgs.id, i)}   
                     if (this.state.sender) {
                         console.log('true')
