@@ -140,16 +140,6 @@ export default class Post extends Component {
                         
                     </Button>
                 </Left>
-                <Right>
-                    <Button transparent>
-                        <Ionicons
-                            size={25} 
-                            style={post.buttons}
-                            name={'ios-send-outline'}
-                            onPress={() => console.log('a')}
-                            />
-                    </Button>
-                </Right>    
             </CardItem>
 
             <CardItem>

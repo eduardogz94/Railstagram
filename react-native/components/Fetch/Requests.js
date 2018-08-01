@@ -124,7 +124,6 @@ export const getLike = (id, postId, cb) => {
 
 export const uncomment = (user_id, postId, id, cb) => {
     fetching({}, 'DELETE', `${myIp}/api/v1/users/${user_id}/posts/${postId}/comments/${id}`, response => {
-        console.log(response)
         response.status == 200 ?
             cb(true) :
             cb(false)

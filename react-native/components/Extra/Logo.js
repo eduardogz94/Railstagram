@@ -9,7 +9,7 @@ export default class Logo extends Component {
     return (
       <View style={styles.container}>
         <Image source={logoImg} style={styles.image} />
-        <Text style={styles.text}>ZAVELLASTAGRAM</Text>
+        <Text style={styles.text}>ZAVELASTAGRAM</Text>
       </View>
     );
   }
