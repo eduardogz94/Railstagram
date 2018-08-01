@@ -17,26 +17,6 @@ export default class LoginForm extends Component {
         password: ""
     }    
 
-    checkInputs = () => {
-        const { email, password } = this.state;
-
-        (email !== '' && password !== '')
-            ? data = true 
-            : data = false
-
-        return data;
-    }
-
-    setErrors = () => {
-        const { email, password } = this.state
-
-        email == '' ? this.setState({email_error:'Cant be blank'}) 
-            : this.setState({email_error: ''})
-
-        password == '' ? this.setState({passwords_error:'Cant be blank'}) 
-            : this.setState({passwords_error:''})
-    }
-      
 
     render() {
         const { email, password } = this.state
@@ -70,8 +50,6 @@ export default class LoginForm extends Component {
                                     autoCapitalize={'none'} />
                             </Item>
                             <FormValidationMessage>{this.state.passwords_error}</FormValidationMessage>
-                           
-                           
                             <UserContext.Consumer>
                                 {({setSession}) => (
                                     <Button 

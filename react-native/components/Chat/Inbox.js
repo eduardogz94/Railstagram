@@ -38,7 +38,7 @@ export default class Inbox extends Component {
                                         avatar = {(user.picture.url != null) ? `${myIp}${user.picture.url}` : null}
                                         title={user.username}
                                         subtitle={'username'}
-                                        onPress={() => this.props.navigation.navigate('Chat', {username:user.username})}
+                                        onPress={() => this.props.navigation.navigate('Chat', { user })}
                                     />
                                 )}
                             )}

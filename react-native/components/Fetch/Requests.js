@@ -42,6 +42,7 @@ export const sign = (options, cb) => {
     })
 }
 
+<<<<<<< HEAD
 export const newSession = (auth, cb) => {
     fetching({auth}, 'POST', `${myIp}/api/v1/user_token`, response => {
         response.status != 400 ? 
@@ -49,6 +50,27 @@ export const newSession = (auth, cb) => {
         : cb(false)
     })
 }
+=======
+    export const newSession = (auth, cb) => {
+        fetch(`${myIp}/api/v1/user_token`, {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify({ auth })
+        })
+        .then(response => response.json())
+        .then(result => {
+            result.status != 400 ?
+            cb(result.jwt) :
+            cb(false) 
+        }).catch(err => {
+            alert('Wrong email or password')
+        })
+    }
+
+>>>>>>> 9d702821b096b4349e931a11ab481d7f377069ce
 
 export const getAllUsers = (cb) => {
     fetching({}, 'GET', `${myIp}/api/v1/users`, response => {
@@ -184,5 +206,26 @@ export const checkFollow = (options, cb) => {
         response.status
             ? cb(true)
             : cb(false)
+export const checkConv = (options, cb) => {
+    fetching(options, 'POST', `${myIp}/api/v1/chat/exists`, response => {
+        response.status == 200
+            ? cb(response.room_id)
+            : cb(undefined)
+    })
+}
+
+export const historyConv = (options, cb) => {
+    fetching(options, 'POST', `${myIp}/api/v1/chat/history`, response => {
+        response.status == 200
+        ? cb(response)
+        : cb(null)
+    })
+}
+
+export const createConv = (options, cb) => {
+    fetching(options, 'POST', `${myIp}/api/v1/chat/create`, response => {
+        response.status == 200
+        ? cb(response.id)
+        : cb(null)
     })
 }
