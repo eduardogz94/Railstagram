@@ -42,15 +42,6 @@ export const sign = (options, cb) => {
     })
 }
 
-<<<<<<< HEAD
-export const newSession = (auth, cb) => {
-    fetching({auth}, 'POST', `${myIp}/api/v1/user_token`, response => {
-        response.status != 400 ? 
-        cb(response.jwt) 
-        : cb(false)
-    })
-}
-=======
     export const newSession = (auth, cb) => {
         fetch(`${myIp}/api/v1/user_token`, {
             method: 'POST',
@@ -70,7 +61,6 @@ export const newSession = (auth, cb) => {
         })
     }
 
->>>>>>> 9d702821b096b4349e931a11ab481d7f377069ce
 
 export const getAllUsers = (cb) => {
     fetching({}, 'GET', `${myIp}/api/v1/users`, response => {
@@ -206,6 +196,9 @@ export const checkFollow = (options, cb) => {
         response.status
             ? cb(true)
             : cb(false)
+    })
+}
+   
 export const checkConv = (options, cb) => {
     fetching(options, 'POST', `${myIp}/api/v1/chat/exists`, response => {
         response.status == 200
