@@ -57,7 +57,7 @@ export default class Comments extends Component {
                     ? (console.log('they are true'),<Button
                             transparent
                             style={post.deleteComment} 
-                            onPress={() => this.props.delete(id)}    >
+                            onPress={() => this.props.delete(id)}>
                             <Icon style={{ color:'purple'}} name={'ios-close'}/>
                         </Button>)
                     : this.state.equals }

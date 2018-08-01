@@ -4,8 +4,8 @@ import { View, Label } from "native-base";
 class ChatTitle extends React.Component {
     render() {
         return (
-        <View >
-            <Label>{this.props.username}</Label>
+        <View style={{backgroundColor: 'purple'}} >
+            <Label style={{color:'white'}}>Chat with {this.props.username}</Label>
         </View>
         )
 	}

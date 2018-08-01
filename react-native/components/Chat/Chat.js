@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View } from 'native-base';
+import { View, Container, Content, Header } from 'native-base';
 import ActionCable from 'react-native-actioncable'
 
 import MsgBox from './MsgBox';
@@ -80,11 +80,16 @@ export default class Chat extends Component {
         const { history } = this.state
         const { username, id } = this.props.navigation.state.params.user 
         return (
-        <View>
-            <ChatTitle username={username}/> 
-            <Messages history={history}/>
+        <Container>
+            <Header style={{backgroundColor: 'purple'}}>
+                <ChatTitle username={username}/> 
+            </Header>
+
+            <Content>
+                <Messages history={history}/>
+            </Content>
             <MsgBox sendMessage={this.sendMessage} receiver={id}/>
-        </View>
+        </Container>
     )
   }
 }

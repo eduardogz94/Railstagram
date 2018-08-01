@@ -33,24 +33,17 @@ class Messages extends React.Component {
     render() {
         const { history } = this.props
         return (
-            <View> 
+            <ScrollView> 
                 {this.props.history.map((msgs, i) => { 
-                   
+                   return(
+                    <ListItem key={i}>
                         {msgs.id == this.state.user_id 
                             ? (<Text style={direct.right}>{msgs.msg}</Text>) 
-                            : (<Text style={direct.right}>{msgs.msg}</Text>) }
-                    {/* {this.checkMsg(msgs.id, i)}   
-                    if (this.state.sender) {
-                        console.log('true')
-                            return (
-                                <ListItem key={i}> <Text style={direct.right}>{msgs.msg}</Text> </ListItem>)            
-                        } else {
-                            console.log('false')
-                            return(
-                                <ListItem key={i}> <Text style={direct.left}>{msgs.msg}</Text> </ListItem>)
-                        } */}
-               })}
-            </View>
+                            : (<Text style={direct.left}>{msgs.msg}</Text>) }>
+                        
+                    </ListItem>)}   
+                )}
+            </ScrollView>
         )
 	}
 }

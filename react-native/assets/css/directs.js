@@ -9,11 +9,9 @@ export const direct = StyleSheet.create({
         flex:3
     },
     right: {
-        alignContent: 'flex-start',
-        marginLeft: '50%',
+        marginLeft: '90%',
     },
     left: {
-        alignContent: 'flex-end',
         marginRight: '50%'
     }
 })

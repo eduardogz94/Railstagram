@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native'
-import { ListItem, Button, Icon, Left, Body, Right, List, Input, Item, Label, Footer, Content, Form, Container } from 'native-base'
+import { ListItem, Button, Icon, Left, Body, Right, List, Input, Item, Label, Footer, Content, Form, Container, Header } from 'native-base'
 
 import { getComments, comment } from '../Fetch/Requests'
 
@@ -48,23 +48,29 @@ export default class CommentModal extends Component {
   render() {
     return (
         <Container style={post.commentsModal}>
-            <ScrollView >    
+            <Header style={{backgroundColor: 'purple'}}>
+                <Text style={{color:'white', fontSize:17}}> Comments </Text> 
+            </Header>
+            
+            <Content >    
                     <List>
                         {this.state.comments.map((comment, index) => {
                             return (<Comments key={index} comment={comment}/>)})}
                     </List>
-            </ScrollView>
+            </Content>
             <Footer>
                 <Item  
-                    style={{backgroundColor:'purple', width:'50%', height:'80%', marginVertical: '1%'}}
+                    style={{backgroundColor:'white', width:'98%'}}
                     rounded>
                     <Label style={{color:'white', marginHorizontal: '8%', fontSize:8}}>Comment</Label>
                     <Input
+                        placeholder="Type here..."
                         style={{color:'white', fontSize:10}}
                         onChangeText={comment => this.setState({comment:comment})}
                         autoCapitalize={'none'} />
+                    <TouchableOpacity style={{marginVertical: '5%', marginHorizontal:'10%'}} activeOpacity = { 0.2 } onPress={() => this.comment()}>
+                        <Text style={{color:'purple'}}>Comment Now!</Text></TouchableOpacity>
                 </Item>
-                    <TouchableOpacity style={{marginVertical: '5%', marginHorizontal:'10%'}} activeOpacity = { 0.2 } onPress={() => this.comment()}><Text>Comment Now!</Text></TouchableOpacity>
             </Footer>
         </Container>
     )
