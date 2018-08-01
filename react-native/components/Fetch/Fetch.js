@@ -39,6 +39,7 @@ export const fetching = (data, method, url, cb) => {
                     })
                     .catch(err => {
                         console.log(`FETCH COMPONENT > Error while making the request: ${err}`);
+                        cb('no')
                     })
                 break;
             }

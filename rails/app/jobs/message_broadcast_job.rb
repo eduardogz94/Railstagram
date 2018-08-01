@@ -6,7 +6,7 @@ class MessageBroadcastJob < ApplicationJob
         content: message.content,
         user_id: message.user_id,
       }
-      ActionCable.server.broadcast(build_room_id(1), payload)
+      ActionCable.server.broadcast(build_room_id(message.conversation.id), payload)
     end
     
     def build_room_id(id)

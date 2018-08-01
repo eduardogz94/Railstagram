@@ -22,6 +22,10 @@ Rails.application.routes.draw do
             get '/posts/:post_id/likes', to: 'likes#index'
             get '/posts/:post_id/comments', to: 'comments#index'
             
+            post '/chat/exists', to: 'conversations#exists'
+            post '/chat/history', to: 'conversations#history'
+            post '/chat/create', to: 'conversations#create'
+
             get'/user/:user_id/post/:post_id/check_like', to:'likes#check' 
             
             get '/users/find/:username', to: 'users#get'

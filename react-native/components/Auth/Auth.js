@@ -13,6 +13,8 @@ class Auth extends Component {
     state = {
         token: null,
         setSession: (email, password) => {
+            if (email == '') return alert('Email can not be blank')
+            if (password == '') return alert('Password can not be blank')
             newSession({email, password}, token => {
                 if (token != false) {
                     currentUser(token, async result => {
@@ -26,9 +28,9 @@ class Auth extends Component {
                     })
                 }
             })
+                
         },
         removeSession: async () => {
-            alert('YES')
             try {
                 await AsyncStorage.clear()
                 this.props.update(null)

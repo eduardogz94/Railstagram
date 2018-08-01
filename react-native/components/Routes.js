@@ -37,21 +37,10 @@ export const Index = createStackNavigator({
         title: 'Upload'
       }
     },
-    Inbox: {
-        screen: Inbox,
-        navigationOptions: {
-            title: 'Inbox'
-        }
-    },
     Comments: {
       screen: Modal,
     },
-    Chat:{
-        screen: Chat,
-        navigationOptions: {
-            title: 'Chat'
-        }
-    }
+
 });
 
 
@@ -69,6 +58,24 @@ export const User = createStackNavigator({
         }
     }
 });
+
+
+
+export const Dm = createStackNavigator({
+    Inbox: {
+        screen: Inbox,
+        navigationOptions: {
+            title: 'Inbox'
+        }
+    },
+    Chat:{
+        screen: Chat,
+        navigationOptions: {
+            title: 'Chat'
+        }
+    }
+})
+
 
 export const Signup = createStackNavigator({
     Signup:{
@@ -117,7 +124,7 @@ export const UserStack = createBottomTabNavigator({
     Users: Users,
     Profile:User,
     Upload:Upload,
-    Inbox:Inbox
+    Inbox:Dm
 },
 {
     navigationOptions: ({ navigation }) => ({
@@ -157,7 +164,6 @@ export const UserStack = createBottomTabNavigator({
 export const GuestStack = createBottomTabNavigator({
     Signup:Signup,
     Login:Login,
-    Home:Index,
     },
     {
     navigationOptions: ({ navigation }) => ({

@@ -4,10 +4,6 @@ import { View, Label, Text } from "native-base";
 
 class Messages extends React.Component {
 
-  componentDidMount() {
-
-  }
-
   render() {
     const { id, history, socket } = this.props
     return (
