@@ -141,7 +141,7 @@ export default class Post extends Component {
             <CardItem>
                 <Text>
                     <Text style={post.bold}>{this.props.user.username}  </Text>
-                        a{this.props.description}
+                        {this.props.description}
                      </Text>
             </CardItem>
 

@@ -109,7 +109,7 @@ export default class Profile extends Component {
                     </View>)
         } else if (this.state.index == 1) {
                 const { posts } = this.state
-                console.log(posts)
+                alert(JSON.stringify(posts))
                 return  posts.map((post,index) => {
                     return ( 
                         <Post 
