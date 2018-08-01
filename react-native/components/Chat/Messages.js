@@ -32,16 +32,25 @@ class Messages extends React.Component {
     
     render() {
         const { history } = this.props
+        console.log(history)
         return (
             <ScrollView> 
                 {this.props.history.map((msgs, i) => { 
                    return(
-                    <ListItem key={i}>
-                        {msgs.id == this.state.user_id 
-                            ? (<Text style={direct.right}>{msgs.msg}</Text>) 
-                            : (<Text style={direct.left}>{msgs.msg}</Text>) }>
-                        
-                    </ListItem>)}   
+                    <View style={{flexDirection:'row'}} key={i}>
+                        <ListItem style={{flex:2}}>
+                            {msgs.id == this.state.user_id 
+                                ? (<Text style={direct.right}>{msgs.msg}</Text>) 
+                                : (<Text style={direct.left}>{msgs.msg}</Text>) }>
+                            
+                        </ListItem>
+
+                        <ListItem style={{flex:2}}>
+                                {msgs.id == this.state.user_id 
+                                ? (<Text style={direct.right}>{msgs.date}</Text>) 
+                                : (<Text style={direct.left}>{msgs.date}</Text>) }>
+                        </ListItem>
+                    </View>)}   
                 )}
             </ScrollView>
         )

@@ -25,7 +25,7 @@ export default class Chat extends Component {
         const receiver_id = this.props.navigation.state.params.user.id 
         checkConv({sender_id, receiver_id}, room_id => {
             if (room_id != null) {
-                this.setState({ room_id })
+                this.state = { room_id }
                 this.connectToChannel(room_id, false)
             }
         })
@@ -33,7 +33,7 @@ export default class Chat extends Component {
     
     initSocket = async () => {
         const user_id = await auth.getItem('session')
-        this.cable = ActionCable.createConsumer(`ws://192.168.1.121:4000/cable?client=${user_id}`)
+        this.cable = ActionCable.createConsumer(`${ws}/cable?client=${user_id}`)
     }
 
     connectToChannel = (room_id, first_time) => {
@@ -48,7 +48,7 @@ export default class Chat extends Component {
             },
             received: (data) => {
                 let { history } = this.state
-                history.push({ msg:data.content, id:data.user_id })
+                history.push({ msg:data.content, id:data.user_id, created_at: data.created_at })
                 this.setState({ history })
             },
             send_message: async function(content) {

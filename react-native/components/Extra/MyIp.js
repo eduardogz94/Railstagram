@@ -1,4 +1,4 @@
-const default_ping = '192.168.1.121'
+const default_ping = '192.168.43.147'
 
 export const myIp = `http://${default_ping}:4000`
 

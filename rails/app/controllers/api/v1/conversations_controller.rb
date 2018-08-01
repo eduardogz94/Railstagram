@@ -31,7 +31,7 @@ module Api::V1
             if (conversation != nil) 
                 history = [] 
                 conversation.messages.each do |i|
-                    history.push({id: i.id, msg: i.content})
+                    history.push({id: i.user_id, msg: i.content, date:i.created_at})
                 end 
                 render json: { status: 200, history: history }
             else
