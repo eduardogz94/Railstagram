@@ -11,6 +11,7 @@ import { formStyle } from '../../assets/css/form'
 
 import Logo from '../Extra/Logo';
 
+
 import Auth, { UserContext } from '../Auth/Auth';
 const auth = new Auth()
 
@@ -99,12 +100,7 @@ export default class LoginForm extends Component {
                                     </Button>
                                 )}
                             </UserContext.Consumer>
-                           
-                           
-                           
-                          
-
-                            <Text>Havent signup yet?</Text>
+                        
                         </Form>
                     </Content>
                 </Container>

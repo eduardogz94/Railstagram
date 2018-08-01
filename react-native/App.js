@@ -12,9 +12,9 @@ export default class App extends React.Component {
 
     componentWillMount () {
         // AsyncStorage.clear().then(data=>{})
-        AsyncStorage.getItem('token').then(token => {
-            this.setState({ token })
-        })
+        // AsyncStorage.getItem('token').then(token => {
+        //     this.setState({ token })
+        // })
     }
 
     updateToken = token => {

@@ -24,5 +24,11 @@ export const formStyle = StyleSheet.create({
         height:200,
         marginHorizontal: '25%',
         marginVertical: '3%',
+    },
+    pictureCover: {
+        flex: 1,
+        width: null,
+        height: null,
+        resizeMode: 'cover',
     }
 })
